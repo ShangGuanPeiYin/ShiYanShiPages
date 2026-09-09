@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Team Members | MVAS Lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+      :root {
+          --primary-color: #333;
+          --link-color: #444;
+          --hover-bg: #f0f0f0;
+          --border-color: #000;
+      }
+
+      .pub-container {
+          max-width: 1000px;
+          margin: 40px auto;
+          font-family: "Segoe UI", Arial, sans-serif;
+          color: var(--primary-color);
+          line-height: 1.6;
+      }
+
+      /* 年份导航栏 */
+      .year-filter {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          margin-bottom: 50px;
+          justify-content: center;
+      }
+
+      .btn-year {
+          padding: 4px 18px;
+          border: 1.5px solid var(--border-color);
+          background: white;
+          border-radius: 20px;
+          cursor: pointer;
+          font-size: 14px;
+          transition: all 0.2s;
+      }
+
+      .btn-year:hover, .btn-year.active {
+          background: var(--hover-bg);
+          font-weight: bold;
+      }
+
+      .btn-year.wide { padding-left: 30px; padding-right: 30px; }
+
+      /* 列表排版 */
+      .pub-group {
+          display: flex;
+          margin-bottom: 30px;
+      }
+
+      .year-label {
+          flex: 0 0 100px;
+          font-size: 28px;
+          color: #666;
+          font-weight: 400;
+      }
+
+      .items { flex: 1; }
+
+      .pub-item {
+          margin-bottom: 25px;
+          font-size: 15px;
+          color: #444;
+      }
+
+      /* 链接美化：只有下划线，颜色不过于刺眼 */
+      .pub-item a {
+          color: var(--link-color);
+          text-decoration: underline;
+          text-underline-offset: 3px;
+          transition: opacity 0.2s;
+      }
+
+      .pub-item a:hover {
+          opacity: 0.7;
+      }
+
+      /* 响应式：手机端年份置顶 */
+      @media (max-width: 600px) {
+          .pub-group { flex-direction: column; }
+          .year-label { margin-bottom: 10px; }
+      }
+    </style>
+</head>
+<body>
+  <div class="pub-container">
+      <nav class="year-filter">
+          <button class="btn-year active">2025</button>
+          <button class="btn-year">2024</button>
+          <button class="btn-year">2023</button>
+          <button class="btn-year">2022</button>
+          <button class="btn-year">2021</button>
+          <button class="btn-year">2020</button>
+          <button class="btn-year">2019</button>
+          <button class="btn-year">2018</button>
+          <button class="btn-year">2017</button>
+          <button class="btn-year wide">pre-2017</button>
+      </nav>
+
+      <div class="pub-list">
+          <div class="pub-group">
+              <div class="year-label">2025</div>
+              <div class="items">
+                  <p class="pub-item">
+                      Nak-seung P. Hyun et al. <a href="#">Sticking the landing: Insect-inspired strategies for safely landing flapping-wing aerial microrobots</a>. Sci. Robot. 10, eadq3059 (2025). DOI: 10.1126/scirobotics.adq3059
+                  </p>
+                  <p class="pub-item">
+                      Ramirez Serrano, Francisco, et al. "<a href="#">A springtail-inspired multimodal walking-jumping microrobot</a>." Science Robotics 10.99 (2025): eadp7854.
+                  </p>
+                  <p class="pub-item">
+                      Hernandez, A. M., Sandoval, J. A., Yuan, M. C., & Wood, R. J. (2025) <a href="#">Bioinspired surface structures for added shear stabilization in suction discs</a>. Scientific Reports, 15(960). doi: 10.1038/s41598-024-82221-0
+                  </p>
+              </div>
+          </div>
+
+          <div class="pub-group">
+              <div class="year-label">2024</div>
+              <div class="items">
+                  <p class="pub-item">
+                      Gabriel Maquignaz, Rachel Zoll, Michael Karpelson, James C Weaver, Robert J Wood, <a href="#">Design and fabrication of a parasite-inspired, millimeter-scale tissue anchoring mechanism</a>, PNAS Nexus, Volume 3, Issue 12, December 2024, pgae495, https://doi.org/10.1093/pnasnexus/pgae495
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+</html>

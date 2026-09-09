@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>MVAS 实验室竖版宣传贴纸 - 间距优化版</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+  }
+  
+  /* 维持 10.5 : 14.5 的竖版物理比例 */
+  .sticker-container {
+    width: 397px;  
+    height: 548px; 
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    border: 1px solid #dcdcdc;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* 顶部：学院官方区域 */
+  .top-section {
+    background-color: #004098;
+    height: 30%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px; 
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  }
+  
+  .top-section img {
+    max-width: 100%; 
+    max-height: 85%; 
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.25));
+  }
+
+  /* 中部核心区：精细化间距控制 */
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* 整体居中，靠内部 margin 调节局部间距 */
+    padding: 15px 35px 25px 35px;
+    text-align: center;
+  }
+
+  /* 1. 实验室名称 */
+  .lab-logo-box {
+    /* 【调整】缩短与下方团队名的距离，建立强烈的所属关系 */
+    margin-bottom: 15px; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .lab-logo-img {
+    width: 290px; 
+    height: auto;
+  }
+
+  /* 2. 核心人物：福星教授团队 */
+  .team-leader {
+    font-size: 36px; /* 字体保持张力 */
+    font-weight: 900;
+    color: #C20C0C; /* 更沉稳的工业深红 */
+    letter-spacing: 6px; 
+    /* 【调整】拉开与下方分隔线的距离，解除错误绑定 */
+    margin-top:10px;
+    margin-bottom: 25px; 
+    /* 去除生硬背景块，改用轻微阴影提升质感 */
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.08); 
+  }
+
+  /* 3. 分隔线 */
+  .divider {
+    width: 45px;
+    height: 3px;
+    background-color: #222;
+    /* 【调整】分隔线与下方口号保持适中距离，形成独立过度 */
+    margin-bottom: 25px; 
+  }
+
+  /* 4. 底部标语区 */
+  .bottom-slogan {
+    width: 100%;
+  }
+
+  .slogan-zh {
+    font-size: 18px; 
+    font-weight: 600;
+    color: #222; 
+    letter-spacing: 9px; /* 大间距提升高级感 */
+    margin-bottom: 8px;
+    text-indent: 10px; 
+  }
+
+  .slogan-en {
+    font-size: 9px; 
+    color: #888888;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.4;
+    font-family: Arial, Helvetica, sans-serif; 
+  }
+
+  /* 底部红蓝双色点缀条 */
+  .footer-bar {
+    height: 12px;
+    background: linear-gradient(90deg, #004098 0%, #b30000 100%);
+    width: 100%;
+  }
+  .bar-blue { background-color: #004098; flex: 1; }
+  .bar-red { background-color: #C20C0C; flex: 1; }
+</style>
+</head>
+<body>
+
+<div class="sticker-container">
+  <!-- 学院背书 -->
+  <header class="top-section">
+    <img src="../images/学院logo.png" alt="上海交大自动化与感知学院">
+  </header>
+  
+  <!-- 核心展示区 -->
+  <main class="main-content">
+    <!-- 组合 A：实体标识 -->
+    <div class="lab-logo-box">
+      <img src="../images/lab_logo.png" class="lab-logo-img" alt="MVAS Lab Logo">
+    </div>
+    <div class="team-leader">卢俊国教授团队</div>
+    
+    <!-- 空间过渡 -->
+    <div class="divider"></div>
+    
+    <!-- 组合 B：价值观宣导 -->
+    <div class="bottom-slogan">
+      <div class="slogan-zh">感知驱动自主</div>
+      <div class="slogan-zh">视觉智领未来</div>
+      <div class="slogan-en">Perception Drives Autonomy &middot; Vision Leads The Future</div>
+    </div>
+  </main>
+
+  <!-- 底部精细收边 -->
+  <footer class="footer-bar">
+    <div class="bar-blue"></div>
+    <div class="bar-red"></div>
+  </footer>
+</div>
+
+</body>
+</html>

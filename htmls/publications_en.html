@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | MVAS Lab</title>   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>    
+</head>
+
+<body>
+    <header class="header-section">
+        <div class="language-switcher">
+            <nav class="lang-nav">
+                <a href="javascript:void(0)" class="lang-item active" id="btn-en" onclick="handleLangChange('en')">EN</a>
+                <a href="javascript:void(0)" class="lang-item" id="btn-zh" onclick="handleLangChange('zh')">中文</a>
+            </nav>
+        </div>   
+
+        <div class="header-top">           
+            <a href="../index_en.html">
+                <img src="../images/lab_logo_img.png" alt="Lab Logo Icon" height="70">
+            </a>         
+            <div class="title-center">
+                 <a href="../index_en.html"> 
+                    <img src="../images/lab_logo_txt.png" alt="Lab Name Logo" height="60">
+                 </a>
+            </div>           
+            <a href="https://en.sjtu.edu.cn/">
+                <img src="../images/sjtu_logo.png" alt="SJTU Logo" height="80">
+            </a>
+        </div> 
+        <nav class="nav-links" id="main-nav">
+            <a href="research_en.html">Research</a>
+            <a href="publications_en.html"  class="active">Publications</a>
+            <a href="team_en.html">Team</a>
+            <a href="join_en.html">Join Us</a>
+        </nav>
+    </header>     
+    
+    <div class="content-wrapper">    
+        <div id="year-filter" class="year-filter-container">
+        </div>      
+         
+        <div id="pub-container">
+            <p style="text-align: center; padding: 50px;"><i class="fas fa-spinner fa-spin"></i> Loading Publications...</p>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 The Machine Vision and Autonomous Systems Lab. All rights reserved.</p>
+    </footer>
+
+    <script src="../nav.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 读取偏好，确保在页面加载瞬间完成中英文状态同步
+            const savedLang = localStorage.getItem('lab-lang-pref') || 'en';
+            
+            // 确保 updatePublicationView 函数在 nav.js 中已被定义
+            if (typeof updatePublicationView === 'function') {
+                updatePublicationView(savedLang);
+            } else {
+                console.error('updatePublicationView function not found. Check nav.js path.');
+            }
+        });
+    </script>
+</body>
+</html>

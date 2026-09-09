@@ -1,0 +1,708 @@
+:root {
+    --main-red: #A72038;  /* rgb(167,32,56) */
+    --main-blue: #004098;   /* rgb(0,64,152) */
+    --text-gray: #555;
+    --light-gray: #f9f9f9;
+}
+
+/* --- 基础重置 --- */
+* {
+    box-sizing: border-box; /* 确保 padding 不撑开宽度 */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:  "Palatino Linotype", "Book Antiqua",Palatino , "PingFang SC", "Source Han Sans CN","Microsoft Yahei", serif;
+    /* font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft Yahei",  sans-serif; */
+    /* text-align: center; 确保中间导航链接居中 */
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;   
+}
+
+h1 { font-size: 2.2em; color: var(--main-blue); margin-bottom: 0px;}
+
+/* --- 统一容器限制 --- */
+.header-section, 
+.content-wrapper,
+.main-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* 两侧留白，防止窄屏贴边 */
+}
+
+/* --- 顶部 Header 容器 --- */
+.header-section {
+    position: relative; /* 用于定位语言切换 */    
+    padding-top: 40px; /* 为顶部语言切换留出空间 */
+}
+
+.language-switcher{
+  margin-bottom: 6px; 
+}
+
+.lang-nav {
+    position: absolute; 
+    top: 20px; right: 20px; 
+    display: flex; 
+    background: #eee; 
+    padding: 2px; 
+    border-radius: 6px;
+}
+.lang-item { 
+    padding: 4px 10px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    color: #666; 
+    font-size: 12px; 
+    border-radius: 4px; 
+}
+.lang-item.active { 
+    background: var(--main-red); 
+    color: white !important; 
+}
+
+/* Logo 栏布局 */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 20px 0;
+}
+
+.title-center {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.title-center img {
+    /* 设定中间 Logo 图片的最大高度，防止它拉伸 */
+    /* max-height: 80px;  */
+    /* 设定图片的最大宽度，防止它在窄屏时溢出 */
+    /* max-width: 50%;  */
+    /* 如果需要，可以稍微调整图片与上下Logo的对齐 */
+    vertical-align: middle; 
+}
+
+/* 导航栏优化 */
+.nav-links {
+    padding: 0px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.nav-links a {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: rgb(167, 32, 56);
+}
+
+/* 在 HTML 中为当前页添加 class="active" */
+.nav-links a.active {
+    color: rgb(167,32,56);
+    border-bottom: 2px solid rgb(167,32,56);
+}
+
+/* 媒体查询 (可选): 适应更小的屏幕，提高响应性 */
+@media (max-width: 768px) {
+    .header-section {
+        padding: 15px 3%;
+    }
+
+    .language-switcher {
+        position: relative; /* 在小屏幕上改为普通流布局 */
+        top: auto;
+        right: auto;
+        text-align: right;
+    }
+
+    .header-top{
+        flex-direction: column; /* 小屏幕上垂直堆叠 */
+        text-align: center;
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+/* --- 主体内容优化 --- */
+.content-wrapper {
+    margin-top: 20px;
+    text-align: left; /* 保持学术严谨，文字居左 */
+}
+
+.intro-section {
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    border-left: 5px solid var(--main-red); /* 标题左侧红色装饰条 */
+    padding-left: 15px;
+    margin: 40px 0 25px 0;
+    color: var(--main-red);
+}
+
+/* 团队照片容器 */
+.photo-container {
+    width: 100%;
+    margin-bottom: 35px;
+    overflow: hidden; /* 配合悬停缩放 */
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.responsive-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 550px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.photo-container:hover .responsive-img {
+    transform: scale(1.02); /* 优雅的悬停放大 */
+}
+
+/* 介绍文本样式 */
+.intro-text {
+    font-size: 17px;
+    line-height: 1.85;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 20px;
+    text-indent: 2em; /* 首行缩进，更符合中文规范 */
+}
+
+/* 链接交互 */
+.intro-text a {
+    color: rgb(0, 64, 152); /* 交大蓝 */
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease;
+    margin: 0 2px;
+}
+
+.intro-text a:hover {
+    color: #A72038;
+    border-bottom-color: #A72038;
+}
+
+/* 重点加粗 */
+.highlight {
+    color: #222;
+    font-weight: 600;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .section-title { font-size: 24px; }
+    .intro-text { font-size: 16px; text-indent: 0; } /* 移动端取消缩进增加空间感 */
+}
+
+/* --- 新闻列表样式 --- */
+/* 容器 */
+.news-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-bottom: 0px;
+}
+
+/* 单个动态项 */
+.news-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    background: #fff;
+}
+
+/* 日期部分：左侧正方形色块 */
+.news-date {
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(167, 32, 56); /* 交大红 */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    margin-right: 20px;
+    line-height: 1.2;
+}
+
+.news-date .day {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.news-date .month {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.news-date .year {
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+/* 内容部分 */
+.news-content {
+    flex-grow: 1;
+}
+
+.news-content h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.news-content p {
+    margin: 0;
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.news-content strong {
+    color: #222;
+}
+
+.news-content a {
+    color: rgb(0, 64, 152); /* 交大蓝 */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.news-content a:hover {
+    text-decoration: underline;
+}
+
+/* 响应式调整 */
+@media (max-width: 600px) {
+    .news-item {
+        flex-direction: column;
+    }
+    .news-date {
+        flex-direction: row;
+        width: auto;
+        height: auto;
+        padding: 5px 15px;
+        margin-bottom: 15px;
+        gap: 8px;
+    }
+    .news-date .year {
+        display: none; /* 手机端隐藏年份以节省空间 */
+    }
+}
+
+/* 头部布局：标题与链接并排 */
+.news-header {
+    display: flex;
+    justify-content: space-between; /* 左右分布 */
+    align-items: baseline;          /* 基线对齐，确保文字看起来整齐 */
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+/* 简化版“查看更多”文字链接 */
+.btn-link-more {
+    font-size: 14px;
+    color: #666; /* 默认灰色，不喧宾夺主 */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* 防止手机端折行 */
+}
+
+.btn-link-more:hover {
+    color: rgb(167, 32, 56); /* 悬停变色 */
+    text-decoration: underline;
+    transform: translateX(3px); /* 整体轻微右移 */
+}
+
+/* 响应式微调 */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 20px;
+    }
+    .btn-link-more {
+        font-size: 13px;
+    }
+}
+
+/* --- 视频区域样式 --- */
+.videos-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* --- Flexbox 布局实现三列对齐 --- */
+video-grid {   
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);   /* 桌面：3 列 */
+    gap: 22px;
+    /* max-width: calc(100vw - 40px); */
+    margin: 0 auto;
+    padding: 10px;
+}
+
+@media (max-width: 900px) {
+    video-grid {
+        grid-template-columns: repeat(2, 1fr);  /* 平板：2 列 */
+    }
+}
+
+@media (max-width: 600px) {
+    video-grid {
+        grid-template-columns: 1fr;              /* 手机：1 列 */
+    }
+}
+
+/* 组件样式 */
+video-card {
+    display: block;
+    /* 边框和阴影（图中似乎没有，但推荐使用） */
+    border: 1px solid #ddd;
+    border-radius: 5px; 
+    overflow: hidden;
+}
+
+video-card figure {
+    margin: 0;
+    position: relative;   /* 让标题可以绝对定位 */
+}
+video-card figure:hover .overlay-text {
+    opacity:1;
+}
+
+
+/* 封面容器 */
+video-card .thumb {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    cursor: pointer;
+    background: #000;          
+}
+
+/* 1. 封面文字样式 */
+video-card .overlay-text{
+    position: absolute;
+        display:flex;
+    padding: 0px 12px;
+        top: 0px;
+        left: 0; right:0;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 1.0rem;
+    z-index: 2;   /* 确保文字在图片之上 */
+    pointer-events: none; /* 防止文字遮挡点击事件 */
+    transition: opacity 0.3s ease; /* 让显示/隐藏更平滑 */            
+}
+
+video-card .overlay-text::before {
+    content: ""; /* 必须有 content 属性 */
+    display: inline-block;
+    width: 25px;  /* 图标宽度 */
+    height: 25px; /* 图标高度 */
+    margin-right: 8px; /* 图标与文字的间距 */
+    background-image: url('images/lab_logo_img.png'); /* 图标路径 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle; /* 垂直居中对齐 */
+}
+/* 关键逻辑：
+当父级有 .is-playing 类（视频播放中）
+且父级没有被 hover（鼠标离开）时，隐藏文字 */
+video-card.is-playing .overlay-text  {
+    opacity: 0;
+}
+
+/* 关键逻辑：
+当视频播放中，但鼠标悬停在组件上时，重新显示文字 */
+video-card.is-playing:hover .overlay-text{
+    opacity: 1;
+}
+
+video-card img,
+video-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 或  contain*/
+    display: block;
+}
+
+video-card .player {
+    aspect-ratio: 16 / 9;   
+}
+
+video-card .play-button {
+    position: absolute;
+    /* inset: 0;
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+    color: white;
+    background: rgba(0,0,0,0.35); */
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    /* 使用 CSS 伪元素或 SVG/图片来实现红色的播放图标 */
+    width: 60px;
+    height: 42px;
+    background-color: #ff0000; /* 红色背景 */
+    border-radius: 12px / 42px; /* 模拟圆角 */
+    transition: transform 0.2s, opacity 0.2s;            
+}
+
+video-card .play-button:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.9;
+}
+
+video-card .play-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* 模拟三角形播放箭头 */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 18px;
+    border-color: transparent transparent transparent #ffffff; /* 白色箭头 */
+    transform: translate(-50%, -50%);
+    margin-left: 3px; /* 微调箭头位置 */
+}
+
+/* ---项目图像文本区块布局--- */
+/* 核心容器与布局 */
+.contact-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+
+
+        .container { width: 100%; }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center; /* 垂直居中对齐 */
+            justify-content: space-between;
+        }
+
+        /* 栅格系统优化 */
+        .col-left { flex: 0 0 55%; max-width: 55%; }
+        .col-right { flex: 0 0 35%; max-width: 35%; }
+        .col-full { flex: 0 0 100%; max-width: 100%; margin-top: 30px; }
+
+        /* 地图样式 */
+        .map-wrapper {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .map-wrapper:hover { transform: translateY(-5px); }
+
+        .map {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* 联系信息样式 */
+        .contact-info-card {
+            padding: 20px 0;
+        }
+
+        .contact-name {
+            font-size: 24px;
+            color: #222;
+            margin: 0 0 10px 0;
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+
+        .contact-title {
+            font-size: 16px;
+            color: #666;
+            font-weight: normal;
+        }
+/* 
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, #A72038, transparent);
+            margin: 15px 0 25px 0;
+        } */
+
+        .info-box p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+            font-size: 15px;
+            color: #444;
+            line-height: 1.4;
+        }
+
+        .info-box i {
+            font-size: 20px;
+            color: #A72038;
+            margin-right: 12px;
+            width: 24px; /* 固定图标宽度以对齐文字 */
+            text-align: center;
+        }
+
+        .info-box a {
+            color: rgb(0, 64, 152);
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .info-box a:hover { text-decoration: underline; color: #A72038; }
+
+        /* 响应式适配 */
+        @media (max-width: 992px) {
+            .col-left, .col-right { flex: 0 0 100%; max-width: 100%; }
+            .col-right { margin-top: 30px; }
+            .contact-info-card { text-align: center; }
+            .contact-name { justify-content: center; }
+            hr { background: linear-gradient(to right, transparent, #A72038, transparent); }
+            .info-box p { justify-content: center; }
+        }
+/* ----------------------------------- */
+/* 成员卡片 (Member Card) 样式 */
+/* ----------------------------------- */
+    /* .members-section{
+        justify-items: flex-start;
+    } */
+        /* PI Section */
+        .pi-card {
+            display: flex;
+            align-items: center;
+            /* background: var(--light-gray); */
+            padding: 30px;
+            /* border-radius: 12px; */
+            gap: 30px;
+        }
+
+        /* Member Grid */
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .member-card {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            /* border: 1px solid #eee; */
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        } */
+
+        .member-photo {
+            width: 110px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 8px;
+            background: #eee;
+        }
+
+        .member-info {
+            padding-left: 15px;
+        }
+
+        .member-name {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #222;
+            margin: 0;
+        }
+
+        .member-title {
+            font-style: italic;
+            font-size: 0.9em;
+            color: var(--main-red);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .member-icons a {
+            color: #888;
+            margin-right: 12px;
+            font-size: 1.1em;
+            transition: color 0.2s;
+        }
+
+        .member-icons a:hover { color: var(--main-red); }
+
+        /* Responsive */
+        @media (max-width: 850px) {
+            .pi-card { flex-direction: column; text-align: center; }
+        }
+
+       /* 链接样式 */
+        .pub-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;        /* 固定宽度，让一排图标对齐更整齐 */
+            height: 28px;
+            margin-right: 4px;  /* 图标之间的间距 */
+            font-size: 0.95rem; /* 稍微缩小，显得精致 */
+            color: #555;        /* 默认灰色，不抢标题风头 */
+            background-color: var(--light-gray); /* 浅色背景底座 */
+            border-radius: 6px; /* 柔和的圆角 */
+            text-decoration: none;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); /* 更平滑的曲线 */
+            vertical-align: middle;
+            position: relative;
+            top: -1px;          /* 视觉微调，使其与文字中轴线对齐 */
+        }
+
+        .pub-link i {
+            margin-right: 0px;
+        }
+
+        .pub-link:hover {
+            background-color: var(--main-red);
+            color: white !important;
+            transform: translateY(-2px); /* 悬停时轻微上浮 */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 增加投影 */
+        }
+
+/* 页脚 */
+.main-footer {
+    border-top: 1px solid #eee;
+    padding: 30px 0;
+    margin-top: 60px;
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+}

@@ -1,0 +1,2448 @@
+[
+    {
+        "year": 2025,
+        "title_en": "A decision-making algorithm of multiple reactive tasks for autonomous driving sweepers based on behavior trees",
+        "authors": "Hongyi Kang, Junguo Lu, Kaixiong Li, Qinghao Zhang, Yafei Wang",
+        "venue": "IEEE/ASME Transactions on Mechatronics",
+        "pdf": "",
+        "video": "#",
+        "code": "#",
+        "doi": "10.1109/TMECH.2025.3528060",
+        "link": "#",
+        "patent": "#"
+    },
+    {
+        "year": 2025,
+        "title_en": "A full-lifecycle calibration method for camera and LiDAR in autonomous driving",
+        "authors": "Ming Wei, Junguo Lu, Nan Ye, Zhen Zhu, Qinghao Zhang, Yafei Wang",
+        "venue": "IEEE Transactions on Instrumentation and Measurement",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TIM.2025.3565783"
+    },
+    {
+        "year": 2025,
+        "title_en": "A Novel 3D Object Detection Algorithm Based on Mamba-Enhanced Grouped Feature Extraction and Multi-Scale Feature Fusion",
+        "authors": "Shouchao Wang, Junguo Lu, Ming Wei, Chen Chen, Qinghao Zhang",
+        "venue": "Proceedings of the 37th Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC65474.2025.11090660"
+    },
+    {
+        "year": 2025,
+        "title_en": "A Novel and Robust AIS-Camera Fusion Method for Situational Awareness in Autonomous Ships",
+        "authors": "Junkai Xiao, Junguo Lu, Jiachen Li, Ming Wei, Zhen Zhu, Xiaodong Han",
+        "venue": "Proceedings of the 37th Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC65474.2025.11090511"
+    },
+        {
+        "year": 2025,
+        "title_en": "A Novel Fusion Localization Algorithm for Autonomous Driving Based on Lidar, IMU and Camera",
+        "authors": "Zhijian Ma, Junguo Lu, Qinghao Zhang",
+        "venue": "Proceedings of the 37th Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC65474.2025.11090540"
+    },
+        {
+        "year": 2025,
+        "title_en": "A review on robust control of continuous time fractional-order systems",
+        "authors": "Qinghao Zhang, Junguo Lu, Zhen Zhu",
+        "venue": "Nonlinear Dynamics",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1007/s11071-025-11497-2"
+    },
+        {
+        "year": 2025,
+        "title_en": "Adaptive output regulation for permanent magnet synchronous motor (PMSM) speed servo system via time-varying internal model approach",
+        "authors": "Hui Song, Zhaowu Ping, Jiaze Hui, Yunzhi Huang, Junguo Lu",
+        "venue": "Actuators",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.3390/act14030158"
+    },
+        {
+        "year": 2025,
+        "title_en": "An extended GKYP lemma for unmanned multi-order fractional-order systems",
+        "authors": "Xiaochuang Jin, Wenkai Zheng, Xun Sun, Zhen Zhu, Qinghao Zhang, Junguo Lu",
+        "venue": " Lecture Notes in Electrical Engineering",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1007/978-981-96-3576-4_52"
+    },
+        {
+        "year": 2025,
+        "title_en": "Attitude control of flexible spacecraft subject to disturbances with time-varying frequencies",
+        "authors": "Zhaowu Ping, Xing Gao, Delai Xu, Yunzhi Huang, Canghu Jiang, Junguo Lu",
+        "venue": "International Journal of Robust and Nonlinear Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1002/rnc.8024"
+    },
+        {
+        "year": 2025,
+        "title_en": "Attitude control of flexible spacecraft subject to disturbances with unknown frequencies",
+        "authors": "Zhaowu Ping, Shengrui He, Delai Xu, Yunzhi Huang, Canghua Jiang, Junguo Lu",
+        "venue": "Journal of the Franklin Institute",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.jfranklin.2025.107746"
+    },
+        {
+        "year": 2025,
+        "title_en": "Constrained safe cooperative maneuvering of autonomous surface vehicles: A control barrier function approach",
+        "authors": "Wentao Wu, Yibo Zhang, Zhenhua Li, Junguo Lu, Weidong Zhang",
+        "venue": "IEEE Transactions on Systems, Man, and Cybernetics: Systems",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TSMC.2023.3345847"
+    },
+        {
+        "year": 2025,
+        "title_en": "Disturbance rejection of PMSM speed servo system: an adaptive observer approach",
+        "authors": "Zhicong Huo, Zhaowu Ping, Yingjie Jia, Jiaze Hui, Yunzhi Huang, Junguo Lu",
+        "venue": "Control Theory and Technology",
+        "pdf": "",
+        "video": "",
+        "doi": "10.1007/s11768-025-00261-x",
+        "link": ""
+    },
+        {
+        "year": 2025,
+        "title_en": "Dynamic analysis of the multi-lingual S2IR rumor propagation model under stochastic disturbances",
+        "authors": "Jinling Wang, Jing Liao, Junguo Lu, Jiarong Li, Mei Liu",
+        "venue": "Entropy",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.3390/e27030217"
+    },
+        {
+        "year": 2025,
+        "title_en": "Enhancing lift and dynamic stability through morphological optimization of wings for tailless flapping-wing robots",
+        "authors": "Qingcheng Guo, Chaofeng Wu, Xiaosheng Wu, Feng Cui, Junguo Lu, Josie Hughes",
+        "venue": "IEEE Robotics and Automation Letters",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/LRA.2025.3551548"
+    },
+        {
+        "year": 2025,
+        "title_en": "Estimating the region of attraction on fractional-order complex networks with time-varying delay",
+        "authors": "Feifei Du, Junguo Lu, Qinghao Zhang",
+        "venue": "Mathematics and Computers in Simulation",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.matcom.2025.02.030"
+    },
+        {
+        "year": 2025,
+        "title_en": "Event-triggered delayed impulsive control for synchronization of stochastic multi-layer networks",
+        "authors": "Hengyu Liu, Jiaxing Mao, Junguo Lu, Qinghao Zhang, Jiarong Li",
+        "venue": "Lecture Notes in Electrical Engineering",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1007/978-981-96-3568-9_22"
+    },
+        {
+        "year": 2025,
+        "title_en": "Fault estimation for singular fractional-order systems based on $H_\\infty$ unknown input observers",
+        "authors": "Qinghao Zhang, Junguo Lu, Zhen Zhu, Renjie Cui",
+        "venue": "Ocean Engineering",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.oceaneng.2025.121656"
+    },
+        {
+        "year": 2025,
+        "title_en": "Fixed-Time-Synchronized Stability and Stabilization for Chaotic Systems: Based on Norm Normalized Sign Function",
+        "authors": "Pan Ma, Jinling Wang, Junguo Lu, Jiarong Li, Mei Liu",
+        "venue": "2025 IEEE 6th International Seminar on Artificial Intelligence, Networking and Information Technology (AINIT)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/AINIT65432.2025.11035056"
+    },
+        {
+        "year": 2025,
+        "title_en": "Fuzzy modal time-scheduled control and $L_2$-gain analysis for switched nonlinear systems",
+        "authors": "Jinling Wang, Junguo Lu, Jiarong Li, Qinghai Zhang, Cheng Hu",
+        "venue": "ISA Transactions",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.isatra.2025.06.026"
+    },
+        {
+        "year": 2025,
+        "title_en": "$H_\\infty$ Filtering for Fractional-Order Systems with Distributed Delay",
+        "authors": "Yinan Chen, Junguo Lu, Zhen Zhu",
+        "venue": "Proceedings of the 37th Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC65474.2025.11090753"
+    },
+        {
+        "year": 2025,
+        "title_en": "$H_\\infty$ consensus control for high-order fully actuated multi-agent systems with external disturbances",
+        "authors": "Qinghao Zhang, Junguo Lu",
+        "venue": "International Journal of Systems Science",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1080/00207721.2025.2492301"
+    },
+        {
+        "year": 2025,
+        "title_en": "Hybrid dwell-time-based $H_\\infty$ control of switched nonlinear systems and its application to switched neural networks",
+        "authors": "Jinling Wang, Junguo Lu, Jiarong Li, Haijun Jiang, Cheng Hu",
+        "venue": "Neurocomputing",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.neucom.2025.130331"
+    },
+        {
+        "year": 2025,
+        "title_en": "LPV modeling and robust sampled-data $H_\\infty$ control of a tailless flapping wing microaerial vehicle with parameter uncertainties",
+        "authors": "Qingcheng Guo, Zhicheng Deng, Chaofeng Wu, Feng Cui, Qinghao Zhang, Junguo Lu",
+        "venue": "IEEE/ASME Transactions on Mechatronics",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TMECH.2024.3425310"
+    },
+        {
+        "year": 2025,
+        "title_en": "Neural-LAFC: A neural learning adaptive flight controller for tailless flapping-wing robots under uncertain wind disturbance conditions",
+        "authors": "Qingcheng Guo, Yichen Zhang, Jiawang Mou, Wu Liu, Xiaosheng Wu, Junguo Lu",
+        "venue": "IEEE Transactions on Aerospace and Electronic Systems",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TAES.2025.3552311"
+    },
+        {
+        "year": 2025,
+        "title_en": "Novel Necessary and Sufficient Delay-Independent Conditions for Stability of Fractional-Order Time-Delay Systems",
+        "authors": "Qinghao Zhang, Xiaochuang Jin, Junguo Lu, Zhen Zhu",
+        "venue": "IEEE Control Systems Letters",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/LCSYS.2025.3620881"
+    },
+        {
+        "year": 2025,
+        "title_en": "Novel stability and stabilization conditions for fractional-order systems with mixed delays",
+        "authors": "Yinan Chen, Junguo Lu, Qinghao Zhang, Zhen Zhu",
+        "venue": "Mathematical Methods in the Applied Sciences",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1002/mma.10668"
+    },
+        {
+        "year": 2025,
+        "title_en": "Observer-based event-triggered control for $H_\\infty$ synchronization of complex networks",
+        "authors": "Jiarong Li, Junguo Lu, Jinling Wang, Guoliang Zhang, Qinghao Zhang, Haijun Jiang",
+        "venue": "Information Sciences",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.ins.2024.121589", 
+        "link": ""
+    },
+        {
+        "year": 2025,
+        "title_en": "Observer-based robust $H_\\infty$ control for two-dimensional continuous-discrete fractional-order Roesser systems: The $0 < \\varepsilon \\le 1$ case",
+        "authors": "Jiarui Zhang, Junguo Lu, Qinghao Zhang, Zhen Zhu",
+        "venue": "Journal of Computational and Applied Mathematics",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.cam.2025.117156",
+        "link": ""
+    },
+        {
+        "year": 2025,
+        "title_en": "Pinning impulsive control for quasi-projective synchronization of stochastic multi-layer networks",
+        "authors": "Lingna Shi, Junguo Lu, Jiarong Li, Haijun Jiang, Jinling Wang, Yue Ren",
+        "venue": "Information Sciences",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.ins.2025.121896"
+    },
+        {
+        "year": 2025,
+        "title_en": "Robust $H_\\infty$ analysis and control of fractional-order systems with ellipsoidal parametric uncertainty",
+        "authors": "Longjun Zhu, Junguo Lu, Zhen Zhu, Qinghao Zhang",
+        "venue": "Mathematical Methods in the Applied Sciences",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1002/mma.10778"
+    },
+        {
+        "year": 2025,
+        "title_en": "$S^2BEV$: Lightweight, Robust, and Precise SLAM-Oriented Segmentation Bird Eye's View Mapping Approach",
+        "authors": "Yefeng Sun, Liang Gong, Jialing Dai, Bishu Gao, Jinghan Cai, Gengjie Lin, Fabien Moutarde, Junguo Lu, Chengliang Liu",
+        "venue": "2025 IEEE International Conference on Robotics and Automation (ICRA)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/ICRA55743.2025.11127686"
+    },
+        {
+        "year": 2025,
+        "title_en": "Stability analysis and stabilization of fractional-order systems with distributed delay",
+        "authors": "Yinan Chen, Junguo Lu, Zhen Zhu",
+        "venue": "International Journal of Robust and Nonlinear Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1002/rnc.7750"
+    },
+        {
+        "year": 2025,
+        "title_en": "The extended strictly positive real lemma for fractional order systems with distributed delay and application to robust control",
+        "authors": "Yinan Chen, Junguo Lu, Zhen Zhu",
+        "venue": "Circuits, Systems, and Signal Processing",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1007/s00034-025-03059-z"
+    },
+        {
+        "year": 2025,
+        "title_en": "The robust $H_2$ performance of discrete-time control systems with hybrid uncertainties",
+        "authors": "Xueliang Liu, Yangxuan Li, Junguo Lu, Zhen Zhu, Qinghao Zhang, Jinling Wang",
+        "venue": "Lecture Notes in Electrical Engineering",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1007/978-981-96-3576-4_32"
+    },
+        {
+        "year": 2025,
+        "title_en": "The robust $H_2$ performance of uncertain Markovian jump systems",
+        "authors": "Xueliang Liu, Yangxuan Li, Zhen Zhu, Qinghao Zhang, Junguo Lu, Jiarong Li",
+        "venue": "Lecture Notes in Electrical Engineering",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1007/978-981-96-3576-4_33"
+    },
+        {
+        "year": 2025,
+        "title_en": "The robust $H_\\infty$ control of fractional-order systems with distributed delay",
+        "authors": "Yinan Chen, Junguo Lu, Zhen Zhu",
+        "venue": "Computational and Applied Mathematics",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1007/s40314-025-03271-2"
+    },  
+        {
+        "year": 2024,
+        "title_en": "Robust stability and stabilization of continuous-discrete fractional-order 2D Fornasini–Marchesini second model with interval uncertainties",
+        "authors": "Zhen Zhu, Junguo Lu",
+        "venue": "Asian Journal of Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1002/asjc.3380"
+    },
+        {
+        "year": 2024,
+        "title_en": "Development of a bio-inspired tailless FWMAV with high-frequency flapping wings trajectory tracking control",
+        "authors": "Qingcheng Guo, Chaofeng Wu, Yichen Zhang, Feng Cui, Wu Liu, Xiaosheng Wu, Junguo Lu",
+        "venue": "Journal of Bionic Engineering",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1007/s42235-024-00554-y"
+    },
+        {
+        "year": 2024,
+        "title_en": "Robust asymptotic stability analysis for fractional-order systems with commensurate time delays: The $1 < \\beta \\le 2$ case",
+        "authors": "Jiarui Zhang, Junguo Lu, Qinghao Zhang",
+        "venue": "Applied Mathematics and Computation",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.amc.2024.128759"
+    },
+        {
+        "year": 2024,
+        "title_en": "BEV-CFKT: A LiDAR-camera cross-modality-interaction fusion and knowledge transfer framework with transformer for BEV 3D object detection",
+        "authors": "Ming Wei, Jiachen Li, Hongyi Kang, Yijie Huang, Junguo Lu",
+        "venue": "Neurocomputing",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.neucom.2024.127527"
+    },
+        {
+        "year": 2024,
+        "title_en": "Practical finite-time synchronization of delayed fuzzy cellular neural networks with fractional-order",
+        "authors": "Feifei Du, Junguo Lu, Qinghao Zhang",
+        "venue": "Information Sciences",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.ins.2024.120457"
+    },
+        {
+        "year": 2024,
+        "title_en": "Positive real lemmas for fractional-order two-dimensional Roesser model: The $0 < \\rho_1 \\le 1, 0 < \\rho_2 \\le 1$ case",
+        "authors": "Jiarui Zhang, Junguo Lu",
+        "venue": "Circuits, Systems, and Signal Processing",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1007/s00034-023-02560-7"
+    },
+        {
+        "year": 2024,
+        "title_en": "Robust normalization and stabilization of descriptor fractional-order systems with polytopic uncertainties in all matrices",
+        "authors": "Siyou Luo, Junguo Lu",
+        "venue": "Asian Journal of Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1002/asjc.3224"
+    },
+        {
+        "year": 2024,
+        "title_en": "Order-dependent stability and stabilization conditions for fractional-order systems with distributed delays",
+        "authors": "Yinan Chen, Junguo Lu, Xiaochuang Jin, Zhen Zhu",
+        "venue": "IEEE Transactions on Circuits and Systems II: Express Briefs",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TCSII.2023.3323287"
+    },
+        {
+        "year": 2024,
+        "title_en": "LMI stability conditions for nabla fractional order systems with order $\\alpha \\in (0, 2)$",
+        "authors": "Yiheng Wei, Linlin Zhao, Junguo Lu, Jinde Cao",
+        "venue": "IEEE Transactions on Circuits and Systems II: Express Briefs",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TCSII.2023.3322741"
+    },
+        {
+        "year": 2024,
+        "title_en": "Robust stability and stabilization of uncertain fractional-order singularly perturbed systems",
+        "authors": "Longjun Zhu, Junguo Lu, Zhen Zhu",
+        "venue": "Computational and Applied Mathematics",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1007/s40314-023-02577-3"
+    },
+        {
+        "year": 2024,
+        "title_en": "Robust $H_\\infty$ model reduction for the continuous fractional-order two-dimensional Roesser system: The $0 < \\varepsilon \\le 1$ case",
+        "authors": "Jiarui Zhang, Junguo Lu",
+        "venue": "Mathematical Methods in the Applied Sciences",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1002/mma.9683"
+    },
+        {
+        "year": 2024,
+        "title_en": "Novel admissibility and robust stabilization conditions for fractional-order singular systems with polytopic uncertainties",
+        "authors": "Qinghao Zhang, Junguo Lu",
+        "venue": "Asian Journal of Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1002/asjc.3178"
+    },
+        {
+        "year": 2024,
+        "title_en": "$H_\\infty$ consensus control for high-order fully actuated multi-agent systems with external disturbances",
+        "authors": "Qinghao Zhang, Junguo Lu",
+        "venue": "Proceedings of the 3rd Conference on Fully Actuated System Theory and Applications (FASTA)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/FASTA61401.2024.10595281"
+    },
+        {
+        "year": 2024,
+        "title_en": "Stochastic stability robustness and $H_2$ performance robustness of continuous-time Markovian jump linear systems with uncertain transition rates via $\\mu$ analysis",
+        "authors": "Chi Zhang, Junguo Lu",
+        "venue": "International Journal of Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1080/00207179.2024.2309191"
+    },
+        {
+        "year": 2024,
+        "title_en": "$H_\\infty$ control of fractional-order singularly perturbed systems: The $1 < \\nu < 2$ case",
+        "authors": "Longjun Zhu, Junguo Lu",
+        "venue": "Proceedings of the 36th Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC62350.2024.10588178"
+    },
+        {
+        "year": 2024,
+        "title_en": "Robust $H_\\infty$ model reduction for fractional-order two-dimensional continuous Roesser system: The $1 < \\varepsilon < 2$ case",
+        "authors": "Jiarui Zhang, Junguo Lu, Zhen Zhu",
+        "venue": "Proceedings of the 36th Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC62350.2024.10588345"
+    },
+        {
+        "year": 2024,
+        "title_en": "A deep learning based algorithm for truck part segmentation in large scenes",
+        "authors": "Haotian Wang, Junguo Lu, Qinghao Zhang",
+        "venue": "Chinese Control Conference (CCC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.23919/CCC63176.2024.10662827"
+    },
+        {
+        "year": 2024,
+        "title_en": "End-to-end automatic targetless calibration between low-resolution LiDARs and cameras based on cross-modal attention",
+        "authors": "Tianyang Huang, Junguo Lu, Ming Wei, Qinghao Zhang",
+        "venue": "Proceedings of the 36th Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC62350.2024.10588094"
+    },
+        {
+        "year": 2024,
+        "title_en": "An internal model based adaptive controller design for robot manipulator",
+        "authors": "Chengtao Xu, Zhaowu Ping, Yuqian He, Yunzhi Huang, Junguo Lu",
+        "venue": "Chinese Control Conference (CCC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.23919/CCC63176.2024.10662224"
+    },
+        {
+        "year": 2024,
+        "title_en": "Adaptive fault-tolerant fuzzy containment control for networked autonomous surface vehicles: A noncooperative game approach",
+        "authors": "Wentao Wu, Yibo Zhang, Zehua Jia, Junguo Lu, Weidong Zhang",
+        "venue": "IEEE Transactions on Fuzzy Systems",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TFUZZ.2024.3386849"
+    },
+        {
+        "year": 2024,
+        "title_en": "Robust and real-time road edge detection with flexible LiDAR configuration",
+        "authors": "Jiachen Li, Junguo Lu, Ming Wei, Hongyi Kang, Qinghao Zhang",
+        "venue": "Proceedings of the 36th Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC62350.2024.10587549"
+    },
+        {
+        "year": 2024,
+        "title_en": "TPV-IGKD: Image-guided knowledge distillation for 3D semantic segmentation with tri-plane-view",
+        "authors": "Jiachen Li, Junguo Lu, Ming Wei, Hongyi Kang, Qinghao Zhang",
+        "venue": "IEEE Transactions on Intelligent Transportation Systems",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TITS.2024.3361163"
+    },
+        {
+        "year": 2024,
+        "title_en": "Robust stability and stabilization conditions for fractional-order systems with distributed delays and polytopic uncertainties",
+        "authors": "Yinan Chen, Junguo Lu, Zhen Zhu, Jiarui Zhang, Qinghao Zhang",
+        "venue": "Proceedings of the 36th Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC62350.2024.10587542"
+    },
+        {
+        "year": 2024,
+        "title_en": "A LiDAR-openstreetmap matching method for vehicle global position initialization based on boundary directional feature extraction",
+        "authors": "Zexing Li, Yafei Wang, Ruitao Zhang, Fei Ding, Chongfeng Wei, Junguo Lu",
+        "venue": "IEEE Transactions on Intelligent Vehicles",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TIV.2024.3393229"
+    },
+        {
+        "year": 2024,
+        "title_en": "Autonomous maneuver decision for unmanned fighters in multi-agent BVR air combat",
+        "authors": "Fuwei Tan, Xiaohui Sun, Zhen Zhu, Qinghao Zhang, Yongning He, Junguo Lu ",
+        "venue": "Chinese Control Conference (CCC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.23919/CCC63176.2024.10661619"
+    },
+    {
+        "year": 2024,
+        "title_en": "Adaptive memory event-triggered output feedback finite-time lane-keeping control for autonomous heavy truck with roll prevention",
+        "authors": "Fei Ding, Kaicheng Zhu, Jie Liu, Chen Peng, Yafei Wang, Junguo Lu",
+        "venue": "IEEE Transactions on Fuzzy Systems",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TFUZZ.2024.3454344"
+    },
+    {
+        "year": 2023,
+        "title_en": "Robust stability of fractional-order systems with mixed uncertainties: The $0<\\alpha<1$ case",
+        "authors": "Qinghao Zhang, Junguo Lu",
+        "venue": "Communications in Nonlinear Science and Numerical Simulation",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.cnsns.2023.107511"
+    },
+    {
+        "year": 2023,
+        "title_en": "Stability and stabilization for delay delta fractional order systems: An LMI approach",
+        "authors": "Yiheng Wei, Linlin Zhao, Junguo Lu, Jinde Cao",
+        "venue": "IEEE Transactions on Circuits and Systems II: Express Briefs",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TCSII.2023.3271712"
+    },
+    {
+        "year": 2023,
+        "title_en": "Novel methods of finite-time synchronization of fractional-order delayed memristor-based Cohen–Grossberg neural networks",
+        "authors": "Feifei Du, Junguo Lu",
+        "venue": "Nonlinear Dynamics",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1007/s11071-023-08880-2"
+    },
+    {
+        "year": 2023,
+        "title_en": "Novel results on asymptotic stability and synchronization of fractional-order memristive neural networks with time delays: The $0<\\delta\\leq 1$ case",
+        "authors": "Jiarui Zhang, Junguo Lu, Xiaochuang Jin, Xingyu Yang",
+        "venue": "Neural Networks",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.neunet.2023.09.007"
+    },
+    {
+        "year": 2023,
+        "title_en": "$H_\\infty$ filtering for continuous fractional-order 2D Roesser model: The $0<\\alpha \\leq 1$ case",
+        "authors": "Jiarui Zhang, Junguo Lu",
+        "venue": "Asian Journal of Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1002/asjc.3080"
+    },
+    {
+        "year": 2023,
+        "title_en": "Finite frequency $H_\\infty$ control of fractional-order continuous-discrete 2-D Roesser models",
+        "authors": "Zhen Zhu, Junguo Lu, Qinghao Zhang",
+        "venue": "IEEE Transactions on Circuits and Systems II: Express Briefs",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TCSII.2023.3264548"
+    },
+    {
+        "year": 2023,
+        "title_en": "LMI stability condition for delta fractional order systems with region approximation",
+        "authors": "Yiheng Wei, Linlin Zhao, Junguo Lu, Fawaz E. Alsaadi, Jinde Cao",
+        "venue": "IEEE Transactions on Circuits and Systems I: Regular Papers",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TCSI.2023.3281639"
+    },
+    {
+        "year": 2023,
+        "title_en": "Switched energy and neural network-based approach for swing-up and tracking control of double inverted pendulum",
+        "authors": "Zhaowu Ping, Delai Xu, Hao Tang, Suoliang Ge, Junguo Lu, Ha Wang",
+        "venue": "IEEE Transactions on Systems, Man, and Cybernetics: Systems",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TSMC.2023.3273820"
+    },
+    {
+        "year": 2023,
+        "title_en": "Adaptive finite-time synchronization of fractional-order delayed fuzzy cellular neural networks",
+        "authors": "Feifei Du, Junguo Lu",
+        "venue": "Fuzzy Sets and Systems",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.fss.2023.02.001"
+    },
+    {
+        "year": 2023,
+        "title_en": "Novel stability and stabilization conditions of linear fractional-order time-delay systems using free matrix approach",
+        "authors": "Xiaochuang Jin, Junguo Lu, Qinghao Zhang",
+        "venue": "IEEE Transactions on Circuits and Systems II: Express Briefs",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TCSII.2023.3237563"
+    },
+    {
+        "year": 2023,
+        "title_en": "Delay-dependent and order-dependent asymptotic stability conditions for Riemann–Liouville fractional-order systems with time delays",
+        "authors": "Xiaochuang Jin, Junguo Lu, Qinghao Zhang",
+        "venue": "Computational and Applied Mathematics",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1007/s40314-023-02257-2"
+    },
+    {
+        "year": 2023,
+        "title_en": "Finite-time synchronization of fractional-order delayed fuzzy cellular neural networks with parameter uncertainties",
+        "authors": "Feifei Du, Junguo Lu",
+        "venue": "IEEE Transactions on Fuzzy Systems",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TFUZZ.2022.3214070"
+    },
+    {
+        "year": 2023,
+        "title_en": "Delay-dependent finite-time synchronization criterion of fractional-order delayed complex networks",
+        "authors": "Feifei Du, Junguo Lu, Qinghao Zhang",
+        "venue": "Communications in Nonlinear Science and Numerical Simulation",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.cnsns.2022.107072"
+    },
+    {
+        "year": 2023,
+        "title_en": "Order-dependent and delay-dependent conditions for stability and stabilization of fractional-order time-varying delay systems using small gain theorem",
+        "authors": "Xiaochuang Jin, Junguo Lu",
+        "venue": "Asian Journal of Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1002/asjc.2931"
+    },
+    {
+        "year": 2023,
+        "title_en": "Delay-dependent and order-dependent conditions for stability and stabilization of fractional-order memristive neural networks with time-varying delays",
+        "authors": "Xiaochuang Jin, Junguo Lu, Qinghao Zhang",
+        "venue": "Neurocomputing",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.neucom.2022.12.006"
+    },
+    {
+        "year": 2023,
+        "title_en": "Robust stability and robust $H_2$ performance of discrete-time Markovian jump linear systems with uncertain transition probabilities",
+        "authors": "Chi Zhang, Junguo Lu",
+        "venue": "International Journal of Robust and Nonlinear Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1002/rnc.6476"
+    },
+    {
+        "year": 2023,
+        "title_en": "Swing-up and tracking control of double inverted pendulum based on energy control and approximate output regulation",
+        "title_zh": "基于能量控制与近似输出调节的二级倒立摆起摆和跟踪控制",
+        "authors": "Delai Xu, Zhaowu Ping, Wenjun Zhang, Yunzhi Huang, Suoliang Ge, Junguo Lu",
+        "venue": "Kongzhi Lilun Yu Yingyong/Control Theory and Applications",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.7641/CTA.2022.11307"
+    },
+    {
+        "year": 2023,
+        "title_en": "Some remarks on the Gronwall integral inequality",
+        "authors": "Feifei Du, Junguo Lu",
+        "venue": "Mathematical Methods in the Applied Sciences",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1002/mma.8624"
+    },
+    {
+        "year": 2023,
+        "title_en": "Admissibility and robust stabilization of fractional-order singular discrete systems with interval uncertainties",
+        "authors": "Qinghao Zhang, Junguo Lu",
+        "venue": "International Journal of General Systems",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1080/03081079.2023.2223755"
+    },
+    {
+        "year": 2023,
+        "title_en": "Improved quasi-uniform stability criterion of fractional-order neural networks with discrete and distributed delays",
+        "authors": "Feifei Du, Junguo Lu",
+        "venue": "Asian Journal of Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1002/asjc.2758"
+    },
+    {
+        "year": 2023,
+        "title_en": "Robust stability of linear time-invariant systems with hybrid uncertainties",
+        "authors": "Yangxuan Li, Junguo Lu",
+        "venue": "Proceedings - 2023 International Conference on Automation, Control and Electronics Engineering (CACEE)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CACEE61121.2023.00017"
+    },
+    {
+        "year": 2023,
+        "title_en": "Stability analysis and stabilisation of continuous-discrete fractional-order 2D Fornasini–Marchesini first model",
+        "authors": "Jiarui Zhang, Junguo Lu, Zhen Zhu",
+        "venue": "International Journal of Systems Science",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1080/00207721.2022.2122901"
+    },
+    {
+        "year": 2023,
+        "title_en": "A novel scenario-based path planning method for narrow parking space",
+        "authors": "Kaixiong Li, Junguo Lu, Qinghao Zhang",
+        "venue": "Proceedings of the 35th Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC58219.2023.10327190"
+    },
+    {
+        "year": 2023,
+        "title_en": "Stabilization of continuous-discrete fractional-order 2D Roesser model via reinforcement learning and linear matrix equalities",
+        "authors": "Zhen Zhu, Longjun Zhu, Qinghao Zhang, Junguo Lu",
+        "venue": "Proceedings of the 35th Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC58219.2023.10327069"
+    },
+    {
+        "year": 2023,
+        "title_en": "A novel route planning approach based on energy-based action sample reinforcement learning",
+        "authors": "Yuxiang Li, Junguo Lu, Zhen Zhu, Qinghao Zhang",
+        "venue": "Proceedings of the 35th Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC58219.2023.10327188"
+    },
+    {
+        "year": 2023,
+        "title_en": "Novel robust stability conditions of fractional-order systems with structured uncertain parameters based on parameter-dependent functions: the $0 < \\alpha < 1$ case",
+        "authors": "Chenfei Kang, Junguo Lu, Xuyi Qiu, Qinghao Zhang",
+        "venue": "International Journal of General Systems",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1080/03081079.2022.2132489"
+    },
+    {
+        "year": 2023,
+        "title_en": "Internal model based adaptive speed controller design for PMSM servo system",
+        "authors": "Hui Song, Zhaowu Ping, Yingjie Jia, Yunzhi Huang, Junguo Lu",
+        "venue": "2023 9th International Conference on Mechanical and Electronics Engineering (ICMEE)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/ICMEE59781.2023.10525455"
+    },
+    {
+        "year": 2022,
+        "title_en": "Exploring a new discrete delayed Mittag–Leffler matrix function to investigate finite-time stability of Riemann–Liouville fractional-order delay difference systems",
+        "authors": "Feifei Du, Junguo Lu",
+        "venue": "Mathematical Methods in the Applied Sciences",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1002/mma.8342"
+    },
+    {
+        "year": 2022,
+        "title_en": "Global position tracking control of PMSM servo system via internal model approach and experimental validations",
+        "authors": "Zhaowu Ping, Yingjie Jia, Yaoyi Li, Yunzhi Huang, Hai Wang, Junguo Lu",
+        "venue": "International Journal of Robust and Nonlinear Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1002/rnc.6317"
+    },
+    {
+        "year": 2022,
+        "title_en": "$H_−/H_\\infty$ fault detection observer design for fractional-order singular systems in finite frequency domains",
+        "authors": "Renjie Cui, Junguo Lu",
+        "venue": "ISA Transactions",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.isatra.2022.02.042"
+    },
+    {
+        "year": 2022,
+        "title_en": "New results on finite-time stability of fractional-order Cohen–Grossberg neural networks with time delays",
+        "authors": "Feifei Du, Junguo Lu",
+        "venue": "Asian Journal of Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1002/asjc.2641"
+    },
+    {
+        "year": 2022,
+        "title_en": "Delay-dependent criteria for robust stability and stabilization of fractional-order time-varying delay systems",
+        "authors": "Xiaochuang Jin, Junguo Lu",
+        "venue": "European Journal of Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.ejcon.2022.100704"
+    },
+    {
+        "year": 2022,
+        "title_en": "Complete robust stability domain of fractional-order linear time-invariant single parameter-dependent systems with the order $0 < \\alpha < 2$",
+        "authors": "Junguo Lu, Ruonan Qian, Qinghao Zhang",
+        "venue": "IEEE Transactions on Circuits and Systems II: Express Briefs",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TCSII.2022.3176490"
+    },
+    {
+        "year": 2022,
+        "title_en": "Solution analysis and novel admissibility conditions of SFOSs: The $1 < \\alpha < 2$ case",
+        "authors": "Qinghao Zhang, Junguo Lu, Jie Xu, Yangquan Chen",
+        "venue": "IEEE Transactions on Systems, Man, and Cybernetics: Systems",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TSMC.2021.3113673"
+    },
+    {
+        "year": 2022,
+        "title_en": "Order-dependent LMI-based stability and stabilization conditions for fractional-order time-delay systems using small gain theorem",
+        "authors": "Xiaochuang Jin, Junguo Lu",
+        "venue": "International Journal of Robust and Nonlinear Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1002/rnc.6156"
+    },
+    {
+        "year": 2022,
+        "title_en": "Optimal output regulation for PMSM speed servo system using approximate dynamic programming",
+        "authors": "Zhaowu Ping, Yingjie Jia, Bangguo Xiong, Hongwei Zhang, Junguo Lu",
+        "venue": "Science China Information Sciences",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1007/s11432-022-3682-x"
+    },
+    {
+        "year": 2022,
+        "title_en": "Finite-time stability of fractional-order fuzzy cellular neural networks with time delays",
+        "authors": "Feifei Du, Junguo Lu",
+        "venue": "Fuzzy Sets and Systems",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.fss.2021.08.011"
+    },
+    {
+        "year": 2022,
+        "title_en": "LMI-based stability analysis of continuous-discrete fractional-order 2D Roesser model",
+        "authors": "Zhen Zhu, Junguo Lu, Qinghao Zhang",
+        "venue": "IEEE Transactions on Circuits and Systems II: Express Briefs",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TCSII.2021.3131183"
+    },
+    {
+        "year": 2022,
+        "title_en": "An improved neural network tracking control strategy for linear motor-driven inverted pendulum on a cart and experimental study",
+        "authors": "Zhaowu Ping, Mengya Zhou, Chenxi Liu, Yunzhi Huang, Ming Yu, Junguo Lu ",
+        "venue": "Neural Computing and Applications",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1007/s00521-021-05986-9"
+    },
+    {
+        "year": 2022,
+        "title_en": "LMI-based stability conditions for continuous fractional-order two-dimensional Fornasini-Marchesini first model",
+        "authors": "Zhen Zhu, Junguo Lu",
+        "venue": "IEEE Transactions on Circuits and Systems II: Express Briefs",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TCSII.2021.3105743"
+    },
+    {
+        "year": 2022,
+        "title_en": "An improved neural network tracking control strategy for linear motor-driven inverted pendulum on a cart and experimental study",
+        "authors": "Zhaowu Ping, Mengya Zhou, Chenxi Liu, Yunzhi Huang, Ming Yu, Junguo Lu",
+        "venue": "Neural Computing and Applications",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1007/s00521-021-05986-9"
+    },
+    {
+        "year": 2022,
+        "title_en": "LMI-based stability conditions for continuous fractional-order two-dimensional Fornasini-Marchesini first model",
+        "authors": "Zhen Zhu, Junguo Lu",
+        "venue": "IEEE Transactions on Circuits and Systems II: Express Briefs",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TCSII.2021.3105743"
+    },
+    {
+        "year": 2022,
+        "title_en": "Maximal perturbation bounds for the robust stability of fractional-order linear time-invariant parameter-dependent systems",
+        "authors": "Ruonan Qian, Junguo Lu, Qinghao Zhang",
+        "venue": "IEEE Transactions on Circuits and Systems II: Express Briefs",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TCSII.2021.3119656"
+    },
+    {
+        "year": 2022,
+        "title_en": "Robust normalization and stabilization of descriptor fractional-order systems with uncertainties in all matrices",
+        "authors": "Siyou Luo, Junguo Lu, Xuyi Qiu",
+        "venue": "Journal of the Franklin Institute",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.jfranklin.2021.12.016"
+    },
+    {
+        "year": 2022,
+        "title_en": "Finite-time stability of fractional-order delayed Cohen–Grossberg memristive neural networks: a novel fractional-order delayed Gronwall inequality approach",
+        "authors": "Feifei Du, Junguo Lu",
+        "venue": "International Journal of General Systems",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1080/03081079.2021.1985487"
+    },
+    {
+        "year": 2022,
+        "title_en": "On the asymptotic stability for linear multi-order fractional-order systems with time delays",
+        "authors": "Xiaochuang Jin, Junguo Lu",
+        "venue": "Proceedings of the 34th Chinese Control and Decision Conference(CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC55256.2022.10034267"
+    },
+    {
+        "year": 2022,
+        "title_en": "Deep reinforcement learning in POMDPs for 3-D palletization problem",
+        "authors": "Ai Bo, Junguo Lu, Chunyu Zhao",
+        "venue": "Proceedings - 2022 Chinese Automation Congress (CAC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CAC57257.2022.10054950"
+    },
+    {
+        "year": 2022,
+        "title_en": "Experimental output regulation of permanent magnet synchronous motor position servo system: An internal model-based two-step control approach",
+        "authors": "Zhaowu Ping, Yang Song, Yaoyi Li, Yunzhi Huang, Junguo Lu",
+        "venue": "Transactions of the Institute of Measurement and Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1177/01423312211030241"
+    },
+    {
+        "year": 2022,
+        "title_en": "Straight line detection algorithm of truck point cloud based on statistical line chart",
+        "authors": "Ming Wei, Junguo Lu, Siyou Luo, Qinghao Zhang, Lunkai Zhang",
+        "venue": "Proceedings of the 34th Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC55256.2022.10034185"
+    },
+    {
+        "year": 2021,
+        "title_en": "Explicit solutions and asymptotic behaviors of Caputo discrete fractional-order equations with variable coefficients",
+        "authors": "Feifei Du, Junguo Lu",
+        "venue": "Chaos, Solitons and Fractals",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.chaos.2021.111490"
+    },
+    {
+        "year": 2021,
+        "title_en": "New approach to finite-time stability for fractional-order BAM neural networks with discrete and distributed delays",
+        "authors": "Feifei Du, Junguo Lu",
+        "venue": "Chaos, Solitons and Fractals",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.chaos.2021.111225"
+    },
+    {
+        "year": 2021,
+        "title_en": "Laser beam pointing control based on differential dual-view imaging",
+        "title_zh":"基于差分成像的激光光束指向性控制",
+        "authors": "Hongwei Yang, Yimian Du, Lidong Lü, Wei Tao, Junguo Lu, Hui Zhao",
+        "venue": "Zhongguo Jiguang/Chinese Journal of Lasers",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.3788/CJL202148.1705002"
+    },
+    {
+        "year": 2021,
+        "title_en": "New criteria on finite-time stability of fractional-order Hopfield neural networks with time delays",
+        "authors": "Feifei Du, Junguo Lu",
+        "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TNNLS.2020.3016038"
+    },
+    {
+        "year": 2021,
+        "title_en": "A robust output regulation approach for trajectory tracking control of ball and plate system",
+        "authors": "Kunpeng Li, Zhaowu Ping, Yunzhi Huang, Junguo Lu",
+        "venue": "Chinese Control Conference (CCC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.23919/CCC52363.2021.9550278"
+    },
+    {
+        "year": 2021,
+        "title_en": "Robust stability and stabilization of hybrid fractional-order multi-dimensional systems with interval uncertainties: An LMI approach",
+        "authors": "Zhen Zhu, Junguo Lu",
+        "venue": "Applied Mathematics and Computation",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.amc.2021.126075"
+    },
+    {
+        "year": 2021,
+        "title_en": "Nonlinear speed tracking control of PMSM servo system: A global robust output regulation approach",
+        "authors": "Zhaowu Ping, Yaoyi Li, Yang Song, Yunzhi Huang, Hai Wang, Junguo Lu",
+        "venue": "Control Engineering Practice",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.conengprac.2021.104832"
+    },
+    {
+        "year": 2021,
+        "title_en": "Necessary and sufficient conditions for extended strictly positive realness of singular fractional-order systems",
+        "authors": "Qinghao Zhang, Junguo Lu",
+        "venue": "IEEE Transactions on Circuits and Systems II: Express Briefs",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TCSII.2020.3033162"
+    },
+    {
+        "year": 2021,
+        "title_en": "Novel master-slave synchronization conditions for chaotic fractional-order Lur'e systems based on small gain theorem",
+        "authors": "Xiaochuang Jin, Junguo Lu",
+        "venue": "IEEE Transactions on Circuits and Systems II: Express Briefs",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TCSII.2020.3047441"
+    },
+    {
+        "year": 2021,
+        "title_en": "Robust stability and stabilization of multi-order fractional-order systems with interval uncertainties: An LMI approach",
+        "authors": "Junguo Lu, Zhen Zhu, Yingdong Ma",
+        "venue": "International Journal of Robust and Nonlinear Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": ""
+    },
+    {
+        "year": 2021,
+        "title_en": "Global robust output regulation of a class of MIMO nonlinear systems by nonlinear internal model control",
+        "authors": "Zhaowu Ping, Yaoyi Li, Yunzhi Huang, Junguo Lu, Hai Wang",
+        "venue": "International Journal of Robust and Nonlinear Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1002/rnc.5457"
+    },
+    {
+        "year": 2021,
+        "title_en": "Experimental output regulation of linear motor driven inverted pendulum with friction compensation",
+        "authors": "Zhaowu Ping, Chenxi Liu, Yunzhi Huang, Ming Yu, Junguo Lu",
+        "venue": "IEEE Transactions on Systems, Man, and Cybernetics: Systems",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TSMC.2019.2931740"
+    },
+    {
+        "year": 2021,
+        "title_en": "LMI-based robust stability analysis of discrete-time fractional-order systems with interval uncertainties",
+        "authors": "Zhen Zhu, Junguo Lu",
+        "venue": "IEEE Transactions on Circuits and Systems I: Regular Papers",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TCSI.2021.3053701"
+    },
+    {
+        "year": 2021,
+        "title_en": "$H_\\infty$ control for singular fractional-order interval systems: The $0 < \\alpha < 1$ case",
+        "authors": "Qinghao Zhang, Junguo Lu",
+        "venue": "ISA Transactions",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.isatra.2020.10.003"
+    },
+    {
+        "year": 2021,
+        "title_en": "Bounded real lemmas for singular fractional-order systems: The $1 < \\alpha < 2$ case",
+        "authors": "Qinghao Zhang, Junguo Lu",
+        "venue": "IEEE Transactions on Circuits and Systems II: Express Briefs",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TCSII.2020.3007996"
+    },
+    {
+        "year": 2021,
+        "title_en": "Time domain solution analysis and novel admissibility conditions of singular fractional-order systems",
+        "authors": "Qinghao Zhang, Junguo Lu, Yingdong Ma, Yangquan Chen",
+        "venue": "IEEE Transactions on Circuits and Systems I: Regular Papers",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TCSI.2020.3036412"
+    },
+    {
+        "year": 2021,
+        "title_en": "New criterion for finite-time synchronization of fractional order memristor-based neural networks with time delay",
+        "authors": "Feifei Du, Junguo Lu",
+        "venue": "Applied Mathematics and Computation",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.amc.2020.125616"
+    },
+    {
+        "year": 2021,
+        "title_en": "New criteria for finite-time stability of fractional order memristor-based neural networks with time delays",
+        "authors": "Feifei Du, Junguo Lu",
+        "venue": "Neurocomputing",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.neucom.2020.09.039"
+    },
+    {
+        "year": 2021,
+        "title_en": "Exact bounds for robust stability of output feedback controlled fractional-order systems with single parameter perturbations",
+        "authors": "Qinghao Zhang, Junguo Lu, Yangquan Chen",
+        "venue": "International Journal of Robust and Nonlinear Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1002/rnc.5269"
+    },
+    {
+        "year": 2021,
+        "title_en": "Robust $H_\\infty$ decentralized control of the fractional-order interconnected system with element-bounded uncertainties over finite frequency ranges",
+        "authors": "Bingyue Liu, Junguo Lu",
+        "venue": "Proceeding - 2021 China Automation Congress(CAC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CAC53003.2021.9727245"
+    },
+    {
+        "year": 2021,
+        "title_en": "Robust stability and stabilization of fractional-order systems with polytopic uncertainties via homogeneous polynomial parameter-dependent matrix forms",
+        "authors": "Siyou Luo, Junguo Lu",
+        "venue": "International Journal of General Systems",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1080/03081079.2021.1976774"
+    },
+    {
+        "year": 2021,
+        "title_en": "A new laser-based loop detection method for lane way environment 3D mapping",
+        "authors": "Zeyao Huang, Junguo Lu",
+        "venue": "Proceeding - 2021 China Automation Congress(CAC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CAC53003.2021.9728410"
+    },
+    {
+        "year": 2021,
+        "title_en": "Robust stability and stabilization of commensurate fractional multi-order systems with norm-bounded uncertainties",
+        "authors": "Xinyu Sha, Junguo Lu",
+        "venue": "Proceedings of the 33rd Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC52312.2021.9602184"
+    },
+    {
+        "year": 2021,
+        "title_en": "Novel robust $H_\\infty$ Stability and stabilization conditions for fractional-order systems with convex polytopic uncertainties",
+        "authors": "Hanru Tang, Junguo Lu, Dong Yang",
+        "venue": "Proceedings of the 33rd Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC52312.2021.9602606"
+    },
+    {
+        "year": 2021,
+        "title_en": "Parameter-dependent LMI condition for stability analysis of fractional-order linear time-invariant single parameter-dependent systems",
+        "authors": "Ruonan Qian, Junguo Lu, Yue Hu",
+        "venue": "Proceeding - 2021 China Automation Congress (CAC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CAC53003.2021.9728069"
+    },
+    {
+        "year": 2021,
+        "title_en": "$H_−/H_\\infty$ fault detection observer design for fractional-order singular systems",
+        "authors": "Renjie Cui, Junguo Lu, Yue  Hu",
+        "venue": "Proceeding - 2021 China Automation Congress (CAC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CAC53003.2021.9728636"
+    },
+    {
+        "year": 2021,
+        "title_en": "$H_\\infty$ performance robustness analysis of fractional-order systems with structured perturbations",
+        "authors": "Qinghao Zhang, Dong Yang, Yanlong Wu, Junguo Lu",
+        "venue": "Proceedings of the 33rd Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC52312.2021.9602106"
+    },
+    {
+        "year": 2021,
+        "title_en": "$H_\\infty$ model reduction for fractional-order linear systems",
+        "authors": "Guanyou Mo, Junguo Lu, Dong Yang, Yanlong Wu",
+        "venue": "Proceedings of the 33rd Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC52312.2021.9602194"
+    },
+    {
+        "year": 2021,
+        "title_en": "3D point clouds classification and segmentation network based on global features",
+        "authors": "Ziyang Gong, Jiawei Wang, Chenfei Kang, Yue Hu, Annan Wang, Junguo Lu",
+        "venue": "Proceeding - 2021 China Automation Congress (CAC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CAC53003.2021.9728254"
+    },
+    {
+        "year": 2020,
+        "title_en": "Positive real lemmas for singular fractional-order systems: The $0 < \\alpha < 1$ case",
+        "authors": "Qinghao Zhang, Junguo Lu",
+        "venue": "IET Control Theory and Applications",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1049/iet-cta.2020.0527"
+    },
+    {
+        "year": 2020,
+        "title_en": "One-to-one air-combat maneuver strategy based on improved TD3 algorithm",
+        "authors": "Xuyi Qiu, Ziyu Yao, Fuwei Tan, Zhen Zhu, Junguo Lu",
+        "venue": "Proceedings - 2020 Chinese Automation Congress (CAC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CAC51589.2020.9327310"
+    },
+    {
+        "year": 2020,
+        "title_en": "An internal model approach for speed tracking control of PMSM driven electric vehicle",
+        "authors": "Yaoyi Li, Zhaowu Ping, Yunzhi Huang, Junguo Lu",
+        "venue": "IEEE International Conference on Control and Automation (ICCA)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": ""
+    },
+    {
+        "year": 2020,
+        "title_en": "Robust stability of output feedback controlled fractional-order systems with structured uncertainties in all system coefficient matrices",
+        "authors": "Qinghao Zhang, Junguo Lu",
+        "venue": "ISA Transactions",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/ICCA51439.2020.9264321"
+    },
+    {
+        "year": 2020,
+        "title_en": "Synchronization of fractional order memristor-based inertial neural networks with time delay",
+        "authors": "Xingyu Yang, Junguo Lu",
+        "venue": "Proceedings of the 32nd Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC49329.2020.9164036"
+    },
+    {
+        "year": 2020,
+        "title_en": "A novel method for curved scene text detection",
+        "authors": "Chao He, Junguo Lu",
+        "venue": "Proceedings of the 32nd Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC49329.2020.9164414"
+    },
+    {
+        "year": 2020,
+        "title_en": "A new effective parallel plane segmentation method for point cloud based on dimension reduction correction",
+        "authors": "Lunkai Zhang, Junguo Lu,Yubin Miao",
+        "venue": "Proceedings of the 32nd Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC49329.2020.9164312"
+    },
+    {
+        "year": 2020,
+        "title_en": "A novel data augmentation method using style-based GAN for robust pulmonary nodule segmentation",
+        "authors": "Haoqi Shi, Junguo Lu, Qianjun Zhou",
+        "venue": "Proceedings of the 32nd Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC49329.2020.9164303"
+    },
+    {
+        "year": 2020,
+        "title_en": "Discrete-time neural network approach for tracking control of spherical inverted pendulum",
+        "authors": "Zhaowu Ping, Huanbo Hu, Yunzhi Huang, Suoliang Ge, Junguo Lu",
+        "venue": "IEEE Transactions on Systems, Man, and Cybernetics: Systems",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TSMC.2018.2834560"
+    },
+    {
+        "year": 2020,
+        "title_en": "An output regulation approach for swing-up and tracking control of double pendulum on a cart",
+        "authors": "Mengya Zhou, Zhaowu Ping, Yunzhi Huang, Junguo Lu",
+        "venue": "Chinese Control Conference (CCC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.23919/CCC50068.2020.9189632"
+    },
+    {
+        "year": 2020,
+        "title_en": "Distributed leader-following formation control for mobile robots with unknown amplitudes of leader's velocity",
+        "authors": "Xu Zhang, Xiao Yu, Junguo Lu, Weiyao Lan",
+        "venue": "Chinese Control Conference (CCC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.23919/CCC50068.2020.9188817"
+    },
+    {
+        "year": 2020,
+        "title_en": "Finite-time stability of neutral fractional order time delay systems with Lipschitz nonlinearities",
+        "authors": "Feifei Du, Junguo Lu",
+        "venue": "Applied Mathematics and Computation",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.amc.2020.125079"
+    },
+    {
+        "year": 2020,
+        "title_en": "New criterion for finite-time stability of fractional delay systems",
+        "authors": "Feifei Du, Junguo Lu",
+        "venue": "Applied Mathematics Letters",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.aml.2020.106248"
+    },
+    {
+        "year": 2020,
+        "title_en": "On continuous-time constrained stochastic linear–quadratic control",
+        "authors": "Weiping Wu, Jianjun Gao, Junguo Lu, Xun Li",
+        "venue": "Automatica",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.automatica.2020.108809"
+    },
+    {
+        "year": 2020,
+        "title_en": "Internal model control of PMSM position servo system: Theory and experimental results",
+        "authors": "Zhaowu Ping, Tao Wang, Yunzhi Huang, Hai Wang, Junguo Lu, Yaoyi  Li",
+        "venue": "IEEE Transactions on Industrial Informatics",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TII.2019.2935248"
+    },
+    {
+        "year": 2020,
+        "title_en": "Position control of spherical inverted pendulum via improved discrete-time neural network approach",
+        "authors": "Chenxi Liu, Zhaowu Ping, Yunzhi Huang, Junguo Lu, Hai Wang",
+        "venue": "Nonlinear Dynamics",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1007/s11071-019-05455-y"
+    },
+    {
+        "year": 2019,
+        "title_en": "Stability analysis of nonlinear oscillator networks based on the mechanism of cascading failures",
+        "authors": "Yubo Huang, Hongli Dong, Weidong Zhang, Junguo Lu",
+        "venue": "Chaos, Solitons and Fractals",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.chaos.2019.07.030"
+    },
+    {
+        "year": 2019,
+        "title_en": "An improved discrete-time neural network controller design for spherical inverted pendulum position tracking system",
+        "authors": "Chenxi Liu, Zhaowu Ping, Yunzhi Huang, Junguo Lu",
+        "venue": "Chinese Control Conference (CCC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.23919/ChiCC.2019.8866238"
+    },
+    {
+        "year": 2019,
+        "title_en": "Nonlinear Internal Model Based Two-Step Controller Design for PMSM Position Servo System",
+        "authors": "Tao Wang, Zhaowu Ping, Yunzhi Huang, Junguo Lu",
+        "venue": "IEEE International Conference on Control and Automation (ICCA)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/ICCA.2019.8899494"
+    },
+    {
+        "year": 2019,
+        "title_en": "Hierarchical Recurrent and Convolutional Neural Network Based on Attention for Chinese Document Classification",
+        "authors": "Lianxin Lei, Junguo Lu, Shaohui Ruan",
+        "venue": "Proceedings of the 31st Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC.2019.8833090"
+    },
+    {
+        "year": 2019,
+        "title_en": "A New Semantic Segmentation Method of Point Cloud Based on PointNet and VoxelNet",
+        "authors": "Weihang Zhou, Junguo Lu,  Wenlong Yue",
+        "venue": "Proceedings of the 31st Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC.2019.8832574"
+    },
+    {
+        "year": 2019,
+        "title_en": "A Novel Method for Text Detection in Arbitrary Scenes Based on Multi-scale Segmentation Networks",
+        "authors": "Kai Dai, Junguo Lu, Shaohui Ruan",
+        "venue": "Proceedings of the 31st Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC.2019.8833432"
+    },
+    {
+        "year": 2018,
+        "title_en": "Speed Tracking Control of Permanent Magnet Synchronous Motor by a Novel Two-step Internal Model Control Approach",
+        "authors": "Zhaowu Ping, Qingchuan Ma, Tao Wang, Yunzhi Huang, Junguo Lu",
+        "venue": "International Journal of Control Automation and Systems",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1007/s12555-018-0255-y"
+    },
+    {
+        "year": 2018,
+        "title_en": "A Failure-Tolerant Approach to Synchronous Formation Control of Mobile Robots under Communication Delays",
+        "authors": "Zhe Liu, Hesheng Wang, Lingyun Xu, Yunhui Liu, Junguo Lu",
+        "venue": "Proceedings - IEEE International Conference on Robotics and Automation (ICRA)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/ICRA.2018.8460660"
+    },
+    {
+        "year": 2018,
+        "title_en": "Fault detection for semiconductor quality control based on Spark using data mining technology",
+        "authors": "Pengfei Tong, Junguo Lu, Kihyeon Yun",
+        "venue": "Proceedings of the 30th Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC.2018.8407886"
+    },
+    {
+        "year": 2018,
+        "title_en": "A new plane segmentation method of point cloud based on mean shift and RANSAC",
+        "authors": "Wenlong Yue, Junguo Lu, Weihang Zhou, Yubin Miao",
+        "venue": "Proceedings of the 30th Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC.2018.8407394"
+    },
+    {
+        "year": 2018,
+        "title_en": "A novel method for fast arbitrary-oriented scene text detection",
+        "authors": "Shaohui Ruan, Junguo Lu, Fengming Xie, Zhongxiao Jin",
+        "venue": "Proceedings of the 30th Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC.2018.8407393"
+    },
+    {
+        "year": 2018,
+        "title_en": "Fractional order $PI^{\\lambda}$ controller synthesis for steam turbine speed governing systems",
+        "authors": "Kai Chen, Rongnian Tang, Chuang Li, Junguo Lu",
+        "venue": "ISA Transactions",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.isatra.2018.03.017"
+    },
+    {
+        "year": 2018,
+        "title_en": "Dual SIMC-PI Controller Design for Cascade Implement of Input Resetting Control with Application",
+        "authors": "Bo Sun, Sigurd Skogestad, Junguo Lu, Weidong Zhang",
+        "venue": "Industrial and Engineering Chemistry Research",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1021/acs.iecr.7b05047"
+    },
+    {
+        "year": 2018,
+        "title_en": "A control problem of PM synchronous motor by two-step internal model controller design",
+        "authors": "Qingchuan Ma, Zhaowu Ping, Yunzhi Huang, Junguo Lu",
+        "venue": "2017 Asian Control Conference (ASCC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/ASCC.2017.8287174"
+    },
+    {
+        "year": 2017,
+        "title_en": "Actuator-fault-tolerant trajectory tracking control for multi-robot system under directed network topologies and communication delays",
+        "authors": "Zhe Liu, Junguo Lu, Hesheng Wang, Yunhui Liu",
+        "venue": "Chinese Control Conference (CCC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.23919/ChiCC.2017.8028420"
+    },
+    {
+        "year": 2017,
+        "title_en": "Speed tracking and nonlinear disturbance rejection of PM synchronous motor by internal model design",
+        "authors": "Zhaowu Ping, Qingchuan Ma, Hao Tang, Qi Tian, Junguo Lu",
+        "venue": "International Journal of Control, Automation and Systems",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1007/s12555-016-0288-z"
+    },
+    {
+        "year": 2017,
+        "title_en": "Decentralized robust $H_\\infty$ controller design for fractional order interconnected systems with element-bounded uncertainties",
+        "authors": "Fuzheng Chen, Junguo Lu, Yubin Miao",
+        "venue": "Proceedings of the 29th Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC.2017.7978987"
+    },
+    {
+        "year": 2017,
+        "title_en": "Fault detection observer design for fractional-order systems",
+        "authors": "Wei Zhong, Junguo Lu, Yubin Miao",
+        "venue": "Proceedings of the 29th Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC.2017.7978988"
+    },
+    {
+        "year": 2017,
+        "title_en": "Robust $H_\\infty$ analysis and control of fractional-order systems with convex polytopic uncertainties",
+        "authors": "Fengming Xie, Junguo Lu, Yunan Zhao, Yubin Miao",
+        "venue": "Proceedings of the 29th Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC.2017.7978989"
+    },
+    {
+        "year": 2017,
+        "title_en": "Stability and Stabilization Analysis of Fractional-Order Linear Systems Subject to Actuator Saturation and Disturbance",
+        "authors": "Chuang Li, Kai Chen, Junguo Lu, Rongnian Tang",
+        "venue": "IFAC-PapersOnLine",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.ifacol.2017.08.2055"
+    },
+    {
+        "year": 2017,
+        "title_en": "Decentralised robust $H_\\infty$ control of fractional-order interconnected systems with uncertainties",
+        "authors": "Junguo Lu, Yunan Zhao",
+        "venue": "International Journal of Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1080/00207179.2016.1201595"
+    },
+    {
+        "year": 2017,
+        "title_en": "Adaptive synchronized formation control considering communication constraints",
+        "authors": "Zhe Liu, Weidong Chen, Junguo Lu, Jingchuan Wang, Hesheng Wang",
+        "venue": "Advances in Intelligent Systems and Computing",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1007/978-3-319-48036-7_42"
+    },
+    {
+        "year": 2016,
+        "title_en": "Synchronous trajectory tracking for mobile robot network without velocity measurements between coupling robots",
+        "authors": "Zhe Liu, Weidong Chen, Junguo Lu, Hesheng Wang",
+        "venue": "2016 IEEE International Conference on Real-Time Computing and Robotics (RCAR)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/RCAR.2016.7784102"
+    },
+    {
+        "year": 2016,
+        "title_en": "Switched Control of Three-Phase Voltage Source Pulsewidth-Modulated Rectifier under Dynamic Load: Output Feedback and Robustness",
+        "authors": "Zhaowu Ping, Hao Tang, Junguo Lu, Xueying Gao, Qi Tan",
+        "venue": "Journal of Dynamic Systems, Measurement and Control, Transactions of the ASME",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1115/1.4034074"
+    },
+    {
+        "year": 2016,
+        "title_en": "Global robust output regulation of multivariable systems with nonlinear exosystem",
+        "authors": "Zhaowu Ping, Hao Tang, Junguo Lu, Xueying Gao, Qi Tan, Qingchuan Ma",
+        "venue": "International Journal of Robust and Nonlinear Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1002/rnc.3539"
+    },
+    {
+        "year": 2016,
+        "title_en": "Robust approach for attitude tracking and nonlinear disturbance rejection of rigid body spacecraft",
+        "authors": "Zhaowu Ping, Yi Dong, Hao Tang, Junguo Lu",
+        "venue": "IET Control Theory and Applications",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1049/iet-cta.2016.0323"
+    },
+    {
+        "year": 2016,
+        "title_en": "Formation Control of Mobile Robots Using Distributed Controller with Sampled-Data and Communication Delays",
+        "authors": "Zhe Liu, Weidong Chen, Junguo Lu, Hesheng Wang, Jingchuan Wang",
+        "venue": "IEEE Transactions on Control Systems Technology",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TCST.2016.2518618"
+    },
+    {
+        "year": 2016,
+        "title_en": "Joint dimensionality reduction for face recognition based on D-KSVD",
+        "authors": "Yongsheng HU, Jie Li, Zhao Yang, Junguo Lu, Jianbo Su",
+        "venue": "Proceedings - International Conference on Machine Learning and Cybernetics",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/ICMLC.2016.7872935"
+    },
+    {
+        "year": 2016,
+        "title_en": "The ellipsoidal invariant set of fractional order systems subject to actuator saturation: The convex combination form",
+        "authors": "Kai Chen, Junguo Lu, Chuang Li",
+        "venue": "IEEE/CAA Journal of Automatica Sinica",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/JAS.2016.7508807"
+    },
+    {
+        "year": 2015,
+        "title_en": "On the ellipsoidal invariant set of fractional order systems subject to actuator saturation",
+        "authors": "Chuang Li, Junguo Lu",
+        "venue": "Chinese Control Conference (CCC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/ChiCC.2015.7259737"
+    },
+    {
+        "year": 2014,
+        "title_en": "Switched control of three-phase voltage source PWM rectifier under dynamic load by output feedback",
+        "authors": "Zhaowu Ping, Hao Tang, Junguo Lu, Xueying Gao, Qi Tan",
+        "venue": "Proceedings of the 33rd Chinese Control Conference (CCC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/ChiCC.2014.6896357"
+    },
+    {
+        "year": 2014,
+        "title_en": "Modeling and simulation of EAST flexible in-vessel inspection robot based on absolute nodal coordinate formulation",
+        "authors": "Lin Li, Junguo Lu, Weidong Chen, Jingchuan Wang",
+        "venue": "2014 IEEE International Conference on Robotics and Biomimetics (IEEE ROBIO)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/ROBIO.2014.7090324"
+    },
+    {
+        "year": 2014,
+        "title_en": "Robust stability bounds of uncertain fractional-order systems",
+        "authors": "Yingdong Ma, Junguo Lu, Weidong Chen, Yangquan Chen",
+        "venue": "Fractional Calculus and Applied Analysis",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.2478/s13540-014-0159-3"
+    },
+    {
+        "year": 2014,
+        "title_en": "Virtual reality simulator for the EAST blanket remote handing system",
+        "authors": "Xing Su, Junguo Lu",
+        "venue": "26th Chinese Control and Decision Conference (CCDC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/CCDC.2014.6852914"
+    },
+    {
+        "year": 2014,
+        "title_en": "Robust stability and stabilization of fractional order linear systems with positive real uncertainty",
+        "authors": "Yingdong Ma, Junguo Lu, Weidong Chen",
+        "venue": "ISA Transactions",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.isatra.2013.11.013"
+    },
+    {
+        "year": 2014,
+        "title_en": "Observer-based stabilisation of a class of fractional order non-linear systems for $0 < \\alpha < 2$ case",
+        "authors": "Chuang Li, Jingcheng Wang, Junguo Lu, Yang Ge",
+        "venue": "IET Control Theory and Applications",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1049/iet-cta.2013.1082"
+    },
+    {
+        "year": 2013,
+        "title_en": "Maximal perturbation bounds for robust stabilizability of fractional-order systems with norm bounded perturbations",
+        "authors": "Junguo Lu, Yingdong Ma, Weidong Chen",
+        "venue": "Journal of the Franklin Institute",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.jfranklin.2013.07.014"
+    },
+    {
+        "year": 2013,
+        "title_en": "Robust asymptotical stability of fractional-order linear systems with structured perturbations",
+        "authors": "Junguo Lu, Yangquan Chen, Weidong Chen",
+        "venue": "Computers and Mathematics with Applications",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.camwa.2013.03.001"
+    },
+    {
+        "year": 2013,
+        "title_en": "Robust decentralized control of perturbed fractional-order linear interconnected systems",
+        "authors": "Jun Li, Junguo Lu, Yangquan Chen",
+        "venue": "Computers and Mathematics with Applications",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.camwa.2013.07.001"
+    },
+    {
+        "year": 2013,
+        "title_en": "Stability and stabilization of fractional-order linear systems with convex polytopic uncertainties",
+        "authors": "Junguo Lu, Yangquan Chen",
+        "venue": "Fractional Calculus and Applied Analysis",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.2478/s13540-013-0010-2"
+    },
+    {
+        "year": 2013,
+        "title_en": "Global asymptotical synchronization of delayed complex dynamical networks with switching topology",
+        "authors": "Junguo Lu, Junyao Chen, Weidong Chen",
+        "venue": "IFAC Proceedings Volumes (IFAC-PapersOnline)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.3182/20130708-3-CN-2036.00079"
+    },
+    {
+        "year": 2012,
+        "title_en": "Observer-based robust stabilisation of a class of non-linear fractional-order uncertain systems: An linear matrix inequalitie approach",
+        "authors": "Chuang Li, J. Wang, Junguo Lu",
+        "venue": "IET Control Theory and Applications",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1049/iet-cta.2012.0312"
+    },
+    {
+        "year": 2012,
+        "title_en": "Quadratic stability and stabilization of matrix second-order time-varying systems",
+        "authors": "Junguo Lu, Jizhong Xiao, Weidong Chen",
+        "venue": "International Journal of Robust and Nonlinear Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1002/rnc.1815"
+    },
+    {
+        "year": 2012,
+        "title_en": "Maximal perturbation bounds for robust $\\alpha$-stability of matrix second-order systems with one-parameter perturbations",
+        "authors": "Junguo Lu, Jizhong Xiao, Weidong Chen",
+        "venue": "Automatica",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.automatica.2012.02.042"
+    },
+    {
+        "year": 2011,
+        "title_en": "Robust stabilization of fractional order interval systems via a fractional-order PID controller",
+        "authors": "Jianyu Lin, Junguo Lu, Zongli Lin",
+        "venue": "Proceedings of the 30th Chinese Control Conference (CCC)",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": ""
+    },
+    {
+        "year": 2010,
+        "title_en": "Trajectory linearization based output tracking control of an unmanned tandem helicopter with variance constraints",
+        "authors": "Shiqian Liu, Junguo Lu, Zhongliang Jing",
+        "venue": "International Journal of Control, Automation and Systems",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1007/s12555-010-0611-z"
+    },
+    {
+        "year": 2010,
+        "title_en": "Robust stability and stabilization of fractional-order interval systems with the fractional order $\\alpha$: The $0 < \\alpha < 1$ case",
+        "authors": "Junguo Lu, Yangquan Chen",
+        "venue": "IEEE Transactions on Automatic Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TAC.2009.2033738"
+    },
+    {
+        "year": 2010,
+        "title_en": "Observer-based $H_\\infty$ control for networked nonlinear systems with random packet losses",
+        "authors": "Jianguo Li, Jingqi Yuan, Junguo Lu",
+        "venue": "ISA Transactions",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.isatra.2009.08.001"
+    },
+    {
+        "year": 2009,
+        "title_en": "Robust stability and stabilization of fractional-order linear systems with nonlinear uncertain parameters: An LMI approach",
+        "authors": "Shengyan Xing, Junguo Lu",
+        "venue": "Chaos, Solitons and Fractals",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.chaos.2009.03.017"
+    },
+    {
+        "year": 2009,
+        "title_en": "Global asymptotical synchronization of chaotic neural networks by output feedback impulsive control: An LMI approach",
+        "authors": "Junguo Lu, Guanrong Chen",
+        "venue": "Chaos, Solitons and Fractals",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.chaos.2008.09.024"
+    },
+    {
+        "year": 2009,
+        "title_en": "Global exponential stability of impulsive Cohen-Grossberg neural networks with continuously distributed delays",
+        "authors": "Zhaowu Ping, Junguo Lu",
+        "venue": "Chaos, Solitons and Fractals",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.chaos.2007.11.022"
+    },
+    {
+        "year": 2009,
+        "title_en": "Robust stability and stabilization of fractional-order interval systems: An LMI approach",
+        "authors": "Junguo Lu, Guanrong Chen",
+        "venue": "IEEE Transactions on Automatic Control",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TAC.2009.2013056"
+    },
+    {
+        "year": 2009,
+        "title_en": "Robust variance-constrained control for a class of continuous time-delay systems with parameter uncertainties",
+        "authors": "Kailiang Yang, Junguo Lu",
+        "venue": "Chaos, Solitons and Fractals",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.chaos.2007.06.069"
+    },
+    {
+        "year": 2009,
+        "title_en": "Global exponential stability and periodicity of reaction-diffusion recurrent neural networks with distributed delays and Dirichlet boundary conditions",
+        "authors": "Junguo Lu, Linji Lu",
+        "venue": "Chaos, Solitons and Fractals",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.chaos.2007.06.040"
+    },
+    {
+        "year": 2008,
+        "title_en": "Global exponential stability and periodicity of reaction-diffusion delayed recurrent neural networks with Dirichlet boundary conditions",
+        "authors": "Junguo Lu",
+        "venue": "Chaos, Solitons and Fractals",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.chaos.2007.05.002"
+    },
+    {
+        "year": 2008,
+        "title_en": "Global exponential stability of fuzzy cellular neural networks with delays and reaction-diffusion terms",
+        "authors": "Jian Wang, Junguo Lu",
+        "venue": "Chaos, Solitons and Fractals",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.chaos.2007.01.032"
+    },
+    {
+        "year": 2008,
+        "title_en": "Global asymptotical synchronization of chaotic Lur'e systems using sampled data: A linear matrix inequality approach",
+        "authors": "Junguo Lu, David J. Hill",
+        "venue": "IEEE Transactions on Circuits and Systems II: Express Briefs",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TCSII.2007.916788"
+    },
+    {
+        "year": 2008,
+        "title_en": "Stability analysis of a class of nonlinear fractional-order systems",
+        "authors": "Xiangjun Wen, Zhengmao Wu, Junguo Lu",
+        "venue": "IEEE Transactions on Circuits and Systems II: Express Briefs",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TCSII.2008.2002571"
+    },
+    {
+        "year": 2007,
+        "title_en": "Chaotifying a stable linear controllable system by single input state feedback",
+        "authors": "Zhengmao Wu, Junguo Lu, Jianying Xie",
+        "venue": "Chinese Physics",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1088/1009-1963/16/5/015"
+    },
+    {
+        "year": 2007,
+        "title_en": "Impulsive Synchronization of Chaotic Lur'e Systems by Linear Static Measurement Feedback: An LMI Approach",
+        "authors": "Junguo Lu",
+        "venue": "IEEE Transactions on Circuits and Systems II: Express Briefs",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TCSII.2007.898468"
+    },
+    {
+        "year": 2007,
+        "title_en": "Robust global exponential stability for interval reaction-diffusion Hopfield neural networks with distributed delays",
+        "authors": "Junguo Lu",
+        "venue": "IEEE Transactions on Circuits and Systems II: Express Briefs",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/TCSII.2007.905357"
+    },
+    {
+        "year": 2006,
+        "title_en": "Chaotifying the controllable linear system via single input state feedback",
+        "authors": "Zhengmao Wu, Junguo Lu, Jianying Xie, Jie Li",
+        "venue": "International Journal of Modern Physics C",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1142/S0129183106009114"
+    },
+    {
+        "year": 2006,
+        "title_en": "Chaotic dynamics of the fractional-order Lü system and its synchronization",
+        "authors": "Junguo Lu",
+        "venue": "Physics Letters, Section A: General, Atomic and Solid State Physics",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.physleta.2006.01.068"
+    },
+    {
+        "year": 2006,
+        "title_en": "Analysing chaos in fractional-order systems with the harmonic balance method",
+        "authors": "Zhengmao Wu, Junguo Lu, Jianying Xie",
+        "venue": "Chinese Physics",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1088/1009-1963/15/6/013"
+    },
+    {
+        "year": 2006,
+        "title_en": "Chaotic dynamics of the fractional-order Ikeda delay system and its synchronization",
+        "authors": "Junguo Lu",
+        "venue": "Chinese Physics",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1088/1009-1963/15/2/011"
+    },
+    {
+        "year": 2006,
+        "title_en": "Chaotic behavior in sampled-data control systems with saturating control",
+        "authors": "Junguo Lu",
+        "venue": "Chaos, Solitons and Fractals",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.chaos.2005.08.191"
+    },
+    {
+        "year": 2006,
+        "title_en": "Nonlinear observer design to synchronize fractional-order chaotic systems via a scalar transmitted signal",
+        "authors": "Junguo Lu",
+        "venue": "Physica A: Statistical Mechanics and its Applications",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.physa.2005.04.040"
+    },
+    {
+        "year": 2006,
+        "title_en": "Synchronization of a class of fractional-order chaotic systems via a scalar transmitted signal",
+        "authors": "Junguo Lu",
+        "venue": "Chaos, Solitons and Fractals",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": ""
+    },
+    {
+        "year": 2006,
+        "title_en": "A new output feedback synchronization theorem for a class of chaotic systems with a scalar transmitted signal",
+        "authors": "Junguo Lu",
+        "venue": "Chinese Physics",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.chaos.2005.04.032"
+    },
+    {
+        "year": 2006,
+        "title_en": "A note on the fractional-order Chen system",
+        "authors": "Junguo Lu, Guanrong Chen",
+        "venue": "Chaos, Solitons and Fractals",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.chaos.2005.04.037"
+    },
+    {
+        "year": 2005,
+        "title_en": "Chaotic dynamics and synchronization of fractional-order Genesio-Tesi systems",
+        "authors": "Junguo Lu",
+        "venue": "Chinese Physics",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1088/1009-1963/14/8/007"
+    },
+    {
+        "year": 2005,
+        "title_en": "Generating chaos in the sense of Devaney via decentralized feedback control from a stable Takagi-Sugeno fuzzy system",
+        "authors": "Junguo Lu",
+        "venue": "Chinese Physics",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1088/1009-1963/14/7/013"
+    },
+    {
+        "year": 2005,
+        "title_en": "Another anticontrol method of chaos in the sense of Devaney from a Takagi-Sugeno fuzzy system via the overflow nonlinearity",
+        "authors": "Junguo Lu",
+        "venue": "Chinese Physics",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1088/1009-1963/14/6/005"
+    },
+    {
+        "year": 2005,
+        "title_en": "Decentralized state-feedback chaotification method of discrete Takagi-Sugeno fuzzy systems",
+        "authors": "Junguo Lu",
+        "venue": "Chinese Physics",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1088/1009-1963/14/4/011"
+    },
+    {
+        "year": 2005,
+        "title_en": "Chaos communication based on synchronization of discrete-time chaotic systems",
+        "authors": "Junguo Lu",
+        "venue": "Chinese Physics",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1088/1009-1963/14/2/010"
+    },
+    {
+        "year": 2005,
+        "title_en": "Multiple access chaotic digital communication based on generalized synchronization",
+        "authors": "Junguo Lu",
+        "venue": "Chaos, Solitons and Fractals",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.chaos.2004.11.008"
+    },
+    {
+        "year": 2005,
+        "title_en": "Chaotifying a stable Takagi-Sugeno fuzzy system by a sawtooth nonlinearity",
+        "authors": "Junguo Lu",
+        "venue": "Chinese Physics",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1088/1009-1963/14/1/014"
+    },
+    {
+        "year": 2005,
+        "title_en": "Chaotic dynamics and synchronization of fractional-order Arneodo's systems",
+        "authors": "Junguo Lu",
+        "venue": "Chaos, Solitons and Fractals",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.chaos.2005.02.023"
+    },
+    {
+        "year": 2005,
+        "title_en": "Generating chaos via decentralized linear state feedback and a class of nonlinear functions",
+        "authors": "Junguo Lu",
+        "venue": "Chaos, Solitons and Fractals",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/j.chaos.2004.11.039"
+    },
+    {
+        "year": 2004,
+        "title_en": "Chaotifying a linear time-invariant system by the decentralized state feedback controller and sine function",
+        "authors": "Junguo Lu",
+        "venue": "International Journal of Nonlinear Sciences and Numerical Simulation",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1515/IJNSNS.2004.5.4.313"
+    },
+    {
+        "year": 2004,
+        "title_en": "Global synchronization of a class of chaotic systems with a scalar transmitted signal",
+        "authors": "Junguo Lu",
+        "venue": "International Journal of Bifurcation and Chaos in Applied Sciences and Engineering",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1142/S0218127404009855"
+    },
+    {
+        "year": 2003,
+        "title_en": "Linear generalized synchronization of continuous-time chaotic systems",
+        "authors": "Junguo Lu",
+        "venue": "Chaos, Solitons and Fractals",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1016/S0960-0779(02)00471-X"
+    },
+    {
+        "year": 2002,
+        "title_en": "Chaos shift keying based on driven Chua's circuit and optimal demodulation",
+        "authors": "Junguo Lu, Rong Wei, Zhiquan Wang",
+        "venue": "Tien Tzu Hsueh Pao/Acta Electronica Sinica",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": ""
+    },
+    {
+        "year": 2002,
+        "title_en": "Self-similarity in internet traffic - Modeling, analysis and control",
+        "authors": "Xiaofan Wang, Junguo Lu, Zhiquan Wang",
+        "venue": "Kongzhi yu Juece/Control and Decision",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": ""
+    },
+    {
+        "year": 2002,
+        "title_en": "Feedback linearization using a wavelet network",
+        "authors": "Rong Wei, Junguo Lu, Zhiquan Wang",
+        "venue": "Chinese Journal of Electronics",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": ""
+    },
+    {
+        "year": 2001,
+        "title_en": "Realization of $\\alpha$-order time-delay inverse systems based on wavelet neural networks",
+        "authors": "Rong Wei, Junguo Lu, Zhiquan Wang",
+        "venue": "Nanjing Li Gong Daxue Xuebao/Journal of Nanjing University of Science and Technology",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": ""
+    },
+    {
+        "year": 2001,
+        "title_en": "New wavelet model for identification of discrete chaotic systems and qualitative analysis of model",
+        "authors": "Rong Wei, Junguo Lu, Jun Li, Zhiquan Wang",
+        "venue": "Tien Tzu Hsueh Pao/Acta Electronica Sinica",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": ""
+    },
+    {
+        "year": 2001,
+        "title_en": "Backstepping control of discrete-time chaotic systems with application to the Henon system",
+        "authors": "Junguo Lu, Rong Wei, Xiaofan Wang, Zhiquan Wang",
+        "venue": "IEEE Transactions on Circuits and Systems I: Fundamental Theory and Applications",
+        "pdf": "",
+        "video": "",
+        "code": "",
+        "doi": "10.1109/81.964429"
+    } 
+]
