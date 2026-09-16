@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "auto-sweeper",
+    "title": "Autonomous Road Sweeper",
+    "summary": "An autonomous cleaning system for complex road environments.",
+    "cover": "images/team_photo.jpg",
+    "video": "https://ieeemvasl-1484396763.cos.ap-shanghai.myqcloud.com/auto_sweeper.mp4",
+    "tags": ["Machine Vision", "Decision Making", "Autonomous Control"],
+    "challenge": "Deliver safe, continuous cleaning in dynamic road environments.",
+    "approach": "Combine perception, task decisions, and vehicle control into a deployable autonomous workflow.",
+    "outcomes": [],
+    "people": [],
+    "featured": true
+  },
+  {
+    "slug": "bipedal-robot",
+    "title": "Autonomous Bipedal Locomotion",
+    "summary": "Perception and locomotion research for bipedal robots in unstructured environments.",
+    "cover": "images/map3D.jpeg",
+    "video": "https://ieeemvasl-1484396763.cos.ap-shanghai.myqcloud.com/bipedal_robot.mp4",
+    "tags": ["Robot Perception", "Motion Planning", "Autonomous Control"],
+    "challenge": "Balance stable locomotion and task adaptation in complex environments.",
+    "approach": "Co-design environmental perception and motion control for closed-loop operation in physical settings.",
+    "outcomes": [],
+    "people": [],
+    "featured": true
+  },
+  {
+    "slug": "marine-navigation",
+    "title": "Marine Autonomous Navigation",
+    "summary": "Autonomous perception, localization, and navigation for waterborne systems.",
+    "cover": "images/map-2D.jpeg",
+    "video": "https://ieeemvasl-1484396763.cos.ap-shanghai.myqcloud.com/marine_navigation.mp4",
+    "tags": ["Marine Robotics", "Navigation", "Machine Vision"],
+    "challenge": "Handle environmental changes and navigation uncertainty in open-water settings.",
+    "approach": "Combine scene perception, state estimation, and path decisions for autonomous waterborne operation.",
+    "outcomes": [],
+    "people": [],
+    "featured": true
+  }
+]

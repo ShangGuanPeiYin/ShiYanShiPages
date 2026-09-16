@@ -1,0 +1,16 @@
+{
+  "labName": "机器视觉与自主系统实验室",
+  "shortName": "MVAS Lab",
+  "tagline": "让机器在真实世界中看见、理解并自主行动。",
+  "department": "上海交通大学电子信息与电气工程学院自动化系",
+  "address": "上海市闵行区东川路800号",
+  "email": "jglu@sjtu.edu.cn",
+  "university": {"name": "上海交通大学", "url": "https://www.sjtu.edu.cn/"},
+  "nav": {
+    "research": "研究",
+    "people": "成员",
+    "publications": "成果",
+    "news": "动态",
+    "join": "加入我们"
+  }
+}

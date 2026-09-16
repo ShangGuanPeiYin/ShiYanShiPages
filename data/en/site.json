@@ -1,0 +1,16 @@
+{
+  "labName": "Machine Vision and Autonomous Systems Laboratory",
+  "shortName": "MVAS Lab",
+  "tagline": "Seeing, understanding, and acting in the physical world.",
+  "department": "Department of Automation, Shanghai Jiao Tong University",
+  "address": "800 Dongchuan Road, Minhang District, Shanghai, China",
+  "email": "jglu@sjtu.edu.cn",
+  "university": {"name": "Shanghai Jiao Tong University", "url": "https://www.sjtu.edu.cn/"},
+  "nav": {
+    "research": "Research",
+    "people": "People",
+    "publications": "Publications",
+    "news": "News",
+    "join": "Join us"
+  }
+}

@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "auto-sweeper",
+    "title": "无人驾驶道路清洁机器人",
+    "summary": "面向复杂道路环境的自主清洁系统。",
+    "cover": "images/team_photo.jpg",
+    "video": "https://ieeemvasl-1484396763.cos.ap-shanghai.myqcloud.com/auto_sweeper.mp4",
+    "tags": ["机器视觉", "行为决策", "自主控制"],
+    "challenge": "在动态道路环境中完成安全、连续的清洁作业。",
+    "approach": "融合感知、任务决策与车辆控制，构建可部署的自主作业链路。",
+    "outcomes": [],
+    "people": [],
+    "featured": true
+  },
+  {
+    "slug": "bipedal-robot",
+    "title": "双足机器人自主运动",
+    "summary": "面向非结构化环境的双足机器人感知与运动能力研究。",
+    "cover": "images/map3D.jpeg",
+    "video": "https://ieeemvasl-1484396763.cos.ap-shanghai.myqcloud.com/bipedal_robot.mp4",
+    "tags": ["机器人感知", "运动规划", "自主控制"],
+    "challenge": "在复杂环境中兼顾运动稳定性与任务适应性。",
+    "approach": "将环境感知与运动控制协同设计，形成面向真实场景的闭环系统。",
+    "outcomes": [],
+    "people": [],
+    "featured": true
+  },
+  {
+    "slug": "marine-navigation",
+    "title": "海洋自主导航系统",
+    "summary": "面向水域场景的自主感知、定位与导航系统。",
+    "cover": "images/map-2D.jpeg",
+    "video": "https://ieeemvasl-1484396763.cos.ap-shanghai.myqcloud.com/marine_navigation.mp4",
+    "tags": ["水面机器人", "导航", "机器视觉"],
+    "challenge": "应对开放水域中的环境变化与导航不确定性。",
+    "approach": "组合环境感知、状态估计与路径决策，支持水域自主运行。",
+    "outcomes": [],
+    "people": [],
+    "featured": true
+  }
+]

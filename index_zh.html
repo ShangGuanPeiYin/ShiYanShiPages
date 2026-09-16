@@ -1,182 +1,19 @@
-<!DOCTYPE html>
-<html lang="zh">
+<!doctype html>
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>机器视觉与自主系统实验室</title>
-    <meta name="author" content="小植">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>机器视觉与自主系统实验室</title>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/site-shell.css">
 </head>
-
-<body>
-    <header class="header-section">     
-        <div class="language-switcher">
-            <nav class="lang-nav">
-                <a href="javascript:void(0)" class="lang-item" id="btn-en" onclick="handleLangChange('en')">EN</a>
-                <a href="javascript:void(0)" class="lang-item active" id="btn-zh" onclick="handleLangChange('zh')">中文</a>
-            </nav>
-        </div>
-        <div class="header-top">           
-            <a href="index_zh.html">
-                <img src="images/lab_logo_img.png" alt="实验室图形logo" height="70">
-            </a>         
-            <div class="title-center">
-                 <a href="index_zh.html"> 
-                    <img src="images/lab_logo_txt.png" alt="实验室文字logo" height="60">
-                 </a>
-            </div>           
-            <a href="https://www.sjtu.edu.cn/">
-                <img src="images/sjtu_logo.png" alt="学校logo" height="80">
-            </a>
-        </div> 
-        <nav class="nav-links" id="main-nav">
-            <a href="htmls/research_zh.html">研究方向</a>
-            <a href="htmls/publications_en.html">学术成果</a>
-            <a href="htmls/team_zh.html">团队成员</a>
-            <a href="htmls/join_zh.html">加入我们</a>
-        </nav>
-    </header> 
-
-    <div class="content-wrapper">       
-        <section class="intro-section">
-            <h2 class="section-title main-red-color">MVAS概况</h2>            
-            <div class="photo-container">
-                <img src="images/team_photo.jpg" alt="机器视觉与自主系统实验室团队照片" class="responsive-img">
-            </div>
-            
-            <p class="intro-text">
-                <a href="html_en.html">欢迎来到机器视觉与自主系统（MVAS）实验室</a>！我们的研究以机器感知与决策控制为核心，深度融合<span class="highlight">机器视觉</span>与<span class="highlight">自主控制算法</span>，致力于解决自主系统在复杂工作环境中的感知、规划与安全挑战。
-            </p>
-
-            <p class="intro-text">
-                我们为自主系统提供安全、可靠、高效的软件驱动力，并将其转化为具有商业价值的技术产品，如<span class="highlight">无人驾驶道路清洁机器人</span>、<span class="highlight">全自动草坪修剪机器人</span>，以及<span class="highlight">船舶辅助靠离泊智能系统</span>等。
-            </p>
-            
-            <p class="intro-text">
-                实验室由 <a href="#">卢俊国</a> 教授领衔，隶属于 <a href="https://www.sjtu.edu.zh">上海交通大学自动化感知学院</a>，汇聚了 30 多名充满活力的研究人员和工程技术人才。如果您有意向加入我们，请查阅 <a href="htmls/join_zh.html">招贤纳新</a> 页面。
-            </p>
-        </section>
-        
-        <section class="news-section">
-            <div class="news-header">
-                <h2 class="section-title main-red-color">团队动态</h2>
-                <a href="htmls/news_all_zh.html" class="btn-link-more">查看更多 &rarr;</a>
-            </div>
-            
-            <div class="news-container">
-                <div class="news-item">
-                    <div class="news-date">
-                        <span class="day">01</span>
-                        <span class="month">Sep</span>
-                        <span class="year">2025</span>
-                    </div>
-                    <div class="news-content">
-                        <h3>博士论文答辩成功</h3>
-                        <p>
-                            祝贺 <strong>傅佳慧 (Carol)</strong> 成功完成其博士论文答辩！
-                            论文题目为：<a href="#">《低动态环境下的长效视觉对象 SLAM》</a>。
-                        </p>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-date">
-                        <span class="day">15</span>
-                        <span class="month">Aug</span>
-                        <span class="year">2023</span>
-                    </div>
-                    <div class="news-content">
-                        <h3>学术论文录用</h3>
-                        <p>
-                            恭喜团队！我们的论文 "Robust Underwater SLAM using Sonar and Visual Data" 
-                            已被机器人顶级会议 <strong>ICRA 2024</strong> 正式录用。
-                        </p>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-date">
-                        <span class="day">30</span>
-                        <span class="month">Jul</span>
-                        <span class="year">2023</span>
-                    </div>
-                    <div class="news-content">
-                        <h3>新成员加入</h3>
-                        <p>
-                            热烈欢迎 <strong>王力 博士</strong> 以博士后研究员身份加入实验室。
-                            王博士在自主导航领域拥有丰富的研究经验。
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="videos-section">    
-            <h2 class="section-title main-red-color">视频展示</h2>           
-            <video-grid>
-                <video-card
-                    src="https://ieeemvasl-1484396763.cos.ap-shanghai.myqcloud.com/auto_sweeper.mp4"
-                    title="自动清扫车"
-                    poster="posters/auto_sweeper.png"
-                    overlay="自动清扫车">           
-                </video-card>
-
-                <video-card
-                    src="https://ieeemvasl-1484396763.cos.ap-shanghai.myqcloud.com/bipedal_robot.mp4"
-                    title="双足机器人"
-                    poster="posters/bipedal_robot.png"
-                    overlay="双足机器人">
-                </video-card>
-
-                <video-card
-                    src="https://ieeemvasl-1484396763.cos.ap-shanghai.myqcloud.com/marine_navigation.mp4"
-                    title="船舶辅助驾驶"
-                    poster="posters/marine_navigation.png"
-                    overlay="船舶辅助驾驶">
-                </video-card>
-            </video-grid>
-            <script src="video-player.js"></script>           
-        </section>   
-
-        <section class="contact-section">  
-            <h2 class="section-title main-red-color">联系我们</h2>                                  
-                <div class="row custom-row" style="--left-width: 55%;">
-                    <div class="col-left">
-                        <div class="media-wrapper">
-                            <img src="images/map3D-logo.png" class="media-content"   alt="实验室位置3D图"/>
-                        </div>
-                    </div>
-                    
-                    <div class="col-right">
-                        <div class="contact-info-card">
-                            <h2 class="contact-name">张庆昊 <span class="contact-title">助理研究员</span></h2>
-                            <hr>
-                            <div class="info-box">                              
-                                <p><i class="bx bx-map"></i>上海市闵行区东川路800号</p>                               
-                                <p><i class="bx bx-building-house"></i>电院群楼2-223室 (200240)</p>                             
-                                <p><i class="bx bx-envelope"></i>
-                                    <a href="mailto:zhangqinghao@sjtu.edu.cn">zhangqinghao@sjtu.edu.cn</a></p>  
-                                <p><i class="bx bx-phone-call"></i> 1836-296-1932</p>  
-                            </div>
-                        </div>                                                                                               
-                    </div>
-                </div>
-
-                <div class="row custom-row" style="--left-width: 100%;">
-                    <div class="col-left">
-                        <div class="media-wrapper">
-                            <img src="images/map2D-logo.png" class="media-content" alt="Laboratory Layout Map"/>
-                        </div>
-                    </div>               
-                </div>            
-        </section>
-    </div>
-
-    <footer class="main-footer">
-        <p>&copy; 2025 机器视觉与自主系统实验室. All rights reserved.</p>
-    </footer>
-    <script src="nav.js"></script>      
+<body data-page="home" data-lang="zh">
+  <a class="skip-link" href="#page-main">跳到主要内容</a>
+  <div id="site-header"></div>
+  <main id="page-main" tabindex="-1"></main>
+  <p id="page-status" role="alert" hidden></p>
+  <div id="site-footer"></div>
+  <script type="module" src="assets/js/app.js"></script>
 </body>
 </html>

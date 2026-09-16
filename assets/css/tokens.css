@@ -1,0 +1,18 @@
+:root {
+  --color-ink: #090d14;
+  --color-surface: #101722;
+  --color-paper: #172131;
+  --color-panel: #1d2a3d;
+  --color-text: #eef4f8;
+  --color-muted: #a8b7c4;
+  --color-accent: #63e6c8;
+  --color-accent-strong: #20bfa1;
+  --color-link: #8dc7ff;
+  --color-line: rgb(238 244 248 / 16%);
+  --content-max: 80rem;
+  --space-1: .5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+}

@@ -1,184 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>MVAS Laboratory | Machine Vision and Autonomous Systems</title>
-    <meta name="author" content="MVAS">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MVAS Laboratory</title>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/site-shell.css">
 </head>
-
-<body>
-    <header class="header-section">     
-        <!-- <div class="language-switcher"> -->
-            <nav class="lang-nav">
-                <a href="javascript:void(0)" class="lang-item active" id="btn-en" onclick="handleLangChange('en')">EN</a>
-                <a href="javascript:void(0)" class="lang-item" id="btn-zh" onclick="handleLangChange('zh')">中文</a>
-            </nav>
-        <!-- </div> -->
-        <div class="header-top">           
-            <a href="index_en.html">
-                <img src="images/lab_logo_img.png" alt="Lab Logo Icon" height="70">
-            </a>         
-            <div class="title-center">
-                 <a href="index_en.html"> 
-                    <img src="images/lab_logo_txt.png" alt="Lab Name Logo" height="60">
-                 </a>
-            </div>           
-            <a href="https://en.sjtu.edu.cn/">
-                <img src="images/sjtu_logo.png" alt="SJTU Logo" height="80">
-            </a>
-        </div> 
-        <nav class="nav-links" id="main-nav">
-            <a href="htmls/research_en.html">Research</a>
-            <a href="htmls/publications_en.html">Publications</a>
-            <a href="htmls/team_en.html">Team</a>
-            <a href="htmls/join_en.html">Join Us</a>
-        </nav>
-    </header> 
-
-    <div class="content-wrapper">       
-        <section class="intro-section">
-            <h2 class="section-title main-red-color">About MVAS</h2>            
-            <div class="photo-container">
-                <img src="images/team_photo.jpg" alt="MVAS Laboratory Group Photo" class="responsive-img">
-            </div>
-            
-            <p class="intro-text">
-                Welcome to the <a href="index_en.html">Machine Vision and Autonomous Systems (MVAS) Laboratory</a>! Our research focuses on machine perception, decision-making, and control. We deeply integrate <span class="highlight">Computer Vision</span> with <span class="highlight">Autonomous Control Algorithms</span> to address the challenges of perception, planning, and safety for autonomous systems in complex environments.
-            </p>
-
-            <p class="intro-text">
-                We provide safe, reliable, and efficient software power for autonomous systems and translate them into high-value commercial products, such as <span class="highlight">Unmanned Road Sweepers</span>, <span class="highlight">Autonomous Lawnmowers</span>, and <span class="highlight">Intelligent Ship Berthing Assistance Systems</span>.
-            </p>
-            
-            <p class="intro-text">
-                Led by <a href="#">Prof. Junguo Lu</a>, the MVAS Lab is part of the <a href="https://en.sjtu.edu.cn">School of Electronic Information and Electrical Engineering at Shanghai Jiao Tong University</a>. We host over 30 dynamic researchers and engineers. If you are interested in joining us, please visit our <a href="htmls/join_en.html">Careers</a> page.
-            </p>
-        </section>
-        
-        <section class="news-section">
-            <div class="news-header">
-                <h2 class="section-title main-red-color">News & Events</h2>
-                <a href="htmls/news_all_en.html" class="btn-link-more">View All &rarr;</a>
-            </div>
-            
-            <div class="news-container">
-                <div class="news-item">
-                    <div class="news-date">
-                        <span class="day">01</span>
-                        <span class="month">Sep</span>
-                        <span class="year">2025</span>
-                    </div>
-                    <div class="news-content">
-                        <h3>PhD Dissertation Defense Success</h3>
-                        <p>
-                            Congratulations to <strong>Jiahui (Carol) Fu</strong> for successfully defending her PhD thesis! 
-                            Title: <a href="#">"Long-term Visual Object SLAM in Low-dynamic Environments"</a>.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-date">
-                        <span class="day">15</span>
-                        <span class="month">Aug</span>
-                        <span class="year">2023</span>
-                    </div>
-                    <div class="news-content">
-                        <h3>Paper Accepted</h3>
-                        <p>
-                            Congratulations! Our paper "Robust Underwater SLAM using Sonar and Visual Data" 
-                            has been officially accepted by <strong>ICRA 2024</strong>.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-date">
-                        <span class="day">30</span>
-                        <span class="month">Jul</span>
-                        <span class="year">2023</span>
-                    </div>
-                    <div class="news-content">
-                        <h3>New Member Joined</h3>
-                        <p>
-                            A warm welcome to <strong>Dr. Li Wang</strong>, who joined our lab as a Postdoctoral Researcher. 
-                            Dr. Wang brings extensive experience in autonomous navigation.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="videos-section">    
-            <h2 class="section-title main-red-color">Video Gallery</h2>           
-            <video-grid>
-                <video-card
-                    src="https://ieeemvasl-1484396763.cos.ap-shanghai.myqcloud.com/auto_sweeper.mp4"
-                    title="Auto Sweeper"
-                    poster="posters/auto_sweeper.png"
-                    overlay="Autonomous Sweeper">           
-                </video-card>
-
-                <video-card
-                    src="https://ieeemvasl-1484396763.cos.ap-shanghai.myqcloud.com/bipedal_robot.mp4"
-                    title="Bipedal Robot"
-                    poster="posters/bipedal_robot.png"
-                    overlay="Bipedal Robot">
-                </video-card>
-
-                <video-card
-                    src="https://ieeemvasl-1484396763.cos.ap-shanghai.myqcloud.com/marine_navigation.mp4"
-                    title="Marine Navigation"
-                    poster="posters/marine_navigation.png"
-                    overlay="Marine Navigation">
-                </video-card>
-            </video-grid>
-            <script src="video-player.js"></script>           
-        </section>   
-
-        <section class="contact-section">  
-            <h2 class="section-title main-red-color">Contact Us</h2>        
-            <div class="container">                           
-                <div class="row custom-row" style="--left-width: 55%;">
-                    <div class="col-left">
-                        <div class="media-wrapper">
-                            <img src="images/map3D-logo.png" class="media-content"   alt="3D Location Map"/>
-                        </div>
-                    </div>
-                    
-                    <div class="col-right">
-                        <div class="contact-info-card">
-                            <h2 class="contact-name">Qinghao Zhang <span class="contact-title">Assistant Researcher</span></h2>
-                            <hr>
-                            <div class="info-box">                              
-                                <p><i class="bx bx-map"></i> 800 Dongchuan Rd, Minhang District, Shanghai</p>                               
-                                <p><i class="bx bx-building-house"></i> SEIEE Building 2-223 (200240)</p>                             
-                                <p><i class="bx bx-envelope"></i>
-                                    <a href="mailto:zhangqinghao@sjtu.edu.cn">zhangqinghao@sjtu.edu.cn</a></p>  
-                                <p><i class="bx bx-phone-call"></i> +86 1836-296-1932</p>  
-                            </div>
-                        </div>                                                                                              
-                    </div>
-                </div>
-
-                <div class="row custom-row" style="--left-width: 100%;">
-                    <div class="col-left">
-                        <div class="media-wrapper">
-                            <img src="images/map2D-logo.png" class="media-content" alt="Laboratory Layout Map"/>
-                        </div>
-                    </div>               
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <footer class="main-footer">
-        <p>&copy; 2025 MVAS Laboratory. All rights reserved.</p>
-    </footer>
-   <script src="nav.js"></script>         
+<body data-page="home" data-lang="en">
+  <a class="skip-link" href="#page-main">Skip to main content</a>
+  <div id="site-header"></div>
+  <main id="page-main" tabindex="-1"></main>
+  <p id="page-status" role="alert" hidden></p>
+  <div id="site-footer"></div>
+  <script type="module" src="assets/js/app.js"></script>
 </body>
 </html>
