@@ -22,18 +22,14 @@ function projectHref(slug) {
   return `${rootPath()}htmls/project_${language()}.html?project=${encodeURIComponent(slug)}`;
 }
 
-function projectCard(project) {
-  const media = project.video
-    ? `<video muted loop playsinline preload="metadata" poster="${escape(rootPath() + project.cover)}"><source src="${escape(project.video)}" type="video/mp4"></video>`
-    : `<img src="${escape(rootPath() + project.cover)}" alt="">`;
+function projectCard(project, showTags = false) {
   return `<article class="project-card">
-    ${media}
+    <a class="project-card__media" href="${projectHref(project.slug)}"><img src="${escape(rootPath() + project.cover)}" alt=""></a>
     <div class="project-card__body">
-      <p class="eyebrow">${escape(project.tags?.[0] || 'MVAS')}</p>
-      <h3>${escape(project.title)}</h3>
+      ${showTags ? `<p class="eyebrow">${escape(project.tags?.[0] || 'MVAS')}</p>` : ''}
+      <h3><a href="${projectHref(project.slug)}">${escape(project.title)}</a></h3>
       <p>${escape(project.summary)}</p>
-      <div class="tag-list">${(project.tags || []).map((tag) => `<span>${escape(tag)}</span>`).join('')}</div>
-      <a class="button" href="${projectHref(project.slug)}">${copy('查看项目', 'View project')}</a>
+      ${showTags ? `<div class="tag-list">${(project.tags || []).map((tag) => `<span>${escape(tag)}</span>`).join('')}</div>` : ''}
     </div>
   </article>`;
 }
@@ -46,21 +42,18 @@ async function renderHome() {
   const [site, projects, news] = await Promise.all([dataset('site'), dataset('projects'), dataset('news')]);
   validateCollection('projects', projects);
   validateCollection('news', news);
-  const featured = projects.filter((project) => project.featured);
   const shouldAutoplay = !window.matchMedia('(prefers-reduced-motion: reduce), (max-width: 47.99rem)').matches;
   const latestNews = [...news].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3);
-  main().innerHTML = `<section class="hero" id="hero">
+  const featured = projects[0];
+  main().innerHTML = `<section class="home-video" id="hero">
     <video${shouldAutoplay ? ' autoplay' : ''} muted loop playsinline preload="metadata" poster="${escape(rootPath() + projects[0].cover)}"><source src="${escape(projects[0].video)}" type="video/mp4"></video>
-    <div class="hero__content">
-      <p class="eyebrow">${escape(site.shortName)}</p>
-      <h1>${escape(site.tagline)}</h1>
-      <p>${escape(site.department)}</p>
-      <div class="button-row"><a class="button button--solid" href="${rootPath()}htmls/research_${language()}.html">${copy('探索研究项目', 'Explore our work')}</a><a class="button" href="${rootPath()}htmls/join_${language()}.html">${copy('加入实验室', 'Join the lab')}</a>${shouldAutoplay ? '' : `<button class="button" type="button" id="hero-play">${copy('播放项目演示', 'Play project demo')}</button>`}</div>
-    </div>
+    ${shouldAutoplay ? '' : `<div class="home-video__controls"><button class="button" type="button" id="hero-play">${copy('播放项目演示', 'Play project demo')}</button></div>`}
   </section>
-  <section class="content-section" id="featured-projects"><div class="page-wrap"><div class="section-heading"><div><p class="eyebrow">${copy('成果优先', 'Work first')}</p><h2>${copy('在真实环境中验证自主系统', 'Autonomous systems, validated in the physical world')}</h2></div></div><div class="project-grid">${featured.map(projectCard).join('')}</div></div></section>
+  <section class="content-section" id="featured-project"><div class="page-wrap"><div class="feature-project"><div><p class="eyebrow">${copy('代表项目', 'Featured project')}</p><h2>${escape(featured.title)}</h2><p class="feature-project__summary">${escape(featured.summary)}</p><p><a class="text-link" href="${projectHref(featured.slug)}">${copy('阅读项目介绍', 'Read the project story')}</a></p></div><figure class="feature-project__visual"><img src="${escape(rootPath() + featured.cover)}" alt=""><figcaption>${escape((featured.tags || []).join(' / '))}</figcaption></figure></div></div></section>
+  <section class="content-section content-section--panel" id="lab-introduction"><div class="page-wrap"><div class="lab-intro"><p class="eyebrow">${escape(site.shortName)}</p><h2>${escape(site.tagline)}</h2><p>${escape(site.department)}</p></div></div></section>
+  <section class="content-section" id="featured-projects"><div class="page-wrap"><div class="section-heading"><div><p class="eyebrow">${copy('研究项目', 'Research projects')}</p><h2>${copy('在真实环境中验证自主系统', 'Autonomous systems, validated in the physical world')}</h2></div><p>${copy('从道路、双足到水域，我们将感知、决策与控制整合为可部署的系统。', 'From roads and bipedal locomotion to marine navigation, we integrate perception, decisions, and control into deployable systems.')}</p></div><div class="project-grid">${projects.map((project) => projectCard(project)).join('')}</div></div></section>
   <section class="content-section content-section--panel" id="latest-news"><div class="page-wrap"><div class="section-heading"><div><p class="eyebrow">${copy('实验室动态', 'News')}</p><h2>${copy('近期动态', 'Latest updates')}</h2></div></div><div class="news-list">${latestNews.map((item) => `<article class="news-item"><time datetime="${escape(item.date)}">${escape(item.date)}</time><div><h3>${escape(item.title)}</h3><p>${escape(item.summary)}</p></div></article>`).join('')}</div></div></section>
-  <section class="content-section" id="join-cta"><div class="page-wrap"><div class="join-grid"><section><p class="eyebrow">${copy('加入我们', 'Join us')}</p><h2>${copy('把研究变成真实系统', 'Turn research into real systems')}</h2><p>${copy('欢迎对机器视觉、机器人和自主系统感兴趣的同学联系实验室。', 'Students interested in machine vision, robotics, and autonomous systems are welcome to get in touch.')}</p><a class="button button--solid" href="${rootPath()}htmls/join_${language()}.html">${copy('了解招募信息', 'Learn about opportunities')}</a></section></div></div></section>`;
+  <section class="content-section join-cta" id="join-cta"><div class="page-wrap"><div class="join-cta__inner"><div><p class="eyebrow">${copy('加入我们', 'Join us')}</p><h2>${copy('把研究变成真实系统', 'Turn research into real systems')}</h2><p>${copy('欢迎对机器视觉、机器人和自主系统感兴趣的同学联系实验室。', 'Students interested in machine vision, robotics, and autonomous systems are welcome to get in touch.')}</p></div><a class="button" href="${rootPath()}htmls/join_${language()}.html">${copy('了解招募信息', 'Learn about opportunities')}</a></div></div></section>`;
   document.querySelector('#hero-play')?.addEventListener('click', async () => {
     const video = document.querySelector('#hero video');
     video.controls = true;
@@ -71,12 +64,15 @@ async function renderHome() {
 async function renderResearch() {
   const projects = validateCollection('projects', await dataset('projects'));
   const tags = [...new Set(projects.flatMap((project) => project.tags || []))];
-  const renderProjects = (filtered) => `<p id="research-count" aria-live="polite">${copy(`显示 ${filtered.length} 个项目`, `Showing ${filtered.length} projects`)}</p><div class="project-grid">${filtered.map(projectCard).join('')}</div>`;
-  main().innerHTML = `${pageIntro(copy('研究', 'Research'), copy('从感知到行动的闭环系统', 'Closed-loop systems from perception to action'), copy('我们围绕机器视觉、机器人与自主系统构建能够进入真实场景的研究平台。', 'We develop research platforms in machine vision, robotics, and autonomous systems for real-world settings.'))}<div class="button-row" aria-label="${copy('研究方向筛选', 'Research tag filter')}"><button class="button button--solid" type="button" data-tag="">${copy('全部', 'All')}</button>${tags.map((tag) => `<button class="button" type="button" data-tag="${escape(tag)}">${escape(tag)}</button>`).join('')}</div><div id="research-list">${renderProjects(projects)}</div></section>`;
+  const renderProjects = (filtered) => `<p id="research-count" aria-live="polite">${copy(`显示 ${filtered.length} 个项目`, `Showing ${filtered.length} projects`)}</p><div class="project-grid">${filtered.map((project) => projectCard(project, true)).join('')}</div>`;
+  main().innerHTML = `${pageIntro(copy('研究', 'Research'), copy('从感知到行动的闭环系统', 'Closed-loop systems from perception to action'), copy('我们围绕机器视觉、机器人与自主系统构建能够进入真实场景的研究平台。', 'We develop research platforms in machine vision, robotics, and autonomous systems for real-world settings.'))}<div class="button-row" aria-label="${copy('研究方向筛选', 'Research tag filter')}"><button class="button button--solid" type="button" data-tag="" aria-pressed="true">${copy('全部', 'All')}</button>${tags.map((tag) => `<button class="button" type="button" data-tag="${escape(tag)}" aria-pressed="false">${escape(tag)}</button>`).join('')}</div><div id="research-list">${renderProjects(projects)}</div></section>`;
   document.querySelectorAll('[data-tag]').forEach((button) => button.addEventListener('click', () => {
     const tag = button.dataset.tag;
     document.querySelector('#research-list').innerHTML = renderProjects(tag ? projects.filter((project) => project.tags.includes(tag)) : projects);
-    document.querySelectorAll('[data-tag]').forEach((item) => item.classList.toggle('button--solid', item === button));
+    document.querySelectorAll('[data-tag]').forEach((item) => {
+      item.classList.toggle('button--solid', item === button);
+      item.setAttribute('aria-pressed', String(item === button));
+    });
   }));
 }
 

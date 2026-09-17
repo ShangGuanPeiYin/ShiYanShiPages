@@ -42,13 +42,13 @@ export function renderSiteShell(site = {}, lang = document.body.dataset.lang) {
     ? `${root}index_${alternate}.html`
     : pageFiles[page] ? `${nested ? '' : 'htmls/'}${pageFiles[page]}_${alternate}.html${query}` : home;
   const labels = language === 'zh'
-    ? { name: site.labName || '机器视觉与自主系统实验室', language: 'EN', menu: '菜单', copyright: site.labName || '机器视觉与自主系统实验室' }
-    : { name: site.labName || 'Machine Vision and Autonomous Systems Laboratory', language: '中文', menu: 'Menu', copyright: site.shortName || 'MVAS Laboratory' };
+    ? { name: site.labName || '机器视觉与自主系统实验室', context: site.department || '上海交通大学自动化系', language: 'EN', menu: '菜单', copyright: site.labName || '机器视觉与自主系统实验室' }
+    : { name: site.labName || 'Machine Vision and Autonomous Systems Laboratory', context: site.department || 'Shanghai Jiao Tong University', language: '中文', menu: 'Menu', copyright: site.shortName || 'MVAS Laboratory' };
 
   document.querySelector('#site-header').innerHTML = `
     <header class="site-header">
       <div class="site-header__row">
-        <a class="site-identity" href="${home}"><img class="site-identity__mark" src="${root}images/lab_logo_img.png" alt=""><span>${labels.name}</span></a>
+        <a class="site-identity" href="${home}"><img class="site-identity__mark" src="${root}images/lab_logo_img.png" alt=""><span class="site-identity__copy"><span class="site-identity__name">${labels.name}</span><span class="site-identity__context">${labels.context}</span></span></a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">${labels.menu}</button>
         <nav class="site-nav" id="mobile-menu" data-open="false" aria-label="${language === 'zh' ? '主导航' : 'Primary navigation'}">
           ${navigation[language].map(([name, label]) => `<a href="${pageHref(name)}"${activePage === name ? ' aria-current="page"' : ''}>${label}</a>`).join('')}
@@ -59,7 +59,7 @@ export function renderSiteShell(site = {}, lang = document.body.dataset.lang) {
         </nav>
       </div>
     </header>`;
-  document.querySelector('#site-footer').innerHTML = `<footer class="site-footer"><address><strong>${labels.copyright}</strong><span>${site.address || ''}</span><a href="mailto:${site.email || ''}">${site.email || ''}</a><a href="${site.university?.url || 'https://www.sjtu.edu.cn/'}" target="_blank" rel="noopener noreferrer">${site.university?.name || ''}</a></address><small>&copy; ${new Date().getFullYear()} ${labels.copyright}</small></footer>`;
+  document.querySelector('#site-footer').innerHTML = `<footer class="site-footer"><div class="site-footer__row"><address><strong>${labels.copyright}</strong><span>${site.address || ''}</span><a href="mailto:${site.email || ''}">${site.email || ''}</a><a href="${site.university?.url || 'https://www.sjtu.edu.cn/'}" target="_blank" rel="noopener noreferrer">${site.university?.name || ''}</a></address><small>&copy; ${new Date().getFullYear()} ${labels.copyright}</small></div></footer>`;
 
   const menu = document.querySelector('#mobile-menu');
   const button = document.querySelector('.menu-toggle');

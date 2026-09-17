@@ -34,6 +34,22 @@ test('localized project datasets retain matching slugs and valid records', async
   assert.doesNotThrow(() => validateCollection('en projects', en));
 });
 
+test('featured projects use their matching repository posters in both locales', async () => {
+  const read = async (locale) => JSON.parse(await readFile(new URL(`../data/${locale}/projects.json`, import.meta.url)));
+  const expectedCovers = {
+    'auto-sweeper': 'posters/auto_sweeper.png',
+    'bipedal-robot': 'posters/bipedal_robot.png',
+    'marine-navigation': 'posters/marine_navigation.png',
+  };
+  const [zh, en] = await Promise.all([read('zh'), read('en')]);
+
+  for (const records of [zh, en]) {
+    for (const project of records.filter((record) => record.featured)) {
+      assert.equal(project.cover, expectedCovers[project.slug]);
+    }
+  }
+});
+
 test('publication filtering combines year, type, and case-insensitive search', () => {
   const records = [
     { title: 'Autonomous Sweeper', summary: '', venue: '', year: 2025, type: 'journal' },
