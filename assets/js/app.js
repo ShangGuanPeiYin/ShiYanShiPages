@@ -1,4 +1,5 @@
 import { loadJson, normalizeLinks, showPageError, validateCollection } from './data-client.js';
+import { applyMediaFallbacks, mediaMarkup, shouldAutoplayMedia } from './media.js';
 import { filterPublications } from './publication-filter.js';
 import { renderSiteShell } from './site-shell.js';
 
@@ -23,11 +24,8 @@ function projectHref(slug) {
 }
 
 function projectCard(project) {
-  const media = project.video
-    ? `<video muted loop playsinline preload="metadata" poster="${escape(rootPath() + project.cover)}"><source src="${escape(project.video)}" type="video/mp4"></video>`
-    : `<img src="${escape(rootPath() + project.cover)}" alt="">`;
   return `<article class="project-card">
-    ${media}
+    <div class="project-card__media">${mediaMarkup(project, { basePath: rootPath() })}</div>
     <div class="project-card__body">
       <p class="eyebrow">${escape(project.tags?.[0] || 'MVAS')}</p>
       <h3>${escape(project.title)}</h3>
@@ -43,29 +41,31 @@ function pageIntro(label, title, description) {
 }
 
 async function renderHome() {
-  const [site, projects, news] = await Promise.all([dataset('site'), dataset('projects'), dataset('news')]);
+  const [site, projects, news, join] = await Promise.all([dataset('site'), dataset('projects'), dataset('news'), dataset('join')]);
   validateCollection('projects', projects);
   validateCollection('news', news);
   const featured = projects.filter((project) => project.featured);
-  const shouldAutoplay = !window.matchMedia('(prefers-reduced-motion: reduce), (max-width: 47.99rem)').matches;
+  const heroProject = featured[0] || projects[0];
+  const shouldAutoplay = shouldAutoplayMedia({ reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches, narrowViewport: window.matchMedia('(max-width: 47.99rem)').matches });
+  const heroMedia = mediaMarkup(heroProject, { basePath: rootPath(), autoplay: shouldAutoplay });
+  const hasHeroVideo = heroMedia.startsWith('<video');
   const latestNews = [...news].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3);
-  main().innerHTML = `<section class="hero" id="hero">
-    <video${shouldAutoplay ? ' autoplay' : ''} muted loop playsinline preload="metadata" poster="${escape(rootPath() + projects[0].cover)}"><source src="${escape(projects[0].video)}" type="video/mp4"></video>
+  const projectRows = featured.slice(0, 3).map((project, index) => `<article class="editorial-project"><div class="editorial-project__media">${mediaMarkup(project, { basePath: rootPath() })}</div><div class="editorial-project__body"><p class="editorial-index"><span>${String(index + 1).padStart(2, '0')}</span> / ${String(featured.length).padStart(2, '0')}</p><p class="eyebrow">${escape(project.tags?.[0] || site.shortName)}</p><h3>${escape(project.title)}</h3><p class="editorial-project__summary">${escape(project.summary)}</p><p class="editorial-project__challenge"><strong>${copy('研究挑战', 'Research challenge')}</strong>${escape(project.challenge)}</p><a class="text-link" href="${projectHref(project.slug)}">${copy('查看项目详情', 'Read the project')}</a></div></article>`).join('');
+  main().innerHTML = `<section class="hero home-hero" id="hero">
+    <div class="home-hero__media">${heroMedia}</div>
     <div class="hero__content">
-      <p class="eyebrow">${escape(site.shortName)}</p>
-      <h1>${escape(site.tagline)}</h1>
-      <p>${escape(site.department)}</p>
-      <div class="button-row"><a class="button button--solid" href="${rootPath()}htmls/research_${language()}.html">${copy('探索研究项目', 'Explore our work')}</a><a class="button" href="${rootPath()}htmls/join_${language()}.html">${copy('加入实验室', 'Join the lab')}</a>${shouldAutoplay ? '' : `<button class="button" type="button" id="hero-play">${copy('播放项目演示', 'Play project demo')}</button>`}</div>
-    </div>
-  </section>
-  <section class="content-section" id="featured-projects"><div class="page-wrap"><div class="section-heading"><div><p class="eyebrow">${copy('成果优先', 'Work first')}</p><h2>${copy('在真实环境中验证自主系统', 'Autonomous systems, validated in the physical world')}</h2></div></div><div class="project-grid">${featured.map(projectCard).join('')}</div></div></section>
-  <section class="content-section content-section--panel" id="latest-news"><div class="page-wrap"><div class="section-heading"><div><p class="eyebrow">${copy('实验室动态', 'News')}</p><h2>${copy('近期动态', 'Latest updates')}</h2></div></div><div class="news-list">${latestNews.map((item) => `<article class="news-item"><time datetime="${escape(item.date)}">${escape(item.date)}</time><div><h3>${escape(item.title)}</h3><p>${escape(item.summary)}</p></div></article>`).join('')}</div></div></section>
-  <section class="content-section" id="join-cta"><div class="page-wrap"><div class="join-grid"><section><p class="eyebrow">${copy('加入我们', 'Join us')}</p><h2>${copy('把研究变成真实系统', 'Turn research into real systems')}</h2><p>${copy('欢迎对机器视觉、机器人和自主系统感兴趣的同学联系实验室。', 'Students interested in machine vision, robotics, and autonomous systems are welcome to get in touch.')}</p><a class="button button--solid" href="${rootPath()}htmls/join_${language()}.html">${copy('了解招募信息', 'Learn about opportunities')}</a></section></div></div></section>`;
-  document.querySelector('#hero-play')?.addEventListener('click', async () => {
-    const video = document.querySelector('#hero video');
-    video.controls = true;
-    await video.play();
-  });
+      <p class="home-hero__number"><span>01</span> / ${String(featured.length).padStart(2, '0')}</p>
+      <p class="eyebrow">${copy('重点项目', 'Featured project')} · ${escape(site.shortName)}</p>
+      <h1>${escape(heroProject.title)}</h1>
+      <p>${escape(heroProject.summary)}</p>
+      <div class="button-row"><a class="button button--solid" href="${projectHref(heroProject.slug)}">${copy('查看重点项目', 'View featured project')}</a><a class="button" href="${rootPath()}htmls/research_${language()}.html">${copy('浏览全部研究', 'Explore all research')}</a>${hasHeroVideo && !shouldAutoplay ? `<button class="button" type="button" id="hero-play">${copy('播放项目演示', 'Play project demo')}</button>` : ''}</div>
+    </div></section>
+  <section class="home-mission" aria-labelledby="mission-title"><div class="page-wrap home-mission__grid"><p class="home-section-label"><span>01</span>${copy('实验室使命', 'Laboratory mission')}</p><div><h2 id="mission-title">${escape(site.tagline)}</h2><p>${escape(site.department)}</p></div></div></section>
+  <section class="content-section home-projects" id="featured-projects"><div class="page-wrap"><div class="home-section-heading"><p class="home-section-label"><span>02</span>${copy('重点研究', 'Selected work')}</p><div><h2>${copy('在真实环境中验证自主系统', 'Autonomous systems, validated in the physical world')}</h2><p>${copy('从机器视觉、运动规划到自主控制，三个项目呈现实验室如何将感知与行动连接为闭环系统。', 'Across machine vision, motion planning, and autonomous control, three projects show how the laboratory closes the loop between perception and action.')}</p></div></div><div class="editorial-projects">${projectRows}</div></div></section>
+  <section class="content-section content-section--panel home-news" id="latest-news"><div class="page-wrap home-news__grid"><div><p class="home-section-label"><span>03</span>${copy('实验室动态', 'News')}</p><h2>${copy('近期动态', 'Latest updates')}</h2><p>${copy('记录团队的论文、成员与学术里程碑。', 'Notes on publications, people, and academic milestones from the laboratory.')}</p></div><div class="news-list">${latestNews.map((item) => `<article class="news-item"><time datetime="${escape(item.date)}">${escape(item.date)}</time><div><p class="news-item__category">${escape(item.category)}</p><h3>${escape(item.title)}</h3><p>${escape(item.summary)}</p></div></article>`).join('')}</div></div></section>
+  <section class="home-join" id="join-cta"><div class="page-wrap home-join__grid"><p class="home-section-label"><span>04</span>${copy('加入我们', 'Join us')}</p><div><h2>${escape(join.title)}</h2><p>${escape(join.intro)}</p><div class="home-join__roles">${join.roles.map((role) => `<span>${escape(role)}</span>`).join('')}</div><a class="button" href="${rootPath()}htmls/join_${language()}.html">${copy('了解招募信息', 'Learn about opportunities')}</a></div></div></section>
+  <section class="home-contact" aria-labelledby="contact-title"><div class="page-wrap home-contact__grid"><p class="home-section-label"><span>05</span>${copy('联系', 'Contact')}</p><div><p class="eyebrow">${escape(site.shortName)} · ${escape(site.university.name)}</p><h2 id="contact-title">${copy('让下一项研究从一次交流开始。', 'Begin the next research question with a conversation.')}</h2><p>${escape(site.address)}</p><a class="home-contact__email" href="mailto:${escape(site.email)}">${escape(site.email)}</a></div></div></section>`;
+  document.querySelector('#hero-play')?.addEventListener('click', async () => { const video = document.querySelector('#hero video'); if (video) { video.controls = true; await video.play(); } });
 }
 
 async function renderResearch() {
@@ -89,7 +89,7 @@ async function renderProject() {
     return;
   }
   const links = normalizeLinks(project);
-  main().innerHTML = `<section class="page-wrap"><div class="project-hero"><p class="eyebrow">${escape((project.tags || []).join(' / '))}</p><h1>${escape(project.title)}</h1><p class="project-copy">${escape(project.summary)}</p></div><div class="project-detail"><div>${project.video ? `<video controls playsinline preload="metadata" poster="${escape(rootPath() + project.cover)}"><source src="${escape(project.video)}" type="video/mp4"></video>` : `<img src="${escape(rootPath() + project.cover)}" alt="">`}</div><aside class="project-facts"><section><h2>${copy('挑战', 'Challenge')}</h2><p>${escape(project.challenge)}</p></section><section><h2>${copy('方法', 'Approach')}</h2><p>${escape(project.approach)}</p></section>${project.outcomes?.length ? `<section><h2>${copy('成果', 'Outcomes')}</h2><ul>${project.outcomes.map((outcome) => `<li>${escape(outcome)}</li>`).join('')}</ul></section>` : ''}${links.length ? `<div class="project-links">${links.map((link) => `<a href="${escape(link.href)}" target="_blank" rel="noreferrer">${escape(link.label)}</a>`).join('')}</div>` : ''}</aside></div></section>`;
+  main().innerHTML = `<section class="page-wrap"><div class="project-hero"><p class="eyebrow">${escape((project.tags || []).join(' / '))}</p><h1>${escape(project.title)}</h1><p class="project-copy">${escape(project.summary)}</p></div><div class="project-detail"><div class="project-detail__media">${mediaMarkup(project, { basePath: rootPath(), controls: true })}</div><aside class="project-facts"><section><h2>${copy('挑战', 'Challenge')}</h2><p>${escape(project.challenge)}</p></section><section><h2>${copy('方法', 'Approach')}</h2><p>${escape(project.approach)}</p></section>${project.outcomes?.length ? `<section><h2>${copy('成果', 'Outcomes')}</h2><ul>${project.outcomes.map((outcome) => `<li>${escape(outcome)}</li>`).join('')}</ul></section>` : ''}${links.length ? `<div class="project-links">${links.map((link) => `<a href="${escape(link.href)}" target="_blank" rel="noreferrer">${escape(link.label)}</a>`).join('')}</div>` : ''}</aside></div></section>`;
 }
 
 function personCard(person) {
@@ -158,6 +158,7 @@ export async function bootPage() {
   const nested = new URL('.', window.location.href).pathname !== root;
   renderSiteShell({ nested, ...(await dataset('site')) }, language());
   await pageRenderers[document.body.dataset.page]?.();
+  applyMediaFallbacks(main());
 }
 
 bootPage().catch((error) => {
