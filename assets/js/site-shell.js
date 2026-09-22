@@ -94,7 +94,7 @@ export function renderSiteShell(site = {}, lang = document.body.dataset.lang) {
         </nav>
         <div class="site-header__actions">
           <a class="site-school" href="${universityUrl}" target="_blank" rel="noopener noreferrer"><img src="${root}images/sjtu_logo.png" alt="${universityName}"></a>
-          <a class="site-language__switch" href="${alternateHref}" lang="${alternate}" aria-label="${labels.languageAria}"><span class="site-language__label">${labels.languageLabel}</span><span class="site-language__value">${labels.language}</span></a>
+          <a class="site-language__switch" href="${alternateHref}" hreflang="${alternate}" aria-label="${labels.languageAria}"><span class="site-language__label">${labels.languageLabel}</span><span class="site-language__value" lang="${alternate}">${labels.language}</span></a>
         </div>
       </div>
     </header>`;
