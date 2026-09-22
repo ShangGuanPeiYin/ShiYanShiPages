@@ -1,18 +1,61 @@
 :root {
-  --color-ink: #090d14;
-  --color-surface: #101722;
-  --color-paper: #172131;
-  --color-panel: #1d2a3d;
-  --color-text: #eef4f8;
-  --color-muted: #a8b7c4;
-  --color-accent: #63e6c8;
-  --color-accent-strong: #20bfa1;
-  --color-link: #8dc7ff;
-  --color-line: rgb(238 244 248 / 16%);
-  --content-max: 80rem;
-  --space-1: .5rem;
-  --space-2: 1rem;
-  --space-3: 1.5rem;
-  --space-4: 2.5rem;
-  --space-5: 4rem;
+  color-scheme: light;
+
+  --color-sjtu-red: #9e1b32;
+  --color-sjtu-red-dark: #741124;
+  --color-sjtu-red-soft: #ead7db;
+  --color-warm-white: #f6f1e8;
+  --color-paper: #fffdf8;
+  --color-paper-strong: #ffffff;
+  --color-charcoal: #24201f;
+  --color-charcoal-soft: #4f4946;
+  --color-stone: #756d68;
+  --color-line: #d7cec3;
+  --color-line-strong: #a89e94;
+  --color-on-red: #fffaf4;
+  --color-on-dark: #f6f1e8;
+  --color-on-dark-muted: #cfc5ba;
+  --color-focus-inner: #ffffff;
+  --color-hero-overlay-start: rgb(36 32 31 / 94%);
+  --color-hero-overlay-mid: rgb(36 32 31 / 68%);
+  --color-hero-overlay-end: rgb(36 32 31 / 22%);
+  --color-shadow: rgb(36 32 31 / 12%);
+
+  --color-ink: var(--color-charcoal);
+  --color-surface: var(--color-warm-white);
+  --color-panel: var(--color-paper);
+  --color-text: var(--color-charcoal);
+  --color-muted: var(--color-charcoal-soft);
+  --color-accent: var(--color-sjtu-red);
+  --color-accent-strong: var(--color-sjtu-red-dark);
+  --color-link: var(--color-sjtu-red-dark);
+
+  --font-display: "Iowan Old Style", "Baskerville", "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
+  --font-body: Aptos, "Source Han Sans SC", "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-label: "Aptos Narrow", "Arial Narrow", "Source Han Sans SC", "PingFang SC", sans-serif;
+
+  --step--1: clamp(.76rem, .73rem + .13vw, .84rem);
+  --step-0: clamp(.98rem, .93rem + .22vw, 1.1rem);
+  --step-1: clamp(1.18rem, 1.06rem + .55vw, 1.48rem);
+  --step-2: clamp(1.48rem, 1.25rem + 1vw, 2rem);
+  --step-3: clamp(1.9rem, 1.48rem + 1.85vw, 2.9rem);
+  --step-4: clamp(2.5rem, 1.74rem + 3.4vw, 4.4rem);
+  --step-5: clamp(3.15rem, 2rem + 5.1vw, 6rem);
+
+  --space-1: clamp(.35rem, .31rem + .18vw, .45rem);
+  --space-2: clamp(.7rem, .62rem + .35vw, .9rem);
+  --space-3: clamp(1.1rem, .95rem + .7vw, 1.5rem);
+  --space-4: clamp(1.7rem, 1.42rem + 1.2vw, 2.4rem);
+  --space-5: clamp(2.6rem, 2.08rem + 2.3vw, 3.9rem);
+  --space-6: clamp(4rem, 3.08rem + 4vw, 6.25rem);
+  --space-7: clamp(6rem, 4.35rem + 7.3vw, 10rem);
+
+  --content-max: 82rem;
+  --text-measure: 66ch;
+  --page-gutter: clamp(1rem, 3.8vw, 3.75rem);
+  --header-min-height: 6.25rem;
+  --control-min-height: 2.875rem;
+  --focus-size: .2rem;
+  --rule-size: .0625rem;
+  --rule-bold: .25rem;
 }
