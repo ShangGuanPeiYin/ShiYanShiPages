@@ -19,11 +19,14 @@ test('every public page shell has a main landmark and shared module entry', asyn
   }
 });
 
-test('home data exposes exactly three featured projects with COS video URLs', async () => {
+test('home data exposes exactly three featured projects with tracked poster images', async () => {
   const projects = JSON.parse(await readFile('data/zh/projects.json', 'utf8'));
   const featured = projects.filter((project) => project.featured);
   assert.equal(featured.length, 3);
-  for (const project of featured) assert.match(project.video, /^https:\/\/ieeemvasl-1484396763\.cos\.ap-shanghai\.myqcloud\.com\//);
+  for (const project of featured) {
+    assert.match(project.cover, /^images\//);
+    await assert.doesNotReject(() => readFile(project.cover));
+  }
 });
 
 test('featured project slugs are unique and resolve to known project data', async () => {
@@ -35,14 +38,13 @@ test('featured project slugs are unique and resolve to known project data', asyn
   assert.ok(slugs.includes('marine-navigation'));
 });
 
-test('rebuilt page code and datasets never reference a local videos directory', async () => {
+test('deployed code and datasets do not depend on Tencent COS', async () => {
   const filesToCheck = [
     'assets/js/app.js',
     'data/zh/projects.json', 'data/en/projects.json',
     ...publicPages,
   ];
   for (const file of filesToCheck) {
-    const content = await readFile(file, 'utf8');
-    assert.doesNotMatch(content, /(?:src|video)\s*[:=]["']?videos\//);
+    assert.doesNotMatch(await readFile(file, 'utf8'), /ieeemvasl-1484396763\.cos\.ap-shanghai\.myqcloud\.com/);
   }
 });

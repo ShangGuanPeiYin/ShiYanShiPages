@@ -1,5 +1,6 @@
 .DS_Store
 .idea/
 .worktrees/
+# Source video masters are local-only; publish optimized encodes before referencing them.
 videos/
 .superpowers/
