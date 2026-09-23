@@ -23,15 +23,15 @@ function projectHref(slug) {
   return `${rootPath()}htmls/project_${language()}.html?project=${encodeURIComponent(slug)}`;
 }
 
-function projectCard(project) {
+function projectCard(project, index) {
   return `<article class="project-card">
     <div class="project-card__media">${mediaMarkup(project, { basePath: rootPath() })}</div>
     <div class="project-card__body">
-      <p class="eyebrow">${escape(project.tags?.[0] || 'MVAS')}</p>
-      <h3>${escape(project.title)}</h3>
-      <p>${escape(project.summary)}</p>
+      <p class="project-index">${String(index + 1).padStart(2, '0')}</p>
       <div class="tag-list">${(project.tags || []).map((tag) => `<span>${escape(tag)}</span>`).join('')}</div>
-      <a class="button" href="${projectHref(project.slug)}">${copy('查看项目', 'View project')}</a>
+      <h3>${escape(project.title)}</h3>
+      <p class="project-card__summary">${escape(project.summary)}</p>
+      <a class="text-link" href="${projectHref(project.slug)}">${copy('查看项目详情 →', 'Read the project →')}</a>
     </div>
   </article>`;
 }
@@ -71,11 +71,13 @@ async function renderHome() {
 async function renderResearch() {
   const projects = validateCollection('projects', await dataset('projects'));
   const tags = [...new Set(projects.flatMap((project) => project.tags || []))];
-  const renderProjects = (filtered) => `<p id="research-count" aria-live="polite">${copy(`显示 ${filtered.length} 个项目`, `Showing ${filtered.length} projects`)}</p><div class="project-grid">${filtered.map(projectCard).join('')}</div>`;
-  main().innerHTML = `${pageIntro(copy('研究', 'Research'), copy('从感知到行动的闭环系统', 'Closed-loop systems from perception to action'), copy('我们围绕机器视觉、机器人与自主系统构建能够进入真实场景的研究平台。', 'We develop research platforms in machine vision, robotics, and autonomous systems for real-world settings.'))}<div class="button-row" aria-label="${copy('研究方向筛选', 'Research tag filter')}"><button class="button button--solid" type="button" data-tag="">${copy('全部', 'All')}</button>${tags.map((tag) => `<button class="button" type="button" data-tag="${escape(tag)}">${escape(tag)}</button>`).join('')}</div><div id="research-list">${renderProjects(projects)}</div></section>`;
+  const renderProjects = (filtered) => `<p id="research-count" aria-live="polite">${copy(`显示 ${filtered.length} 个项目`, `Showing ${filtered.length} projects`)}</p><div class="project-grid">${filtered.map((project, index) => projectCard(project, index)).join('')}</div>`;
+  main().innerHTML = `${pageIntro(copy('研究', 'Research'), copy('从感知到行动的闭环系统', 'Closed-loop systems from perception to action'), copy('我们围绕机器视觉、机器人与自主系统构建能够进入真实场景的研究平台。', 'We develop research platforms in machine vision, robotics, and autonomous systems for real-world settings.'))}<div class="research-filters" aria-label="${copy('研究方向筛选', 'Research tag filter')}"><button class="button button--solid" type="button" data-tag="">${copy('全部', 'All')}</button>${tags.map((tag) => `<button class="button" type="button" data-tag="${escape(tag)}">${escape(tag)}</button>`).join('')}</div><div id="research-list">${renderProjects(projects)}</div></section>`;
   document.querySelectorAll('[data-tag]').forEach((button) => button.addEventListener('click', () => {
     const tag = button.dataset.tag;
-    document.querySelector('#research-list').innerHTML = renderProjects(tag ? projects.filter((project) => project.tags.includes(tag)) : projects);
+    const researchList = document.querySelector('#research-list');
+    researchList.innerHTML = renderProjects(tag ? projects.filter((project) => project.tags.includes(tag)) : projects);
+    applyMediaFallbacks(researchList);
     document.querySelectorAll('[data-tag]').forEach((item) => item.classList.toggle('button--solid', item === button));
   }));
 }
@@ -83,13 +85,17 @@ async function renderResearch() {
 async function renderProject() {
   const projects = validateCollection('projects', await dataset('projects'));
   const slug = new URLSearchParams(window.location.search).get('project') || new URLSearchParams(window.location.search).get('slug');
-  const project = projects.find((item) => item.slug === slug);
+  const projectIndex = projects.findIndex((item) => item.slug === slug);
+  const project = projects[projectIndex];
+  const researchHref = `${rootPath()}htmls/research_${language()}.html`;
   if (!project) {
-    main().innerHTML = `<section class="page-wrap"><p class="eyebrow">404</p><h1>${copy('未找到该项目', 'Project not found')}</h1><p class="project-copy">${copy('该项目链接可能已失效。', 'This project link may be out of date.')}</p><a class="button" href="${rootPath()}htmls/research_${language()}.html">${copy('返回研究页', 'Back to research')}</a></section>`;
+    main().innerHTML = `<section class="page-wrap project-missing"><a class="project-backlink" href="${researchHref}">← ${copy('返回研究', 'Back to research')}</a><p class="project-number">404</p><h1>${copy('未找到该项目', 'Project not found')}</h1><p class="project-copy">${copy('该项目不存在，或链接已经失效。请返回研究页浏览现有项目。', 'This project does not exist, or its link is no longer valid. Return to research to browse the current projects.')}</p></section>`;
     return;
   }
   const links = normalizeLinks(project);
-  main().innerHTML = `<section class="page-wrap"><div class="project-hero"><p class="eyebrow">${escape((project.tags || []).join(' / '))}</p><h1>${escape(project.title)}</h1><p class="project-copy">${escape(project.summary)}</p></div><div class="project-detail"><div class="project-detail__media">${mediaMarkup(project, { basePath: rootPath(), controls: true })}</div><aside class="project-facts"><section><h2>${copy('挑战', 'Challenge')}</h2><p>${escape(project.challenge)}</p></section><section><h2>${copy('方法', 'Approach')}</h2><p>${escape(project.approach)}</p></section>${project.outcomes?.length ? `<section><h2>${copy('成果', 'Outcomes')}</h2><ul>${project.outcomes.map((outcome) => `<li>${escape(outcome)}</li>`).join('')}</ul></section>` : ''}${links.length ? `<div class="project-links">${links.map((link) => `<a href="${escape(link.href)}" target="_blank" rel="noreferrer">${escape(link.label)}</a>`).join('')}</div>` : ''}</aside></div></section>`;
+  const number = String(projectIndex + 1).padStart(2, '0');
+  const total = String(projects.length).padStart(2, '0');
+  main().innerHTML = `<article class="page-wrap project-page"><a class="project-backlink" href="${researchHref}">← ${copy('返回研究', 'Back to research')}</a><header class="project-hero"><div><p class="project-number">${number} / ${total}</p><p class="eyebrow">${copy('研究项目', 'Research project')}</p></div><div><h1>${escape(project.title)}</h1><p class="project-copy">${escape(project.summary)}</p><div class="tag-list">${(project.tags || []).map((tag) => `<span>${escape(tag)}</span>`).join('')}</div></div></header><div class="project-detail__media">${mediaMarkup(project, { basePath: rootPath(), controls: true })}</div><div class="project-facts"><section><p class="project-fact__number">01</p><div><h2>${copy('挑战', 'Challenge')}</h2><p>${escape(project.challenge)}</p></div></section><section><p class="project-fact__number">02</p><div><h2>${copy('方法', 'Approach')}</h2><p>${escape(project.approach)}</p></div></section>${project.outcomes?.length ? `<section><p class="project-fact__number">03</p><div><h2>${copy('成果', 'Outcomes')}</h2><ul>${project.outcomes.map((outcome) => `<li>${escape(outcome)}</li>`).join('')}</ul></div></section>` : ''}</div>${links.length ? `<nav class="project-links" aria-label="${copy('项目外部链接', 'Project links')}">${links.map((link) => `<a href="${escape(link.href)}" target="_blank" rel="noreferrer">${escape(link.label)} ↗</a>`).join('')}</nav>` : ''}</article>`;
 }
 
 function personCard(person) {
