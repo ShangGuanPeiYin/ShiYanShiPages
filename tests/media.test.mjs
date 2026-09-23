@@ -24,17 +24,18 @@ test('remote video URLs fall back to the project cover', () => {
   }
 });
 
-test('local video markup honors autoplay and escapes project data', () => {
+test('local video markup puts the escaped MP4 source on the video element', () => {
   const html = mediaMarkup(
     { title: 'Vision < Control', cover: 'images/a&b.jpg', video: 'videos/demo.mp4' },
-    { basePath: '../', autoplay: true },
+    { basePath: '../' },
   );
+  const openingTag = html.match(/^<video[^>]*>/)?.[0] || '';
 
-  assert.match(html, /^<video[^>]* data-media/);
-  assert.match(html, / autoplay(?:\s|>)/);
-  assert.match(html, /aria-label="Vision &lt; Control"/);
-  assert.match(html, /poster="\.\.\/images\/a&amp;b\.jpg"/);
-  assert.match(html, /src="\.\.\/videos\/demo\.mp4"/);
+  assert.match(openingTag, / data-media/);
+  assert.match(openingTag, /aria-label="Vision &lt; Control"/);
+  assert.match(openingTag, /poster="\.\.\/images\/a&amp;b\.jpg"/);
+  assert.match(openingTag, /src="\.\.\/videos\/demo\.mp4"/);
+  assert.doesNotMatch(html, /<source/);
 });
 
 test('local video markup can expose playback controls without autoplay', () => {
@@ -45,6 +46,17 @@ test('local video markup can expose playback controls without autoplay', () => {
 
   assert.match(html, / controls(?:\s|>)/);
   assert.doesNotMatch(html, / autoplay(?:\s|>)/);
+});
+
+test('autoplay video exposes native controls so playback can be paused', () => {
+  const html = mediaMarkup(
+    { title: 'Robot demo', cover: '/images/robot.jpg', video: '/videos/robot.mp4' },
+    { autoplay: true },
+  );
+  const openingTag = html.match(/^<video[^>]*>/)?.[0] || '';
+
+  assert.match(openingTag, / autoplay(?:\s|>)/);
+  assert.match(openingTag, / controls(?:\s|>)/);
 });
 
 test('media fallbacks bind once and replace failed media accessibly', () => {

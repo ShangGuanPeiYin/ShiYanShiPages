@@ -788,6 +788,11 @@
 
 .home-hero .hero__content {
   padding-inline-end: min(38vw, 28rem);
+  pointer-events: none;
+}
+
+.home-hero .hero__content :is(a, button) {
+  pointer-events: auto;
 }
 
 .home-hero__number,

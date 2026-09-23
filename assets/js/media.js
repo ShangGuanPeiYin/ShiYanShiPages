@@ -34,7 +34,7 @@ export function mediaMarkup(project, options = {}) {
   }
 
   const source = escapeHtml(assetPath(video, basePath));
-  return `<video data-media aria-label="${title}"${options.autoplay ? ' autoplay' : ''}${options.controls ? ' controls' : ''} muted loop playsinline preload="metadata" poster="${cover}"><source src="${source}" type="video/mp4"></video>`;
+  return `<video data-media aria-label="${title}"${options.autoplay ? ' autoplay' : ''}${options.controls || options.autoplay ? ' controls' : ''} muted loop playsinline preload="metadata" poster="${cover}" src="${source}"></video>`;
 }
 
 export function applyMediaFallbacks(root) {
