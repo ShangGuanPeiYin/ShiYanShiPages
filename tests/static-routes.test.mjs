@@ -16,6 +16,9 @@ test('every public page shell has a main landmark and shared module entry', asyn
     const html = await readFile(file, 'utf8');
     assert.match(html, /<main id="page-main"/);
     assert.match(html, /type="module" src="(?:\.\.\/)?assets\/js\/app\.js"/);
+    assert.match(html, /<meta name="description" content="[^"]+">/);
+    assert.match(html, /<meta name="theme-color" content="#9E1B32">/);
+    assert.doesNotMatch(html, /https:\/\/fonts\.(?:googleapis|gstatic)\.com/);
   }
 });
 

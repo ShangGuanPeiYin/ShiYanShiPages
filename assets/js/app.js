@@ -10,6 +10,31 @@ const escape = (value = '') => String(value).replace(/[&<>'"]/g, (character) => 
   '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;',
 }[character]));
 
+export function setupRevealMotion({
+  root = document,
+  reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false,
+  Observer = window.IntersectionObserver,
+} = {}) {
+  const revealElements = [...root.querySelectorAll('[data-reveal]')];
+  if (!revealElements.length) return null;
+
+  if (reducedMotion || typeof Observer !== 'function') {
+    revealElements.forEach((element) => element.classList.add('is-visible'));
+    return null;
+  }
+
+  root.documentElement.classList.add('motion-ready');
+  const observer = new Observer((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+  revealElements.forEach((element) => observer.observe(element));
+  return observer;
+}
+
 function rootPath() {
   const root = new URL('../../', import.meta.url).pathname;
   return new URL('.', window.location.href).pathname === root ? '' : '../';
@@ -207,10 +232,15 @@ export async function bootPage() {
   const nested = new URL('.', window.location.href).pathname !== root;
   renderSiteShell({ nested, ...(await dataset('site')) }, language());
   await pageRenderers[document.body.dataset.page]?.();
-  applyMediaFallbacks(main());
+  const pageMain = main();
+  pageMain.querySelectorAll('section, article').forEach((element) => element.setAttribute('data-reveal', ''));
+  applyMediaFallbacks(pageMain);
+  setupRevealMotion();
 }
 
-bootPage().catch((error) => {
-  console.error(error);
-  showPageError(copy('内容加载失败，请刷新页面后重试。', 'Content failed to load. Please refresh and try again.'));
-});
+if (typeof document !== 'undefined') {
+  bootPage().catch((error) => {
+    console.error(error);
+    showPageError(copy('内容加载失败，请刷新页面后重试。', 'Content failed to load. Please refresh and try again.'));
+  });
+}
