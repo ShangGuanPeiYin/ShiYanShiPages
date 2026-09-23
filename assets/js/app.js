@@ -71,14 +71,21 @@ async function renderHome() {
 async function renderResearch() {
   const projects = validateCollection('projects', await dataset('projects'));
   const tags = [...new Set(projects.flatMap((project) => project.tags || []))];
-  const renderProjects = (filtered) => `<p id="research-count" aria-live="polite">${copy(`显示 ${filtered.length} 个项目`, `Showing ${filtered.length} projects`)}</p><div class="project-grid">${filtered.map((project, index) => projectCard(project, index)).join('')}</div>`;
-  main().innerHTML = `${pageIntro(copy('研究', 'Research'), copy('从感知到行动的闭环系统', 'Closed-loop systems from perception to action'), copy('我们围绕机器视觉、机器人与自主系统构建能够进入真实场景的研究平台。', 'We develop research platforms in machine vision, robotics, and autonomous systems for real-world settings.'))}<div class="research-filters" aria-label="${copy('研究方向筛选', 'Research tag filter')}"><button class="button button--solid" type="button" data-tag="">${copy('全部', 'All')}</button>${tags.map((tag) => `<button class="button" type="button" data-tag="${escape(tag)}">${escape(tag)}</button>`).join('')}</div><div id="research-list">${renderProjects(projects)}</div></section>`;
+  const projectCount = (filtered) => copy(`显示 ${filtered.length} 个项目`, `Showing ${filtered.length} projects`);
+  const projectCards = (filtered) => filtered.map((project, index) => projectCard(project, index)).join('');
+  main().innerHTML = `${pageIntro(copy('研究', 'Research'), copy('从感知到行动的闭环系统', 'Closed-loop systems from perception to action'), copy('我们围绕机器视觉、机器人与自主系统构建能够进入真实场景的研究平台。', 'We develop research platforms in machine vision, robotics, and autonomous systems for real-world settings.'))}<div class="research-filters" role="group" aria-label="${copy('研究方向筛选', 'Research tag filter')}"><button class="button button--solid" type="button" data-tag="" aria-pressed="true">${copy('全部', 'All')}</button>${tags.map((tag) => `<button class="button" type="button" data-tag="${escape(tag)}" aria-pressed="false">${escape(tag)}</button>`).join('')}</div><div id="research-list"><p id="research-count" aria-live="polite">${projectCount(projects)}</p><div class="project-grid" id="research-projects">${projectCards(projects)}</div></div></section>`;
+  const researchCount = document.querySelector('#research-count');
+  const projectGrid = document.querySelector('#research-projects');
   document.querySelectorAll('[data-tag]').forEach((button) => button.addEventListener('click', () => {
     const tag = button.dataset.tag;
-    const researchList = document.querySelector('#research-list');
-    researchList.innerHTML = renderProjects(tag ? projects.filter((project) => project.tags.includes(tag)) : projects);
-    applyMediaFallbacks(researchList);
-    document.querySelectorAll('[data-tag]').forEach((item) => item.classList.toggle('button--solid', item === button));
+    const filtered = tag ? projects.filter((project) => project.tags.includes(tag)) : projects;
+    researchCount.textContent = projectCount(filtered);
+    projectGrid.innerHTML = projectCards(filtered);
+    applyMediaFallbacks(projectGrid);
+    document.querySelectorAll('[data-tag]').forEach((item) => {
+      item.classList.toggle('button--solid', item === button);
+      item.setAttribute('aria-pressed', String(item === button));
+    });
   }));
 }
 
