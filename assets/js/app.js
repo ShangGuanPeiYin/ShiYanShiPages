@@ -105,24 +105,48 @@ async function renderProject() {
   main().innerHTML = `<article class="page-wrap project-page"><a class="project-backlink" href="${researchHref}">← ${copy('返回研究', 'Back to research')}</a><header class="project-hero"><div><p class="project-number">${number} / ${total}</p><p class="eyebrow">${copy('研究项目', 'Research project')}</p></div><div><h1>${escape(project.title)}</h1><p class="project-copy">${escape(project.summary)}</p><div class="tag-list">${(project.tags || []).map((tag) => `<span>${escape(tag)}</span>`).join('')}</div></div></header><div class="project-detail__media">${mediaMarkup(project, { basePath: rootPath(), controls: true })}</div><div class="project-facts"><section><p class="project-fact__number">01</p><div><h2>${copy('挑战', 'Challenge')}</h2><p>${escape(project.challenge)}</p></div></section><section><p class="project-fact__number">02</p><div><h2>${copy('方法', 'Approach')}</h2><p>${escape(project.approach)}</p></div></section>${project.outcomes?.length ? `<section><p class="project-fact__number">03</p><div><h2>${copy('成果', 'Outcomes')}</h2><ul>${project.outcomes.map((outcome) => `<li>${escape(outcome)}</li>`).join('')}</ul></div></section>` : ''}</div>${links.length ? `<nav class="project-links" aria-label="${copy('项目外部链接', 'Project links')}">${links.map((link) => `<a href="${escape(link.href)}" target="_blank" rel="noreferrer">${escape(link.label)} ↗</a>`).join('')}</nav>` : ''}</article>`;
 }
 
-function personCard(person) {
-  const links = [
+function personLinks(person) {
+  return [
     person.email ? { label: 'Email', href: `mailto:${person.email}` } : null,
     person.homepage ? { label: 'Home', href: person.homepage } : null,
     person.scholar ? { label: 'Scholar', href: person.scholar } : null,
     person.github ? { label: 'GitHub', href: person.github } : null,
   ].filter(Boolean);
-  return `<article class="person-card"><img src="${escape(rootPath() + person.photo)}" alt="${escape(person.name)}"><div class="person-card__body"><h3>${escape(person.name)}</h3><p>${escape(person.role)}</p>${links.length ? `<div class="person-links">${links.map((link) => `<a href="${escape(link.href)}"${link.href.startsWith('http') ? ' target="_blank" rel="noreferrer"' : ''}>${link.label}</a>`).join('')}</div>` : ''}</div></article>`;
+}
+
+function personLinksMarkup(person) {
+  const links = personLinks(person);
+  return links.length ? `<div class="person-links">${links.map((link) => `<a href="${escape(link.href)}"${link.href.startsWith('http') ? ' target="_blank" rel="noreferrer"' : ''}>${escape(link.label)}</a>`).join('')}</div>` : '';
+}
+
+function personCard(person) {
+  return `<article class="person-card"><img src="${escape(rootPath() + person.photo)}" alt="${escape(person.name)}" loading="lazy" decoding="async"><div class="person-card__body"><h3>${escape(person.name)}</h3><p>${escape(person.role)}</p>${personLinksMarkup(person)}</div></article>`;
+}
+
+function leadPerson(person) {
+  return `<article class="people-lead"><div class="people-lead__portrait"><img src="${escape(rootPath() + person.photo)}" alt="${escape(person.name)}" decoding="async"></div><div class="people-lead__body"><p class="eyebrow">${escape(person.group)}</p><h2>${escape(person.name)}</h2><p class="people-lead__role">${escape(person.role)}</p>${personLinksMarkup(person)}</div></article>`;
 }
 
 async function renderPeople() {
   const people = await dataset('people');
-  const groups = [...new Set(people.map((person) => person.group))];
-  const renderGroups = (records) => groups.map((group) => `<section class="people-section"><h2>${escape(group)}</h2><div class="people-grid">${records.filter((person) => person.group === group).map(personCard).join('')}</div></section>`).join('');
-  main().innerHTML = `${pageIntro(copy('成员', 'People'), copy('让研究进入现实的人', 'The people who bring research into the world'), copy('MVAS Lab 由来自机器人、控制与视觉交叉领域的研究人员和学生组成。', 'MVAS Lab brings together researchers and students across robotics, control, and vision.'))}<div class="filters"><label><span class="eyebrow">${copy('筛选', 'Filter')}</span><input id="people-filter" type="search" placeholder="${copy('按姓名或角色检索', 'Search name or role')}"></label></div><div id="people-list">${renderGroups(people)}</div></section>`;
+  const leadGroup = copy('负责人', 'Principal Investigator');
+  const lead = people.find((person) => person.group === leadGroup);
+  const groups = [...new Set(people.filter((person) => person !== lead).map((person) => person.group))];
+  const renderGroups = (records) => groups.map((group) => {
+    const members = records.filter((person) => person.group === group);
+    return members.length ? `<section class="people-section"><h2>${escape(group)}</h2><div class="people-grid">${members.map(personCard).join('')}</div></section>` : '';
+  }).join('');
+  const renderPeopleResults = (records) => {
+    if (!records.length) return `<p class="empty-state" role="status">${copy('未找到匹配的成员，请尝试其他关键词。', 'No matching people found. Try another search.')}</p>`;
+    const featured = lead && records.includes(lead) ? leadPerson(lead) : '';
+    const grouped = renderGroups(records.filter((person) => person !== lead));
+    return featured + grouped;
+  };
+  main().innerHTML = `${pageIntro(copy('成员', 'People'), copy('让研究进入现实的人', 'The people who bring research into the world'), copy('MVAS Lab 由来自机器人、控制与视觉交叉领域的研究人员和学生组成。', 'MVAS Lab brings together researchers and students across robotics, control, and vision.'))}<div class="filters people-filters"><label><span class="eyebrow">${copy('筛选', 'Filter')}</span><input id="people-filter" type="search" aria-controls="people-list" placeholder="${copy('按姓名、角色或分组检索', 'Search name, role, or group')}"></label></div><div id="people-list">${renderPeopleResults(people)}</div></section>`;
   document.querySelector('#people-filter').addEventListener('input', (event) => {
     const query = event.target.value.trim().toLocaleLowerCase();
-    document.querySelector('#people-list').innerHTML = renderGroups(people.filter((person) => `${person.name} ${person.role} ${person.group}`.toLocaleLowerCase().includes(query)));
+    const matches = people.filter((person) => `${person.name} ${person.role} ${person.group}`.toLocaleLowerCase().includes(query));
+    document.querySelector('#people-list').innerHTML = renderPeopleResults(matches);
   });
 }
 
@@ -143,7 +167,8 @@ function legacyPublication(record, index) {
 
 function publicationCard(publication) {
   const links = normalizeLinks(publication);
-  return `<article class="publication-card"><div class="publication-year">${escape(publication.year)}</div><div><h3>${escape(publication.title)}</h3><p>${escape(publication.summary)}</p>${publication.venue ? `<p>${escape(publication.venue)}</p>` : ''}${links.length ? `<div class="project-links">${links.map((link) => `<a href="${escape(link.href)}" target="_blank" rel="noreferrer">${escape(link.label)}</a>`).join('')}</div>` : ''}</div></article>`;
+  const year = publication.year || '—';
+  return `<article class="publication-card"><div class="publication-index">${escape(year)}</div><div class="publication-card__body"><h3>${escape(publication.title)}</h3><p>${escape(publication.summary)}</p>${publication.venue ? `<p class="publication-venue">${escape(publication.venue)}</p>` : ''}${links.length ? `<div class="project-links">${links.map((link) => `<a href="${escape(link.href)}" target="_blank" rel="noreferrer">${escape(link.label)}</a>`).join('')}</div>` : ''}</div></article>`;
 }
 
 async function renderPublications() {
@@ -151,17 +176,28 @@ async function renderPublications() {
   const publications = [...curated, ...legacy.map(legacyPublication)].filter((publication, index, records) => !publication.doi || records.findIndex((item) => item.doi === publication.doi) === index).sort((a, b) => Number(b.year) - Number(a.year));
   const years = [...new Set(publications.map((publication) => publication.year).filter(Boolean))];
   const types = [...new Set(publications.map((publication) => publication.type).filter(Boolean))];
-  const renderPublications = (records) => `<p id="publication-count" aria-live="polite">${copy(`显示 ${records.length} 篇成果`, `Showing ${records.length} publications`)}</p>${records.map(publicationCard).join('')}`;
-  main().innerHTML = `${pageIntro(copy('学术成果', 'Publications'), copy('将方法沉淀为可检验的知识', 'Methods made into testable knowledge'), copy('论文条目沿用已有英文原文，外部链接仅在真实链接可用时展示。', 'Publication titles retain their original English form; external links appear only when a valid destination is available.'))}<div class="filters"><label><span class="eyebrow">${copy('筛选', 'Filter')}</span><input id="publication-filter" type="search" placeholder="${copy('按标题、作者或期刊检索', 'Search title, author, or venue')}"></label><label><span class="eyebrow">${copy('年份', 'Year')}</span><select id="publication-year"><option value="">${copy('全部年份', 'All years')}</option>${years.map((year) => `<option value="${escape(year)}">${escape(year)}</option>`).join('')}</select></label><label><span class="eyebrow">${copy('类型', 'Type')}</span><select id="publication-type"><option value="">${copy('全部类型', 'All types')}</option>${types.map((type) => `<option value="${escape(type)}">${escape(type)}</option>`).join('')}</select></label></div><div class="publication-list" id="publication-list">${renderPublications(publications)}</div></section>`;
+  const publicationCount = (records) => copy(`显示 ${records.length} 篇成果`, `Showing ${records.length} publications`);
+  const renderPublications = (records) => records.length
+    ? records.map(publicationCard).join('')
+    : `<p class="empty-state" role="status">${copy('未找到符合条件的成果，请调整关键词或筛选条件。', 'No publications match these filters. Try another keyword or selection.')}</p>`;
+  main().innerHTML = `${pageIntro(copy('学术成果', 'Publications'), copy('将方法沉淀为可检验的知识', 'Methods made into testable knowledge'), copy('论文条目沿用已有英文原文，外部链接仅在真实链接可用时展示。', 'Publication titles retain their original English form; external links appear only when a valid destination is available.'))}<div class="filters publication-filters"><label><span class="eyebrow">${copy('筛选', 'Filter')}</span><input id="publication-filter" type="search" aria-controls="publication-list" placeholder="${copy('按标题、作者或期刊检索', 'Search title, author, or venue')}"></label><label><span class="eyebrow">${copy('年份', 'Year')}</span><select id="publication-year" aria-controls="publication-list"><option value="">${copy('全部年份', 'All years')}</option>${years.map((year) => `<option value="${escape(year)}">${escape(year)}</option>`).join('')}</select></label><label><span class="eyebrow">${copy('类型', 'Type')}</span><select id="publication-type" aria-controls="publication-list"><option value="">${copy('全部类型', 'All types')}</option>${types.map((type) => `<option value="${escape(type)}">${escape(type)}</option>`).join('')}</select></label></div><p id="publication-count" aria-live="polite">${publicationCount(publications)}</p><div class="publication-list" id="publication-list">${renderPublications(publications)}</div></section>`;
+  const count = document.querySelector('#publication-count');
+  const list = document.querySelector('#publication-list');
   const update = () => {
-    document.querySelector('#publication-list').innerHTML = renderPublications(filterPublications(publications, document.querySelector('#publication-filter').value, document.querySelector('#publication-year').value, document.querySelector('#publication-type').value));
+    const filtered = filterPublications(publications, document.querySelector('#publication-filter').value, document.querySelector('#publication-year').value, document.querySelector('#publication-type').value);
+    count.textContent = publicationCount(filtered);
+    list.innerHTML = renderPublications(filtered);
   };
   ['publication-filter', 'publication-year', 'publication-type'].forEach((id) => document.querySelector(`#${id}`).addEventListener(id === 'publication-filter' ? 'input' : 'change', update));
 }
 
 async function renderJoin() {
   const join = await dataset('join');
-  main().innerHTML = `${pageIntro(copy('加入我们', 'Join us'), join.title, join.intro)}<div class="join-grid"><section><h2>${copy('开放方向', 'Opportunities')}</h2><ul>${join.roles.map((role) => `<li>${escape(role)}</li>`).join('')}</ul></section><section><h2>${copy('联系前可准备', 'Helpful materials')}</h2><ul>${join.materials.map((material) => `<li>${escape(material)}</li>`).join('')}</ul></section><section><h2>${copy('联系', 'Contact')}</h2><p><a href="mailto:${escape(join.contact)}">${escape(join.contact)}</a></p></section></div></section>`;
+  main().innerHTML = `${pageIntro(copy('加入我们', 'Join us'), join.title, join.intro)}<div class="join-grid">
+    <section class="join-opportunities"><p class="join-section__number">01</p><h2>${copy('开放方向', 'Opportunities')}</h2><ul>${join.roles.map((role) => `<li>${escape(role)}</li>`).join('')}</ul></section>
+    <section class="join-preparation"><p class="join-section__number">02</p><h2>${copy('联系前可准备', 'Helpful materials')}</h2><ul>${join.materials.map((material) => `<li>${escape(material)}</li>`).join('')}</ul></section>
+    <section class="join-contact"><p class="join-section__number">03</p><h2>${copy('联系', 'Contact')}</h2><a href="mailto:${escape(join.contact)}"><span>${copy('邮件联系', 'Email')}</span><strong>${escape(join.contact)}</strong></a></section>
+  </div></section>`;
 }
 
 const pageRenderers = { home: renderHome, research: renderResearch, people: renderPeople, publications: renderPublications, join: renderJoin, project: renderProject };

@@ -41,3 +41,8 @@ test('publication filtering combines year, type, and case-insensitive search', (
   ];
   assert.deepEqual(filterPublications(records, 'sweeper', '2025', 'journal'), [records[0]]);
 });
+
+test('publication filtering returns an empty list for unmatched text', () => {
+  const records = [{ title: 'Marine SLAM', summary: '', venue: '', year: 2024, type: 'conference' }];
+  assert.deepEqual(filterPublications(records, 'quadruped', '', ''), []);
+});
