@@ -26,6 +26,18 @@ test('Escape closes an open mobile menu and restores trigger focus', () => {
   assert.equal(button.focused, true);
 });
 
+test('other keys and Escape on a closed menu preserve menu state and focus', () => {
+  for (const [key, expanded] of [['Enter', 'true'], ['Escape', 'false']]) {
+    const menu = element();
+    menu.dataset.open = expanded;
+    const button = element(expanded);
+    assert.equal(closeMobileMenuOnEscape({ key }, menu, button), false);
+    assert.equal(menu.dataset.open, expanded);
+    assert.equal(button.getAttribute('aria-expanded'), expanded);
+    assert.equal(button.focused, false);
+  }
+});
+
 function renderHeader(lang) {
   const originalDocument = globalThis.document;
   const originalWindow = globalThis.window;
