@@ -1,0 +1,12 @@
+import {defineCollection} from 'astro:content';
+import {z} from 'astro/zod';
+import {glob} from 'astro/loaders';
+import {isExternalURL} from './lib/core.mjs';
+const text=z.string().optional();const texts=z.array(z.string()).default([]);
+const external=z.string().refine(isExternalURL,'Use a valid non-placeholder HTTP(S) URL');
+const link=z.object({label:z.string(),href:external});
+const general={contentId:z.string().regex(/^[a-z0-9-]+$/),locale:z.enum(['zh','en']),title:text,description:text,draft:z.boolean().default(false),tags:texts,tagLabels:z.record(z.string(),z.string()).optional(),image:text,sourceRefs:texts};
+const translated={challenge:text,approach:text,outcomes:z.array(z.string()).optional(),question:text,suggestedBackgrounds:z.array(z.string()).optional(),materials:z.array(z.string()).optional(),category:text};
+const structural={directionIds:texts,projectIds:texts,peopleIds:texts,publicationIds:texts,video:text,featured:z.boolean().default(false),links:z.array(link).default([]),year:z.number().int().optional(),pubDate:text,eventDate:text,sourceDate:text,sourceDateMeaning:z.enum(['unspecified','publication','event']).optional(),authorsText:text,authors:z.array(z.string()).optional(),venue:text,type:text,doi:text,paperSite:text,migrationOrder:z.number().optional(),order:z.number().optional(),platform:text,githubUrl:external.optional(),huggingfaceUrl:external.optional(),lng:z.number().min(-180).max(180).optional(),lat:z.number().min(-90).max(90).optional(),images:z.array(z.object({src:z.string(),alt:z.string(),source:z.string()})).optional(),place:text,attribution:text};
+const schema=z.discriminatedUnion('locale',[z.object({...general,...translated,...structural,locale:z.literal('zh'),title:z.string().min(1)}).strict(),z.object({...general,...translated,locale:z.literal('en')}).strict()]);
+export const collections=Object.fromEntries(['directions','projects','publications','news','blogs','collections','markers','paperSites'].map(name=>[name,defineCollection({loader:glob({pattern:'**/*.{md,mdx}',base:'./src/content/'+name}),schema})]));

@@ -1,0 +1,6 @@
+---
+import {selectValue} from '../lib/core.mjs';
+const {zh='',en='',as:Tag='span',fallback=false,...attrs}=Astro.props;
+const chinese=selectValue(zh,en,'zh'),english=selectValue(zh,en,'en');
+---
+{(chinese.value||english.value)&&<Tag {...attrs} data-localized data-has-zh={!!chinese.value} data-has-en={!!english.value} hidden={!chinese.value}><span data-locale-block="zh" lang="zh-CN">{chinese.value}</span><span data-locale-block="en" lang={english.actualLocale==='en'?'en':'zh-CN'} hidden>{english.value}{fallback&&english.isFallback&&<small class="translation-note">Chinese original · English translation not provided</small>}</span></Tag>}

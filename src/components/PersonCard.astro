@@ -1,0 +1,5 @@
+---
+import Text from './Text.astro';import Media from './Media.astro';import {withBase} from '../lib/site';
+const {person:p}=Astro.props;
+---
+<article class="person-card" data-card data-search={JSON.stringify(p).toLowerCase()} data-group={p.group}><a href={withBase(`/our-team/${p.slug}/`)}><Media src={p.photo} alt={p.name.zh}/><div class="card-content"><Text as="h3" zh={p.name.zh} en={p.name.en}/><Text as="p" zh={p.role.zh} en={p.role.en}/></div></a></article>

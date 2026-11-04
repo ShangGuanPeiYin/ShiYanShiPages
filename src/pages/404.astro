@@ -1,0 +1,4 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';import Text from '../components/Text.astro';import {withBase} from '../lib/site';
+---
+<BaseLayout title="页面不存在" titleEn="Page not found"><div class="container page-header"><p class="eyebrow">404 / UNCHARTED SPACE</p><Text as="h1" zh="这片星域，尚未抵达。" en="This part of space is uncharted."/><Text as="p" zh="页面不存在或已移动，请从首页或栏目重新探索。" en="This page does not exist or has moved. Explore from the home page."/><a class="button" href={withBase('/')}><Text zh="返回首页" en="Back home"/> →</a></div></BaseLayout>

@@ -1,0 +1,7 @@
+---
+import Text from './Text.astro';import {selectValue} from '../lib/core.mjs';
+const {zh,en,headingZh,headingEn}=Astro.props;
+const normalize=(v:any)=>Array.isArray(v)?v.filter(s=>typeof s==='string'&&s.trim()).join('；'):typeof v==='string'?v.trim():'';
+const z=normalize(zh),e=normalize(en),chinese=selectValue(z,e,'zh'),english=selectValue(z,e,'en');
+---
+{(chinese.value||english.value)&&<section data-locale-section data-has-zh={!!chinese.value} data-has-en={!!english.value} hidden={!chinese.value}>{headingZh&&<Text as="h2" zh={headingZh} en={headingEn}/>}<Text as="p" zh={z} en={e} fallback/></section>}

@@ -1,0 +1,11 @@
+---
+import Text from './Text.astro';import Media from './Media.astro';import {withBase} from '../lib/site';import tags from '../data/tags.json';
+const {pair,section}=Astro.props;const z=pair.zh.data,e=pair.en?.data;const href=withBase(`/${section}/${pair.id}/`);const search=JSON.stringify([z,e,pair.zh.body,pair.en?.body]).toLowerCase();
+---
+<article class:list={['content-card',{'paper-card':section==='publications'}]} data-card data-search={search} data-year={z.year} data-type={z.type||'unclassified'} data-tags={JSON.stringify(z.tags||[])} data-category={z.category}>
+{section==='research'&&<a href={href} tabindex="-1" aria-hidden="true"><Media src={z.image} alt={z.title}/></a>}
+<div class="card-content"><div class="card-meta">{z.year&&<span>{z.year}</span>}{(z.pubDate||z.eventDate||z.sourceDate)&&<span><Text zh={z.pubDate?'发布日期':z.eventDate?'事件日期':'日期'} en={z.pubDate?'Published':z.eventDate?'Event date':'Date'}/> · <time datetime={z.pubDate||z.eventDate||z.sourceDate}>{z.pubDate||z.eventDate||z.sourceDate}</time></span>}<Text zh={z.category} en={e?.category}/></div>
+<a class="card-title" href={href}><Text as="h3" zh={z.title} en={e?.title}/><span aria-hidden="true">↗</span></a>
+<Text as="p" zh={z.description} en={e?.description} fallback/>{z.authorsText&&<p class="authors">{z.authorsText}</p>}{z.venue&&<p class="venue">{z.venue}</p>}
+{z.tags?.length>0&&<div class="tags">{z.tags.map((id:string)=><Text class="tag" zh={(tags as any)[id]?.zh||id} en={e?.tagLabels?.[id]||(tags as any)[id]?.en}/>)}</div>}
+</div></article>

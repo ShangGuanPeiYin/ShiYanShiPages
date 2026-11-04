@@ -1,0 +1,784 @@
+[
+  {
+    "slug": "jun-guo-lu",
+    "name": {
+      "zh": "卢俊国",
+      "en": "Junguo Lu"
+    },
+    "role": {
+      "zh": "长聘教授、博士生导师",
+      "en": "Tenured Professor and PhD Supervisor"
+    },
+    "group": "负责人",
+    "photo": "/assets/legacy/images/team/卢俊国.jpg",
+    "email": "jglu@sjtu.edu.cn",
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "负责人",
+      "en": "Principal Investigator"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "qinghao-zhang",
+    "name": {
+      "zh": "张庆昊",
+      "en": "Qinghao Zhang"
+    },
+    "role": {
+      "zh": "助理研究员",
+      "en": "Research Assistant"
+    },
+    "group": "研究人员",
+    "photo": "/assets/legacy/images/team/张庆昊.jpg",
+    "email": "zhangqinghao@sjtu.edu.cn",
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "研究人员",
+      "en": "Researchers"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "jianjun-zheng",
+    "name": {
+      "zh": "郑建军",
+      "en": "Jianjun Zheng"
+    },
+    "role": {
+      "zh": "副教授（访问学者）",
+      "en": "Visiting Associate Professor"
+    },
+    "group": "研究人员",
+    "photo": "/assets/legacy/images/team/郑建军.png",
+    "email": "471637929@qq.com",
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "研究人员",
+      "en": "Researchers"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "zhen-zhu",
+    "name": {
+      "zh": "朱震",
+      "en": "Zhen Zhu"
+    },
+    "role": {
+      "zh": "博士后（2023入站）",
+      "en": "Postdoctoral Researcher (2023)"
+    },
+    "group": "研究人员",
+    "photo": "/assets/legacy/images/team/朱震.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "研究人员",
+      "en": "Researchers"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "jiarong-li",
+    "name": {
+      "zh": "李佳容",
+      "en": "Jiarong Li"
+    },
+    "role": {
+      "zh": "博士后（2023入站）",
+      "en": "Postdoctoral Researcher (2023)"
+    },
+    "group": "研究人员",
+    "photo": "/assets/legacy/images/team/李佳容.png",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "研究人员",
+      "en": "Researchers"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "jinling-wang",
+    "name": {
+      "zh": "王金玲",
+      "en": "Jinling Wang"
+    },
+    "role": {
+      "zh": "博士后（2023入站）",
+      "en": "Postdoctoral Researcher (2023)"
+    },
+    "group": "研究人员",
+    "photo": "/assets/legacy/images/team/王金玲.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "研究人员",
+      "en": "Researchers"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "wenchengyu-ji",
+    "name": {
+      "zh": "纪文呈宇",
+      "en": "Wenchengyu Ji"
+    },
+    "role": {
+      "zh": "博士后（2024入站）",
+      "en": "Postdoctoral Researcher (2024)"
+    },
+    "group": "研究人员",
+    "photo": "/assets/legacy/images/team/纪文呈宇.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "研究人员",
+      "en": "Researchers"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "feng-xie",
+    "name": {
+      "zh": "谢丰",
+      "en": "Feng Xie"
+    },
+    "role": {
+      "zh": "博士后（2023入站）",
+      "en": "Postdoctoral Researcher (2023)"
+    },
+    "group": "研究人员",
+    "photo": "/assets/legacy/images/team/谢丰.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "研究人员",
+      "en": "Researchers"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "zhao-yu",
+    "name": {
+      "zh": "于钊",
+      "en": "Zhao Yu"
+    },
+    "role": {
+      "zh": "博士后（2024入站）",
+      "en": "Postdoctoral Researcher (2024)"
+    },
+    "group": "研究人员",
+    "photo": "/assets/legacy/images/team/于钊.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "研究人员",
+      "en": "Researchers"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "xiaochuang-jin",
+    "name": {
+      "zh": "金晓创",
+      "en": "Xiaochuang Jin"
+    },
+    "role": {
+      "zh": "2017级博士生",
+      "en": "PhD Student, class of 2017"
+    },
+    "group": "学生",
+    "photo": "/assets/legacy/images/team/金晓创.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "学生",
+      "en": "Students"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "fuwei-tan",
+    "name": {
+      "zh": "谭富威",
+      "en": "Fuwei Tan"
+    },
+    "role": {
+      "zh": "2019级博士生",
+      "en": "PhD Student, class of 2019"
+    },
+    "group": "学生",
+    "photo": "/assets/legacy/images/team/谭富威.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "学生",
+      "en": "Students"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "jiarui-zhang",
+    "name": {
+      "zh": "张嘉瑞",
+      "en": "Jiarui Zhang"
+    },
+    "role": {
+      "zh": "2019级博士生",
+      "en": "PhD Student, class of 2019"
+    },
+    "group": "学生",
+    "photo": "/assets/legacy/images/team/张嘉瑞.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "学生",
+      "en": "Students"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "ming-wei",
+    "name": {
+      "zh": "韦溟",
+      "en": "Ming Wei"
+    },
+    "role": {
+      "zh": "2021级博士生",
+      "en": "PhD Student, class of 2021"
+    },
+    "group": "学生",
+    "photo": "/assets/legacy/images/team/韦溟.png",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "学生",
+      "en": "Students"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "hongyi-kang",
+    "name": {
+      "zh": "康弘毅",
+      "en": "Hongyi Kang"
+    },
+    "role": {
+      "zh": "2022级博士生",
+      "en": "PhD Student, class of 2022"
+    },
+    "group": "学生",
+    "photo": "/assets/legacy/images/team/康弘毅.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "学生",
+      "en": "Students"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "hang-xiao",
+    "name": {
+      "zh": "肖航",
+      "en": "Hang Xiao"
+    },
+    "role": {
+      "zh": "2022级博士生",
+      "en": "PhD Student, class of 2022"
+    },
+    "group": "学生",
+    "photo": "/assets/legacy/images/team/肖航.png",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "学生",
+      "en": "Students"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "zhijian-ma",
+    "name": {
+      "zh": "马志坚",
+      "en": "Zhijian Ma"
+    },
+    "role": {
+      "zh": "2023级博士生",
+      "en": "PhD Student, class of 2023"
+    },
+    "group": "学生",
+    "photo": "/assets/legacy/images/team/马志坚.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "学生",
+      "en": "Students"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "wenting-liu",
+    "name": {
+      "zh": "刘文庭",
+      "en": "Wenting Liu"
+    },
+    "role": {
+      "zh": "2023级博士生",
+      "en": "PhD Student, class of 2023"
+    },
+    "group": "学生",
+    "photo": "/assets/legacy/images/team/刘文庭.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "学生",
+      "en": "Students"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "yijie-huang",
+    "name": {
+      "zh": "Yijie Huang",
+      "en": "Yijie Huang"
+    },
+    "role": {
+      "zh": "2024级博士生",
+      "en": "PhD Student, class of 2024"
+    },
+    "group": "学生",
+    "photo": "/assets/legacy/images/team/黄逸桀.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "学生",
+      "en": "Students"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "yifei-yao",
+    "name": {
+      "zh": "姚逸飞",
+      "en": "Yifei Yao"
+    },
+    "role": {
+      "zh": "2023级硕士生",
+      "en": "Master's Student, class of 2023"
+    },
+    "group": "学生",
+    "photo": "/assets/legacy/images/team/姚逸飞.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "学生",
+      "en": "Students"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "chen-chen",
+    "name": {
+      "zh": "陈晨",
+      "en": "Chen Chen"
+    },
+    "role": {
+      "zh": "2023级硕士生",
+      "en": "Master's Student, class of 2023"
+    },
+    "group": "学生",
+    "photo": "/assets/legacy/images/team/陈晨.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "学生",
+      "en": "Students"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "shouchao-wang",
+    "name": {
+      "zh": "王守超",
+      "en": "Shouchao Wang"
+    },
+    "role": {
+      "zh": "2023级硕士生",
+      "en": "Master's Student, class of 2023"
+    },
+    "group": "学生",
+    "photo": "/assets/legacy/images/team/王守超.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "学生",
+      "en": "Students"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "wenbo-li",
+    "name": {
+      "zh": "李文博",
+      "en": "Wenbo Li"
+    },
+    "role": {
+      "zh": "2023级硕士生",
+      "en": "Master's Student, class of 2023"
+    },
+    "group": "学生",
+    "photo": "/assets/legacy/images/team/李文博.png",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "学生",
+      "en": "Students"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "junkai-xiao",
+    "name": {
+      "zh": "肖俊凯",
+      "en": "Junkai Xiao"
+    },
+    "role": {
+      "zh": "2023级硕士生",
+      "en": "Master's Student, class of 2023"
+    },
+    "group": "学生",
+    "photo": "/assets/legacy/images/team/肖俊凯.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "学生",
+      "en": "Students"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "haozhong-zou",
+    "name": {
+      "zh": "邹豪忠",
+      "en": "Haozhong Zou"
+    },
+    "role": {
+      "zh": "2024级硕士生",
+      "en": "Master's Student, class of 2024"
+    },
+    "group": "学生",
+    "photo": "/assets/legacy/images/team/邹豪忠.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "学生",
+      "en": "Students"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "jiaxun-he",
+    "name": {
+      "zh": "贺加勋",
+      "en": "Jiaxun He"
+    },
+    "role": {
+      "zh": "2024级硕士生",
+      "en": "Master's Student, class of 2024"
+    },
+    "group": "学生",
+    "photo": "/assets/legacy/images/team/贺加勋.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "学生",
+      "en": "Students"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "yiduo-wang",
+    "name": {
+      "zh": "王一多",
+      "en": "Yiduo Wang"
+    },
+    "role": {
+      "zh": "2024级硕士生",
+      "en": "Master's Student, class of 2024"
+    },
+    "group": "学生",
+    "photo": "/assets/legacy/images/team/王一多.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "学生",
+      "en": "Students"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "zezhong-duan",
+    "name": {
+      "zh": "段泽众",
+      "en": "Zezhong Duan"
+    },
+    "role": {
+      "zh": "2024级硕士生",
+      "en": "Master's Student, class of 2024"
+    },
+    "group": "学生",
+    "photo": "/assets/legacy/images/team/段泽众.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "学生",
+      "en": "Students"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "rui-yang",
+    "name": {
+      "zh": "杨瑞",
+      "en": "Rui Yang"
+    },
+    "role": {
+      "zh": "2024级硕士生",
+      "en": "Master's Student, class of 2024"
+    },
+    "group": "学生",
+    "photo": "/assets/legacy/images/team/杨瑞.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "学生",
+      "en": "Students"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "qingcheng-guo",
+    "name": {
+      "zh": "郭倾城",
+      "en": "Qingcheng Guo"
+    },
+    "role": {
+      "zh": "博士（2019-2025）",
+      "en": "PhD (2019-2025)"
+    },
+    "group": "校友",
+    "photo": "/assets/legacy/images/team/郭倾城.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "校友",
+      "en": "Alumni"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "yinan-chen",
+    "name": {
+      "zh": "陈弈楠",
+      "en": "Yinan Chen"
+    },
+    "role": {
+      "zh": "博士（2020-2025）",
+      "en": "PhD (2020-2025)"
+    },
+    "group": "校友",
+    "photo": "/assets/legacy/images/team/陈弈楠.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "校友",
+      "en": "Alumni"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "jiachen-li",
+    "name": {
+      "zh": "李嘉晨",
+      "en": "Jiachen Li"
+    },
+    "role": {
+      "zh": "硕士（2022-2025）",
+      "en": "Master's (2022-2025)"
+    },
+    "group": "校友",
+    "photo": "/assets/legacy/images/team/李嘉晨.png",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "校友",
+      "en": "Alumni"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "tianyang-huang",
+    "name": {
+      "zh": "黄天扬",
+      "en": "Tianyang Huang"
+    },
+    "role": {
+      "zh": "硕士（2022-2025）",
+      "en": "Master's (2022-2025)"
+    },
+    "group": "校友",
+    "photo": "/assets/legacy/images/team/黄天扬.png",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "校友",
+      "en": "Alumni"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "haotian-wang",
+    "name": {
+      "zh": "王浩天",
+      "en": "Haotian Wang"
+    },
+    "role": {
+      "zh": "硕士（2022-2025）",
+      "en": "Master's (2022-2025)"
+    },
+    "group": "校友",
+    "photo": "/assets/legacy/images/team/王浩天.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "校友",
+      "en": "Alumni"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  },
+  {
+    "slug": "dianlun-xu",
+    "name": {
+      "zh": "徐典纶",
+      "en": "Dianlun Xu"
+    },
+    "role": {
+      "zh": "硕士（2022-2025）",
+      "en": "Master's (2022-2025)"
+    },
+    "group": "校友",
+    "photo": "/assets/legacy/images/team/徐典纶.jpg",
+    "email": null,
+    "homepage": null,
+    "scholar": null,
+    "github": null,
+    "groupLabel": {
+      "zh": "校友",
+      "en": "Alumni"
+    },
+    "projectIds": [],
+    "publicationIds": []
+  }
+]

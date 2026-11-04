@@ -1,0 +1,36 @@
+{
+  "zh": {
+    "title": "加入 MVAS Lab",
+    "intro": "我们欢迎对机器视觉、机器人与自主系统研究感兴趣的同学联系实验室。",
+    "roles": [
+      "博士研究生",
+      "硕士研究生",
+      "本科生科研"
+    ],
+    "materials": [
+      "个人简历",
+      "成绩单",
+      "能体现研究兴趣或项目经历的材料"
+    ],
+    "process": [],
+    "contact": "jglu@sjtu.edu.cn",
+    "faqs": []
+  },
+  "en": {
+    "title": "Join MVAS Lab",
+    "intro": "We welcome students interested in machine vision, robotics, and autonomous systems to contact the laboratory.",
+    "roles": [
+      "PhD students",
+      "Master's students",
+      "Undergraduate research"
+    ],
+    "materials": [
+      "Curriculum vitae",
+      "Academic transcript",
+      "Materials that demonstrate research interests or project experience"
+    ],
+    "process": [],
+    "contact": "jglu@sjtu.edu.cn",
+    "faqs": []
+  }
+}

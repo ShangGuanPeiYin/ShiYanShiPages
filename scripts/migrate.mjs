@@ -1,0 +1,31 @@
+import {readFileSync,writeFileSync,existsSync,mkdirSync,statSync,copyFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {pathToFileURL} from 'node:url';
+import {normalizeExternalLinks} from '../src/lib/core.mjs';
+const read=p=>JSON.parse(readFileSync(p,'utf8'));
+const hash=v=>createHash('sha256').update(v).digest('hex');
+const stable=v=>JSON.stringify(v,Object.keys(v).sort());
+export function planMigration(){
+ const records={projects:[],publications:[],news:[]},manifest=[],issues=[],tags={},media={};
+ const mediaKey=p=>{if(!p)return undefined;if(!existsSync(p)||statSync(p).size>=5000000){issues.push({field:'media',source:p,reason:existsSync(p)?'COS URL required':'missing'});return undefined;}media[p]='/assets/legacy/'+p;return media[p];};
+ for(const collection of ['projects','news']){const zh=read(`data/zh/${collection}.json`),en=read(`data/en/${collection}.json`);zh.forEach((v,index)=>{const e=en.find(x=>x.slug===v.slug)||{};const common={contentId:v.slug,locale:'zh',title:v.title,description:v.summary,draft:false,image:mediaKey(v.cover),sourceRefs:[`data/zh/${collection}.json:${index}`],tags:[]};let domain={};let translated={};if(collection==='projects'){
+ common.tags=v.tags.map((label,i)=>{const id='tag-'+hash(label).slice(0,10);if(tags[id]&&tags[id].en!==e.tags?.[i])throw Error('Tag translation conflict '+label);tags[id]={zh:label,en:e.tags?.[i]};return id;});domain={challenge:v.challenge,approach:v.approach,outcomes:v.outcomes,peopleIds:v.people,directionIds:[],featured:v.featured,links:[]};translated={challenge:e.challenge,approach:e.approach,outcomes:e.outcomes,tagLabels:Object.fromEntries(common.tags.map((id,i)=>[id,e.tags?.[i]]))};
+ }else{domain={sourceDate:v.date,sourceDateMeaning:'unspecified',category:v.category};translated={category:e.category};}
+ records[collection].push({zh:{...common,...domain},en:{contentId:v.slug,locale:'en',title:e.title,description:e.summary,...translated}});manifest.push({collection,source:`data/zh/${collection}.json`,index,contentId:v.slug,status:'retained'});
+ });}
+ const team=read('data/zh/people.json').map((v,index)=>{const e=read('data/en/people.json').find(x=>x.slug===v.slug)||{};manifest.push({collection:'team',source:'data/zh/people.json',index,contentId:v.slug,status:'retained'});return {...v,photo:mediaKey(v.photo),name:{zh:v.name,en:e.name},role:{zh:v.role,en:e.role},groupLabel:{zh:v.group,en:e.group},projectIds:[],publicationIds:[]};});
+ const curated=read('data/zh/publications.json'),curatedEn=read('data/en/publications.json'),historical=read('htmls/publications.json'),seen=new Map(),ids=new Map();
+ [...curated.map((v,i)=>({v,index:i,source:'data/zh/publications.json',curated:true})),...historical.map((v,i)=>({v,index:i,source:'htmls/publications.json'}))].forEach(({v,index,source,curated:isCurated},order)=>{
+ const normalized=v.doi?.replace(/^https?:\/\/(dx\.)?doi\.org\//i,'').trim().toLowerCase();const id=isCurated?v.slug:'pub-'+hash(normalized||stable(v)).slice(0,16);let pair=v.doi?seen.get(v.doi):null;
+ if(pair){const links=normalizeExternalLinks(v);for(const l of links)if(!pair.zh.links.some(x=>x.href===l.href&&x.label===l.label))pair.zh.links.push(l);if(!pair.zh.authorsText)pair.zh.authorsText=v.authors||v.summary;for(const key of ['title','venue'])if(!pair.zh[key]&&v[key])pair.zh[key]=v[key];manifest.push({collection:'publications',source,index,contentId:pair.zh.contentId,status:'merged'});issues.push({source,index,reason:'DOI duplicate retained first',winner:pair.zh.contentId});return;}
+ if(ids.has(id))throw Error('ID collision '+id);ids.set(id,v);
+ pair={zh:{contentId:id,locale:'zh',title:v.title_zh||v.title||v.title_en,image:mediaKey(v.cover),year:Number(v.year),authorsText:isCurated?v.summary:v.authors,venue:v.venue,type:v.type,doi:v.doi,links:normalizeExternalLinks(v),migrationOrder:order,tags:[],draft:false,sourceRefs:[`${source}:${index}`]}};
+ const english=isCurated?curatedEn.find(x=>x.slug===v.slug)?.title:v.title_en;if(english)pair.en={contentId:id,locale:'en',title:english};if(!pair.zh.title||!Number.isInteger(pair.zh.year))throw Error('Invalid publication '+source+':'+index);
+ records.publications.push(pair);if(v.doi)seen.set(v.doi,pair);manifest.push({collection:'publications',source,index,contentId:id,status:'retained'});
+ for(const [key,value] of Object.entries(v))if(typeof value==='string'&&/^http:\/\//.test(value))issues.push({source,index,field:key,value,reason:'HTTP source preserved'});
+ });
+ return {records,team,tags,media,manifest,issues,counts:{projects:records.projects.length,team:team.length,news:records.news.length,publicationsInput:curated.length+historical.length,publications:records.publications.length}};
+}
+export function outputFiles(plan){const files={};for(const [collection,pairs] of Object.entries(plan.records))for(const pair of pairs)for(const locale of ['zh','en'])if(pair[locale]){files[`src/content/${collection}/${pair.zh.contentId}.${locale}.md`]='---\n'+JSON.stringify(pair[locale],null,2)+'\n---\n';}for(const [name,data] of Object.entries({'team.json':plan.team,'tags.json':plan.tags,'migration-manifest.json':plan.manifest,'migration-report.json':{counts:plan.counts,issues:plan.issues,media:plan.media}}))files['src/data/'+name]=JSON.stringify(data,null,2)+'\n';for(const type of ['site','join'])files[`src/data/${type}.json`]=JSON.stringify({zh:read(`data/zh/${type}.json`),en:read(`data/en/${type}.json`)},null,2)+'\n';return files;}
+export function writeMigration(plan){const files=outputFiles(plan);for(const [p,v] of Object.entries(files))if(existsSync(p)&&readFileSync(p,'utf8')!==v)throw Error('Refusing to overwrite edited migration output: '+p);for(const [p,v] of Object.entries(files)){mkdirSync(p.slice(0,p.lastIndexOf('/')),{recursive:true});writeFileSync(p,v);}for(const [source,dest] of Object.entries(plan.media)){const p='public'+dest;mkdirSync(p.slice(0,p.lastIndexOf('/')),{recursive:true});if(existsSync(p)&&hash(readFileSync(p))!==hash(readFileSync(source)))throw Error('Edited asset '+p);copyFileSync(source,p);}}
+if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){const plan=planMigration();if(process.argv.includes('--write'))writeMigration(plan);console.log(JSON.stringify({mode:process.argv.includes('--write')?'write':'dry-run',counts:plan.counts,issues:plan.issues},null,2));}

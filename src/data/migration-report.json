@@ -1,0 +1,69 @@
+{
+  "counts": {
+    "projects": 3,
+    "team": 34,
+    "news": 3,
+    "publicationsInput": 245,
+    "publications": 242
+  },
+  "issues": [
+    {
+      "source": "htmls/publications.json",
+      "index": 0,
+      "reason": "DOI duplicate retained first",
+      "winner": "tmech-2025"
+    },
+    {
+      "source": "htmls/publications.json",
+      "index": 102,
+      "reason": "DOI duplicate retained first",
+      "winner": "pub-a3ece54e7cbfb95a"
+    },
+    {
+      "source": "htmls/publications.json",
+      "index": 103,
+      "reason": "DOI duplicate retained first",
+      "winner": "pub-d2f8ae3c7655bb90"
+    }
+  ],
+  "media": {
+    "images/team_photo.jpg": "/assets/legacy/images/team_photo.jpg",
+    "images/map3D.jpeg": "/assets/legacy/images/map3D.jpeg",
+    "images/map-2D.jpeg": "/assets/legacy/images/map-2D.jpeg",
+    "images/team/卢俊国.jpg": "/assets/legacy/images/team/卢俊国.jpg",
+    "images/team/张庆昊.jpg": "/assets/legacy/images/team/张庆昊.jpg",
+    "images/team/郑建军.png": "/assets/legacy/images/team/郑建军.png",
+    "images/team/朱震.jpg": "/assets/legacy/images/team/朱震.jpg",
+    "images/team/李佳容.png": "/assets/legacy/images/team/李佳容.png",
+    "images/team/王金玲.jpg": "/assets/legacy/images/team/王金玲.jpg",
+    "images/team/纪文呈宇.jpg": "/assets/legacy/images/team/纪文呈宇.jpg",
+    "images/team/谢丰.jpg": "/assets/legacy/images/team/谢丰.jpg",
+    "images/team/于钊.jpg": "/assets/legacy/images/team/于钊.jpg",
+    "images/team/金晓创.jpg": "/assets/legacy/images/team/金晓创.jpg",
+    "images/team/谭富威.jpg": "/assets/legacy/images/team/谭富威.jpg",
+    "images/team/张嘉瑞.jpg": "/assets/legacy/images/team/张嘉瑞.jpg",
+    "images/team/韦溟.png": "/assets/legacy/images/team/韦溟.png",
+    "images/team/康弘毅.jpg": "/assets/legacy/images/team/康弘毅.jpg",
+    "images/team/肖航.png": "/assets/legacy/images/team/肖航.png",
+    "images/team/马志坚.jpg": "/assets/legacy/images/team/马志坚.jpg",
+    "images/team/刘文庭.jpg": "/assets/legacy/images/team/刘文庭.jpg",
+    "images/team/黄逸桀.jpg": "/assets/legacy/images/team/黄逸桀.jpg",
+    "images/team/姚逸飞.jpg": "/assets/legacy/images/team/姚逸飞.jpg",
+    "images/team/陈晨.jpg": "/assets/legacy/images/team/陈晨.jpg",
+    "images/team/王守超.jpg": "/assets/legacy/images/team/王守超.jpg",
+    "images/team/李文博.png": "/assets/legacy/images/team/李文博.png",
+    "images/team/肖俊凯.jpg": "/assets/legacy/images/team/肖俊凯.jpg",
+    "images/team/邹豪忠.jpg": "/assets/legacy/images/team/邹豪忠.jpg",
+    "images/team/贺加勋.jpg": "/assets/legacy/images/team/贺加勋.jpg",
+    "images/team/王一多.jpg": "/assets/legacy/images/team/王一多.jpg",
+    "images/team/段泽众.jpg": "/assets/legacy/images/team/段泽众.jpg",
+    "images/team/杨瑞.jpg": "/assets/legacy/images/team/杨瑞.jpg",
+    "images/team/郭倾城.jpg": "/assets/legacy/images/team/郭倾城.jpg",
+    "images/team/陈弈楠.jpg": "/assets/legacy/images/team/陈弈楠.jpg",
+    "images/team/李嘉晨.png": "/assets/legacy/images/team/李嘉晨.png",
+    "images/team/黄天扬.png": "/assets/legacy/images/team/黄天扬.png",
+    "images/team/王浩天.jpg": "/assets/legacy/images/team/王浩天.jpg",
+    "images/team/徐典纶.jpg": "/assets/legacy/images/team/徐典纶.jpg",
+    "images/pdf_icon.png": "/assets/legacy/images/pdf_icon.png"
+  }
+}

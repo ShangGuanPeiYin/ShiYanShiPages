@@ -1,0 +1,10 @@
+---
+import {withBase} from '../lib/site';
+const {src,video,poster,alt='',eager=false}=Astro.props;
+const resolve=(s:string)=>s?.startsWith('/')?withBase(s):s;
+---
+<figure class="media" data-media>
+{video?<video controls playsinline preload="metadata" poster={resolve(poster)} aria-label={alt}><source src={video} type="video/mp4"/></video>:src?<img src={resolve(src)} alt={alt} loading={eager?'eager':'lazy'}/>:<div class="media-placeholder">{alt||'MVAS'}</div>}
+<p class="media-fallback" hidden>{alt} · <span data-zh="媒体暂不可用" data-en="Media unavailable">媒体暂不可用</span></p>
+{video&&poster&&<img class="video-poster-fallback" src={resolve(poster)} alt={alt} loading="lazy" hidden/>}
+</figure>
