@@ -14,4 +14,6 @@ class MigrationTests(unittest.TestCase):
   self.put('zh',{'title':'中文'},'中文正文');self.put('en',{'title':'English'});d=self.ns['pairs']('projects','en')[0];self.assertIn('中文正文',d['_body']);self.assertIn('translation unavailable',d['_body'])
  def test_existing_body_preserved(self):
   self.put('zh',{'title':'中文'},'中文正文');self.put('en',{'title':'English'},'Existing English');self.assertEqual(self.ns['pairs']('projects','en')[0]['_body'],'Existing English')
+ def test_missing_english_file_explains_body_fallback(self):
+  self.put('zh',{'title':'中文'},'中文正文');d=self.ns['pairs']('projects','en')[0];self.assertIn('translation unavailable',d['_body'])
 unittest.main()

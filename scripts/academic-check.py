@@ -24,3 +24,14 @@ for p in (S/'_sass').rglob('*'):
 for n,h in json.loads((S/'migration-generated.json').read_text()).items():assert hashlib.sha256((S/n).read_bytes()).hexdigest()==h
 assert (S/'Gemfile.lock').read_bytes()==Path('/tmp/mvas-academic-upstream/Gemfile.lock').read_bytes()
 print(f'PASS {count} HTML: internal assets/links, no demo prose, 242 papers per locale, existing titles, sidebars, unchanged upstream SASS/lock, generated hashes')
+
+index=json.loads((out/'assets/search.json').read_text())
+assert any('Backstepping control of discrete-time chaotic systems with application to the Henon system' in d['content'] for d in index)
+for lang,prefix in [('zh',''),('en','en/')]:
+ text=(out/(prefix+'projects/auto-sweeper/index.html')).read_text()
+ assert 'tag-87302efabd' not in text
+ assert ('机器视觉' if lang=='zh' else 'Machine Vision') in text
+ news=BeautifulSoup((out/(prefix+'news/index.html')).read_text(),'html.parser')
+ dates=[n.get_text().split(': ')[-1].split('：')[-1] for n in news.select('.news-date')]
+ assert dates==sorted(dates,reverse=True)
+print('PASS: old paper searchable, readable localized project tags, news source dates descending')

@@ -15,10 +15,12 @@ def pairs(kind,lang):
   z=json.loads(p.read_text().split('---',2)[1]); e=p.with_name(p.name.replace('.zh.','.en.')); en=json.loads(e.read_text().split('---',2)[1]) if e.exists() else {}
   d={k:(en.get(k) if lang=='en' and en.get(k) not in (None,'',[]) else v) for k,v in {**en,**z}.items()}; d['_body']=p.read_text().split('---',2)[2].strip()
   if lang=='en' and e.exists(): d['_body']=e.read_text().split('---',2)[2].strip() or ('*English translation unavailable; original Chinese content follows.*\n\n'+d['_body'] if d['_body'] else '')
+  if lang=='en' and not e.exists() and d['_body']: d['_body']='*English translation unavailable; original Chinese content follows.*\n\n'+d['_body']
   out.append(d)
  return out
 def url(p): return "{{ '"+p+"' | relative_url }}"
 def image(p,cls): return f'<img src="{url(p)}" class="{cls}" alt="" loading="lazy">' if p else ''
+tag_names=read(R/'src/data/tags.json')
 site=read(R/'src/data/site.json'); join=read(R/'src/data/join.json'); team=read(R/'src/data/team.json')
 for folder in ['_pages','_posts','_data','papers']:
  (S/folder).mkdir(exist_ok=True)
@@ -36,7 +38,7 @@ for lang in ['zh','en']:
   route=prefix+('/'+slug.strip('/')+'/' if slug else '/')
   data={'title':title,'layout':layout,'permalink':route,'locale':lang,'alternate':('/en'+route if lang=='zh' else route[3:]),'local_path':('/'+slug.strip('/')+'/' if slug else '/')}
   (S/'_pages'/((lang+'-'+slug.replace('/','-')) or lang)).with_suffix('.md').write_text('---\n'+yaml.safe_dump(data,allow_unicode=True)+'---\n\n'+body+'\n')
- projects=pairs('projects',lang); pubs=pairs('publications',lang); news=pairs('news',lang)
+ projects=pairs('projects',lang); pubs=pairs('publications',lang); news=sorted(pairs('news',lang),key=lambda n:n.get('sourceDate',''),reverse=True)
  def link(slug,label): return f'<a href="{url(prefix+"/"+slug+"/")}">{esc(label)}</a>'
  research='<div class="research-grid">'
  for p in projects:
@@ -45,7 +47,8 @@ for lang in ['zh','en']:
   for key,label in [('challenge',t('研究挑战','Challenge')),('approach',t('研究方法','Approach'))]:
    if p.get(key): body+='\n## '+label+'\n\n'+p[key]+'\n'
   body+='\n'+p['_body']
-  if p.get('tagLabels'): body+='\n\n'+ ' · '.join(str(x) for x in p['tagLabels'])
+  labels=[(p.get('tagLabels',{}).get(key) if lang=='en' else None) or tag_names.get(key,{}).get(lang) or tag_names.get(key,{}).get('zh','') for key in p.get('tags',[])]
+  if any(labels): body+='\n\n'+ ' · '.join(esc(x) for x in labels if x)
   page('projects/'+p['contentId'],p['title'],body)
  page('research',t('研究项目','Research'),'# '+t('研究项目','Research')+'\n\n'+research+'</div>')
  tb='# '+t('团队成员','Team')+'\n\n'+link('join',join[lang]['title'])+'\n\n'
@@ -66,7 +69,7 @@ for lang in ['zh','en']:
  nb='# '+t('动态','News')+'\n\n<div class="news-timeline">'
  for n in news:
   date=n.get('sourceDate',''); nb+=f'<div class="news-item"><div class="news-date">{t("来源日期：","Source date: ")}{esc(date)}</div><div class="news-headline">{link("news/"+n["contentId"],n["title"])}</div></div>'
-  page('news/'+n['contentId'],n['title'],'# '+n['title']+'\n\n'+t('来源日期：','Source date: ')+date+'\n\n'+n.get('description','')+'\n\n'+n['_body'])
+  page('news/'+n['contentId'],n['title'],'# '+n['title']+'\n\n'+t('来源日期：','Source date: ')+date+'\n\n'+esc(n.get('category',''))+'\n\n'+n.get('description','')+'\n\n'+n['_body'])
  page('news',t('动态','News'),nb+'</div>')
  page('about',t('关于我们','About'),'# '+site[lang]['labName']+'\n\n'+site[lang]['tagline']+'\n\n'+site[lang]['department']+'\n\n'+site[lang]['address']+'\n\n'+link('join',j['title']))
  for slug,label in [('talks',t('学术报告','Talks')),('software',t('开源软件','Software')),('teaching',t('教学','Teaching')),('blog',t('博客','Blog'))]: page(slug,label,'# '+label+'\n\n'+t('暂无公开条目。','No entries yet.'))

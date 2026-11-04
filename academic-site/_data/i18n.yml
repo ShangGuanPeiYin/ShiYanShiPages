@@ -31,12 +31,12 @@ zh:
   - date: '2025-09-01'
     headline: 博士论文答辩成功
     path: /news/fu-phd-defense-2025/
-  - date: '2023-07-30'
-    headline: 新成员加入
-    path: /news/li-wang-join/
   - date: '2023-08-15'
     headline: 学术论文录用
     path: /news/underwater-slam-icra/
+  - date: '2023-07-30'
+    headline: 新成员加入
+    path: /news/li-wang-join/
 en:
   prefix: /en
   name: MVAS Lab
@@ -70,9 +70,9 @@ en:
   - date: '2025-09-01'
     headline: PhD Dissertation Defense Success
     path: /en/news/fu-phd-defense-2025/
-  - date: '2023-07-30'
-    headline: New Member Joined
-    path: /en/news/li-wang-join/
   - date: '2023-08-15'
     headline: Paper Accepted
     path: /en/news/underwater-slam-icra/
+  - date: '2023-07-30'
+    headline: New Member Joined
+    path: /en/news/li-wang-join/

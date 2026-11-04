@@ -169,11 +169,14 @@
         }
       });
     }, {
-      threshold: 0.1,
+      // Long publication lists cannot reach a 10% intersection ratio.
+      // Reveal as soon as any part enters the existing viewport margin.
+      threshold: 0,
       rootMargin: '0px 0px -40px 0px'
     });
 
     fadeElements.forEach(function (el) {
+      el.classList.add('fade-pending');
       observer.observe(el);
     });
   } else {
@@ -189,6 +192,12 @@
   var searchInputEl = document.getElementById('searchInput');
   var searchResultsEl = document.getElementById('searchResults');
   var searchData = null;
+  var searchGeneration = 0;
+  function searchMessage(message) {
+    var node = document.createElement('div');
+    node.className = 'search-no-results'; node.textContent = message;
+    searchResultsEl.replaceChildren(node);
+  }
 
   function openSearch() {
     if (!searchOverlay) return;
@@ -198,6 +207,8 @@
 
   function closeSearch() {
     if (!searchOverlay) return;
+    searchGeneration++;
+    clearTimeout(debounceTimer);
     searchOverlay.classList.remove('open');
     searchInputEl.value = '';
     searchResultsEl.innerHTML = '';
@@ -232,7 +243,7 @@
   // stores site.baseurl on <body> so the index can be fetched from the right place.
   var baseurl = (document.body && document.body.getAttribute('data-baseurl')) || '';
 
-  function loadSearchData(callback) {
+  function loadSearchData(callback, generation) {
     if (searchData) { callback(searchData); return; }
     fetch(baseurl + '/assets/search.json')
       .then(function (r) { return r.json(); })
@@ -241,7 +252,7 @@
         callback(data);
       })
       .catch(function () {
-        searchResultsEl.innerHTML = '<div class="search-no-results">无法加载搜索索引 / Could not load search index.</div>';
+        if (generation === searchGeneration && searchOverlay.classList.contains('open')) searchMessage(document.documentElement.lang === 'zh' ? '无法加载搜索索引。' : 'Could not load search index.');
       });
   }
 
@@ -257,28 +268,31 @@
     });
 
     if (matches.length === 0) {
-      searchResultsEl.innerHTML = '<div class="search-no-results">无匹配结果 / No results for "' + query + '"</div>';
+      searchMessage((document.documentElement.lang === 'zh' ? '无匹配结果：' : 'No results for: ') + query);
       return;
     }
 
-    searchResultsEl.innerHTML = matches.map(function (item) {
-      var snippet = item.content.substring(0, 150).trim() + '...';
-      return '<a href="' + item.url + '" class="search-result-item">' +
-        '<div class="search-result-title">' + item.title + '</div>' +
-        '<div class="search-result-snippet">' + snippet + '</div>' +
-        '</a>';
-    }).join('');
+    searchResultsEl.replaceChildren();
+    matches.forEach(function(item) {
+      var destination = new URL(item.url, location.href);
+      if (destination.origin !== location.origin || !/^https?:$/.test(destination.protocol)) return;
+      var link = document.createElement('a'); link.href = destination.href; link.className = 'search-result-item';
+      var title = document.createElement('div'); title.className = 'search-result-title'; title.textContent = item.title;
+      var snippet = document.createElement('div'); snippet.className = 'search-result-snippet'; snippet.textContent = item.content.substring(0, 150).trim() + '...';
+      link.append(title, snippet); searchResultsEl.append(link);
+    });
   }
 
   if (searchInputEl) {
     var debounceTimer;
     searchInputEl.addEventListener('input', function () {
       var query = this.value.trim();
+      var generation = ++searchGeneration;
       clearTimeout(debounceTimer);
       debounceTimer = setTimeout(function () {
         loadSearchData(function (data) {
-          renderResults(query, data);
-        });
+          if (generation === searchGeneration && searchOverlay.classList.contains('open')) renderResults(query, data);
+        }, generation);
       }, 150);
     });
   }

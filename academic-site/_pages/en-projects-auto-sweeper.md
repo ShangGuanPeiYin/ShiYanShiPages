@@ -23,4 +23,4 @@ Combine perception, task decisions, and vehicle control into a deployable autono
 
 
 
-tag-87302efabd · tag-c00043d8f3 · tag-de2bdd734c
+Machine Vision · Decision Making · Autonomous Control

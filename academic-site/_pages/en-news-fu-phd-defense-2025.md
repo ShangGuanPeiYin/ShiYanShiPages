@@ -11,6 +11,8 @@ title: PhD Dissertation Defense Success
 
 Source date: 2025-09-01
 
+Academic
+
 Congratulations to Jiahui (Carol) Fu for successfully defending her PhD thesis, “Long-term Visual Object SLAM in Low-dynamic Environments”.
 
 

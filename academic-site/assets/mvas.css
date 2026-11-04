@@ -9,3 +9,9 @@ html:lang(zh) h1,html:lang(zh) h2,html:lang(zh) h3 {font-family:var(--font-serif
 .navbar .container {flex-wrap:wrap;}
 .navbar-nav {flex-wrap:wrap;}
 .navbar-collapse {min-width:0;}
+
+/* Readable before JavaScript loads, and if it fails altogether. */
+.fade-in-section {opacity:1;transform:none;}
+.fade-in-section.fade-pending {opacity:0;transform:translateY(16px);}
+.fade-in-section.fade-pending.visible {opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce) {.fade-in-section.fade-pending {opacity:1;transform:none;}}

@@ -11,6 +11,8 @@ title: New Member Joined
 
 Source date: 2023-07-30
 
+People
+
 Dr. Li Wang joined the laboratory as a Postdoctoral Researcher.
 
 

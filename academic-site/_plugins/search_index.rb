@@ -25,7 +25,7 @@ module SearchIndex
     main = html[%r{<main[^>]*>(.*)</main>}m, 1] || html
     NOISE.each { |re| main = main.gsub(re, ' ') }
     main = main.gsub(/<[^>]+>/, ' ')
-    CGI.unescapeHTML(main).gsub(/\s+/, ' ').strip[0, MAX_CHARS]
+    CGI.unescapeHTML(main).gsub(/\s+/, ' ').strip
   end
 
   def self.entry(site, doc)
