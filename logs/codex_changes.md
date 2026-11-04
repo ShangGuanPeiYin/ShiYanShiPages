@@ -163,3 +163,36 @@
 - 本地审阅：/tmp/mvas-daylight-desktop.png、/tmp/mvas-daylight-mobile.png、/tmp/mvas-daylight-mobile-menu.png；配色抽查结果/tmp/mvas-daylight-qa.json。截图仅本地保存，未进行外部传图。
 - 验证边界：本轮纯视觉调整，未新增或重跑纯函数单测；没有真实Mapbox联调、部署或主观用户审美验收，不声称性能/招生效果变化。
 - Git：沿用用户此前对feat/spacelab-mvas的push授权，将该视觉修正提交并同步同名origin分支；不合并main、不修改其他工作树或正式发布配置。实际提交及远端核对结果见本轮最终回复。
+
+## 2026-11-04 Academic 模板独立版本初始化
+
+- 目的：执行用户确认的 Academic 原模板填充方案，保留双语和中文排版适配。
+- 操作：从 b3bbe40 创建 feat/academic-template-mvas 独立工作树；模板将放 academic-site/，现有版本与发布配置不改。
+- 验证：原工作树干净；独立工作树创建成功。模板下载、内容迁移、构建与浏览器验收尚未完成。不提交、不推送、不部署。
+
+## 2026-11-04 模板内容与双语适配
+
+- 文件：academic-site/、scripts/academic-migrate.py。
+- 基准：上游 source 提交 027c418d56dbdeb57f919ccd2bb7b549a8da2b90；保留原有布局、CSS、交互及授权。
+- 内容：复用已核对的242论文、34成员、3项目、3新闻；以模板原有组件展示，空栏目不保留示例；新增中文/英文页面及字体回退、默认浅色、记忆语言选择。
+- 实现：转换脚本从现有来源产生页面和BibTeX；论文缺类型使用misc而不推断类型，作者文本用整体字面值保护。原英文保留，字段独立回退。
+- 验证：迁移数量输出242/34；生产构建及浏览器验证待完成。
+
+## 2026-11-04 Academic 独立审查修正与验收
+
+- 文件：academic-site/模板适配与生成页面、scripts/academic-{migrate.py,check.py,unit.py,qa.cjs}。
+- 独立审查提出英文论文译名、侧栏初始化、字段并集/正文回退提示、交互文案、团队原组件结构5项重要问题，均已修正；迁移器增加哈希覆盖保护，不再删除内容目录。保留两份BibTeX、原PI/成员网格/校友表格，中文标题宋体回退、正文黑体回退。
+- 浏览器发现并修复：HTML块缺markdown=0产生嵌套破坏；320px研究网格原300px下限溢出；新增语言入口导致768px导航溢出。适配层允许极窄屏收缩和导航换行，原SASS与主题颜色不改。
+- 环境：Bundler2.7.2；Ruby3.2.3缺头文件，通过临时解包ruby3.2-dev和库链接完成本地编译；依赖锁文件未升级。构建成功。
+- 验证：Chromium通过25个响应式页面组合，另检查两语新闻侧栏、242论文、PI1/成员27/校友6、图片加载、语言/主题记忆、筛选、BIB和移动菜单，无pageerror；3项字段/正文回退单元测试通过。产物检查结果见最终回复；未逐一公网验证论文外链，无正式部署，无性能改善声明。
+- 交付：http://127.0.0.1:4000/；截图/tmp/mvas-academic-desktop.png及/tmp/mvas-academic-mobile.png。原4321版本未改。未提交、未推送。
+- 最终产物检查：34个HTML的内部链接与资源全部存在；每种语言242论文、两语首页各3条新闻；原始题名及已有译名核对通过；生成哈希、上游SASS和Gemfile.lock逐字核对通过；git diff --check通过。独立审查后修正由主agent回归验证，未声称审查者二次复核。
+
+## 2026-11-04 按用户要求提交并推送 Academic 源码
+
+- 修改目的：用户明确要求给出全部版本源码路径并全部 push 到 GitHub；此授权替代此前本版本不提交、不推送的限制。
+- 涉及文件：`academic-site/` 中的模板源码、双语内容、媒体小图、Gemfile/Gemfile.lock、上游出处和复现说明；`scripts/academic-check.py`、`scripts/academic-migrate.py`、`scripts/academic-qa.cjs`、`scripts/academic-unit.py`；本日志。
+- 实际修改内容：将已完成的 Academic 独立版本纳入 Git，更新 README-MVAS 的推送说明，沿用 `feat/academic-template-mvas`，不合并其他版本、不改部署配置。沿用现有内容和页面逻辑，本次不额外修改业务行为。
+- 设计理由：五个版本在同仓库各自分支保存，便于用户完整获取与比较；依赖 `vendor/`、构建 `_site/`、本机 `.bundle/`、缓存等按忽略规则排除，视频及大图遵守根媒体约定，不把生成网站和本机依赖当源码提交。
+- 验证方式与结果：重新运行 `python3 scripts/academic-unit.py`，3/3 通过；`python3 scripts/academic-check.py` 通过34个HTML的内部资源与链接、两语242论文、已有题名、侧栏、上游SASS与锁文件一致性和生成哈希检查；`git diff --check` 通过。候选新文件检查未发现依赖/构建目录、视频、≥5MB图片或明显凭据文件名。推送前已读取 origin 最新状态，使用普通快进或新建分支，不强推。
+- 未验证：本轮未重新运行浏览器整套验收、重建Jekyll产物或逐一验证外网论文链接，没有部署或效果改善声明；最终提交及远端同步结果以本轮实际核对为准。

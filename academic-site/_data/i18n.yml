@@ -1,0 +1,78 @@
+zh:
+  prefix: ''
+  name: MVAS Lab
+  title: 机器视觉与自主系统实验室
+  institution: 上海交通大学电子信息与电气工程学院自动化系
+  home: 首页
+  news: 动态
+  allnews: 全部动态
+  about: 关于我们
+  contact: 联系
+  links: 链接
+  search: 搜索页面…
+  nav:
+  - name: about
+    label: 关于我们
+  - name: publications
+    label: 论文成果
+  - name: talks
+    label: 学术报告
+  - name: research
+    label: 研究项目
+  - name: software
+    label: 开源软件
+  - name: team
+    label: 团队成员
+  - name: teaching
+    label: 教学
+  - name: blog
+    label: 博客
+  newsitems:
+  - date: '2025-09-01'
+    headline: 博士论文答辩成功
+    path: /news/fu-phd-defense-2025/
+  - date: '2023-07-30'
+    headline: 新成员加入
+    path: /news/li-wang-join/
+  - date: '2023-08-15'
+    headline: 学术论文录用
+    path: /news/underwater-slam-icra/
+en:
+  prefix: /en
+  name: MVAS Lab
+  title: Machine Vision and Autonomous Systems Laboratory
+  institution: Department of Automation, Shanghai Jiao Tong University
+  home: Home
+  news: News
+  allnews: All news
+  about: About
+  contact: Contact
+  links: Links
+  search: Search pages…
+  nav:
+  - name: about
+    label: About
+  - name: publications
+    label: Publications
+  - name: talks
+    label: Talks
+  - name: research
+    label: Research
+  - name: software
+    label: Software
+  - name: team
+    label: Team
+  - name: teaching
+    label: Teaching
+  - name: blog
+    label: Blog
+  newsitems:
+  - date: '2025-09-01'
+    headline: PhD Dissertation Defense Success
+    path: /en/news/fu-phd-defense-2025/
+  - date: '2023-07-30'
+    headline: New Member Joined
+    path: /en/news/li-wang-join/
+  - date: '2023-08-15'
+    headline: Paper Accepted
+    path: /en/news/underwater-slam-icra/

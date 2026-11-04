@@ -1,0 +1,11 @@
+/* Chinese fallback only; upstream visual system is retained. */
+:root { --font-sans: 'DM Sans', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; --font-serif: 'Source Serif 4', 'Songti SC', 'Noto Serif CJK SC', 'SimSun', serif; }
+html:lang(zh) body {font-family:var(--font-sans);line-height:1.8;}
+html:lang(zh) h1,html:lang(zh) h2,html:lang(zh) h3 {font-family:var(--font-serif);letter-spacing:0;line-height:1.4;}
+.team-card,.pub-entry {overflow-wrap:anywhere;}
+/* Keep the upstream 300px research grid, permitting narrow phones. */
+.research-grid {grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));}
+/* The extra language entry wraps within the original navbar. */
+.navbar .container {flex-wrap:wrap;}
+.navbar-nav {flex-wrap:wrap;}
+.navbar-collapse {min-width:0;}
