@@ -163,3 +163,14 @@
 - 本地审阅：/tmp/mvas-daylight-desktop.png、/tmp/mvas-daylight-mobile.png、/tmp/mvas-daylight-mobile-menu.png；配色抽查结果/tmp/mvas-daylight-qa.json。截图仅本地保存，未进行外部传图。
 - 验证边界：本轮纯视觉调整，未新增或重跑纯函数单测；没有真实Mapbox联调、部署或主观用户审美验收，不声称性能/招生效果变化。
 - Git：沿用用户此前对feat/spacelab-mvas的push授权，将该视觉修正提交并同步同名origin分支；不合并main、不修改其他工作树或正式发布配置。实际提交及远端核对结果见本轮最终回复。
+
+
+## 2026-11-04 按用户要求同步全部网站版本至 GitHub
+
+- 修改目的：用户明确要求给出源码路径并全部 push 到 GitHub；同步 main、feat/mit-red-white-rebuild、feat/sjtu-red-lab-redesign、feat/spacelab-mvas、feat/academic-template-mvas 五个分支，各版本保持独立，不合并。
+- 涉及文件与实际修改：SpaceLab 工作区仅追加本日志；Academic 已在独立工作树将现有 academic-site/ 源码、四个 academic 辅助脚本、复现文档与日志提交，提交 c6e486eece2286cc41fd12bf03f8a96e5d554e89。原主线、MIT 红白版、交大红版仅同步已有提交，不新增业务修改。
+- 设计理由：同仓库按分支完整保留五个版本；源码包括构建所需锁文件和内容，不提交依赖缓存、生成站点、视频备份，不修改正式站点配置。源码推送与正式部署是不同操作。
+- 验证方式与结果：已 fetch origin 并确认五个分支可快进或新建，无需强推；MIT 10/10、交大红35/35、SpaceLab17/17现有单测通过，SpaceLab307 HTML产物检查通过；Academic3/3单测与34 HTML产物检查通过。待提交 Academic 源码扫描排除依赖/构建目录、视频、≥5MB图片及明显凭据文件名。五个分支当前树无≥100MB文件，未跟踪视频。
+- 格式检查边界：Academic 提交前的 git diff --cached --check 对原模板 LICENSE、字体许可证、mathjax 及部分生成页报告行尾空白/末尾空行；这些格式提示没有改写上游原文，不能将该项声称为全部通过。此前 git diff --check 仅检查当时已跟踪文件差异并通过。功能与产物检查结果如上。
+- 推送方式：普通显式分支 refspec，计划原子推送上述五个源分支并设置跟踪；操作结果以随后读取 GitHub 远端 SHA 与本地逐一对账为准，不预写尚未发生的成功。
+- 未验证：本轮未重新运行所有浏览器测试或重建各版本，不声称性能、视觉或招生效果变化；未合并、未强推、未执行正式部署。
